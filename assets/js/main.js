@@ -634,7 +634,7 @@ jQuery(function ($) {
                     } catch (e) {
                         btn.removeClass('effect-motion-bg');
                         input.val('').removeClass('invalid').removeClass('valid');
-                        alert.text('Sorry. We were unable to send your message.').removeClass('valid').addClass('invalid').fadeIn();
+                        alert.text('Désolé, une erreur de connexion empêche cet envoi. Veuillez nous contactez par appel ou nous envoyer un email sur info@igtsd.com .').removeClass('valid').addClass('invalid').fadeIn();
                     }
                 }
             })

@@ -4,9 +4,7 @@
 
     <head>
 
-        <!-- ==============================================
-        Basic Page Needs
-        =============================================== -->
+       
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,10 +20,10 @@
         <!-- ==============================================
         Favicons
         =============================================== -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+        <link rel="shortcut icon" href="assets/images/favicon-igtsd-150.png">
+        <link rel="apple-touch-icon" href="assets/images/favicon-igtsd-150.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon-igtsd-72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon-igtsd-114.png">
 
         <!-- ==============================================
         Vendor Stylesheet
@@ -44,14 +42,10 @@
         =============================================== -->
         <link rel="stylesheet" href="assets/css/default.css">
 
-        <!-- ==============================================
-        Theme Color
-        =============================================== -->
+      
         <meta name="theme-color" content="#075281">
 
-        <!-- ==============================================
-        Theme Settings
-        =============================================== -->
+        
         <style>
             :root {
                 --hero-bg-color: #080d10;
@@ -73,10 +67,12 @@
     <body class="home">
         
         <!-- Preloader -->
-        <div id="preloader" data-timeout="2000" class="odd preloader counter">
-            <div data-aos="fade-up" data-aos-delay="500" class="row justify-content-center text-center items">
+        <div id="preloader" data-timeout="1200" class="odd preloader">
+            
+            <div data-aos="flip-down" data-aos-delay="0" class="row justify-content-center text-center items">
                 <div data-percent="100" class="radial">
-                    <span></span>
+                   <span></span>
+                   <img src="assets/images/preloader-igtsd-no.jpg" style="width: calc(100%/3);" >
                 </div>
             </div>
         </div>
@@ -94,7 +90,7 @@
                             <a href="#" class="nav-link pl-0"><i class="fas fa-clock mr-2"></i>Ouvert: Lun - Ven - 8:00 - 18:00</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link pl-0"><i class="fas fa-map-marker-alt mr-2"></i>Cité Prestige, Faya, Abidjan</a>
+                            <a href="#map" class="nav-link pl-0"><i class="fas fa-map-marker-alt mr-2"></i>Cité Prestige, Faya, Abidjan</a>
                         </li>
                     </ul>
 
@@ -115,7 +111,7 @@
                             <a href="mailto:info@igtsd.com" class="nav-link" ><i class="fas fa-envelope mr-2"></i>info@igtsd.com</a>
                         </li>
                          <li class="nav-item ">
-                            <a href="assets/pdf/IGTSD - COMPANY BROCHURE.pdf" class="nav-link" target="_blank"><i class="fas fa-file-pdf"></i></a>
+                            <a href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" class="nav-link" target="_blank"><i class="fas fa-file-pdf"></i></a>
                         </li>
                     </ul>
 
@@ -126,7 +122,7 @@
                         </li>-->
                        
                         <li class="nav-item social">
-                            <a href="#" class="nav-link pr-0"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#lienlinkedin" class="nav-link pr-0" target=_blank><i class="fab fa-linkedin"></i></a>
                         </li>
                     </ul>
 
@@ -139,12 +135,7 @@
 
                     <!-- Navbar Brand-->
                     <a class="navbar-brand" href="index.html">
-                        <!--<span class="brand">
-                            <span class="featured">
-                                <span class="first">IG</span>
-                            </span>
-                            <span class="last" style="color: white;">TS&D</span>
-                        </span>-->
+                        
                         
                         
                             
@@ -177,22 +168,30 @@
                                     <a class="nav-link" href="maitrise-ouvrage-delegue-telecoms.html">MAÎTRISE D'OUVRAGE DELEGUE</a>
                                     
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="fibre-optique.html">DEPLOIEMENT & MAINTENANCE DE FIBRE OPTIQUE</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="deploiement-reseaux.html">DEPLOIEMENT & MAINTENANCE DE RESEAUX<i class="icon-arrow-right"></i> </a>
+                                    <ul class="dropdown-menu">
+                                      <li class="nav-item">
+                                        <a class="nav-link" href="fibre-optique-reseaux.html">FIBRE OPTIQUE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="cablage-informatique.html">CABLAGE RESEAU INFORMATIQUE</a>
+                                    </li>
+                                    </ul>
                                     
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="infrastructure-telecoms">INGENIERIE RESEAU & SUPERVISION</a>
+                                    <a class="nav-link" href="ingenierie-reseaux-supervision.html">INGENIERIE RESEAU & SUPERVISION</a>
                                     
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="equipements-telecoms.html">TRAVAUX DE GENIE-CIVIL & RELOCALISATION</a>
+                                    <a class="nav-link" href="delocalisation-devoiement-reseaux.html">TRAVAUX DE GENIE-CIVIL & RELOCALISATION</a>
                                     
                                 </li>
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="supervision-audit.html">SOLUTIONS ENERGETIQUES TELECOMS</a>
+                                    <a class="nav-link" href="solutions-energetiques.html">SOLUTIONS ENERGETIQUES </a>
                                     
                                 </li>
                                 
@@ -202,44 +201,32 @@
                         </li>
 
                         <li class="nav-item ">
-                            <a href="realisations.html" class="nav-link">NOS REALISATIONS </a>
+                            <a href="realisations.html" class="nav-link">REALISATIONS </a>
                             
                         </li>
                         <li class="nav-item ">
-                            <a href="blog.html" class="nav-link">BLOG </i></a>
+                            <a href="blog.html" class="nav-link">BLOG </a>
                             
                         </li>
                         
                     </ul>
 
                     <!-- Navbar Icons -->
-                    <ul class="navbar-nav icons">
+                   <!-- <ul class="navbar-nav icons">
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-toggle="modal" data-target="#search">
                                 <i class="icon-magnifier"></i>
                             </a>
                         </li>
                         
-                    </ul>
+                    </ul>-->
 
-                    <!-- Navbar Toggle -->
-                    <ul class="navbar-nav toggle">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#menu">
-                                <i class="icon-menu m-0"></i>
-                            </a>
-                        </li>
-                    </ul>
 
                     <!-- Navbar Action -->
                     <ul class="navbar-nav action">
                         <li class="nav-item ml-3">
                             <a href="contact.html" class="btn ml-lg-auto primary-button">NOUS CONTACTER</a>
-                            <!-- 
-                                Suggestion: Replace the purchase button above with a contact button.
-                                
-                                <a href="#contact" class="smooth-anchor btn ml-lg-auto primary-button">CONTACT US</a>
-                            -->
+                            
                         </li>
                     </ul>
                 </div>
@@ -249,7 +236,7 @@
 
         <!-- Hero -->
         <section id="slider" class="hero p-0 odd">
-            <div class="swiper-container full-slider animation slider-h-100 slider-h-auto">
+            <div class="swiper-container full-slider animation slider-h-100 slider-h-auto ">
                 <div class="swiper-wrapper">
 
 <!-- Item 1 -->
@@ -269,7 +256,7 @@
                 <!-- Action -->
                 <div data-aos="fade-up" data-aos-delay="1200" class="buttons">
                     <div class="d-sm-inline-flex">
-                        <a href="#contact" class="smooth-anchor mt-4 btn primary-button">FAITES L'EXPERIENCE D'UN PROFESSIONALISME ENGAGE</a>
+                        <a href="a-propos.html" class=" ml-lg-auto btn primary-button">FAITES L'EXPERIENCE D'UN PROFESSIONALISME ENGAGE</a>
                         <!--<a href="#video" class="smooth-anchor ml-sm-4 mt-4 btn outline-button">EN SAVOIR PLUS</a>-->
                     </div>
                 </div>
@@ -297,8 +284,8 @@
                 <!-- Action -->
                 <div data-aos="fade-up" data-aos-delay="1200" class="buttons">
                     <div class="d-sm-inline-flex">
-                        <a href="#contact" class="smooth-anchor mt-4 btn primary-button">Decouvrez nos services</a>
-                        <a href="#video" class="smooth-anchor ml-sm-4 mt-4 btn outline-button">Voir nos realisations</a>
+                        <a href="services.html" class="mt-4 btn primary-button">Decouvrez Nos Services</a>
+                        <a href="realisations.html" class=" ml-sm-4 mt-4 btn outline-button">Voir Nos Realisations</a>
                     </div>
                 </div>
             </div>
@@ -319,13 +306,13 @@
                                     <!-- Content -->
                                     <h2 data-aos="zoom-in" data-aos-delay="2000" class="title effect-static-text" style="font-size: 35px;">Ivoire Global <br>Telecoms Services & Distribution</h2>
                                     <p data-aos="zoom-in" data-aos-delay="2400" class="description"><p style="font-weight: bold;">  <span style="color: #2f95d4; font-weight: bold; font-size: 35px;">NOS  FORCES :</span><br> ✔ Expertise éprouvée – Plus de 20 ans d’expérience terrain <br>✔ Engagement qualité – Respect strict des normes internationales<br>✔ Partenariats solides – Collaboration avec les plus grands opérateurs <br>✔ Innovation continue – Solutions évolutives adaptées aux défis technologiques
-                                    </p></p>
+                                    </p>
 
                                     <!-- Action -->
                                     <div data-aos="fade-up" data-aos-delay="2800" class="buttons">
                                         <div class="d-sm-inline-flex">
-                                            <a href="#contact" class="smooth-anchor mt-4 btn primary-button">NOS SERVICES</a>
-                                            <a href="#video" class="smooth-anchor ml-sm-4 mt-4 btn outline-button">A PROPOS DE NOUS</a>
+                                            <a href="a-propos.html" class="mt-4 btn primary-button">A PROPOS DE NOUS</a>
+                                            <a href="services.html" class=" ml-sm-4 mt-4 btn outline-button">NOS SERVICES</a>
                                         </div>
                                     </div>
                                 </div>
@@ -384,7 +371,7 @@ répondant aux défis technologiques actuels et futurs. Grâce à un savoir-fair
                                     <img src="assets/images/activite6.jpg" alt="Person" class="person">
                                 </div>
                                 <div class="col-8 align-self-center text-left">
-                                    <h4>Tous Travaux de Fibre Optique & Deploiement Réseaux</h4>
+                                    <h4>Tous Travaux de Fibre Optique & Déploiement Réseaux</h4>
                                     <!-- <p>Nous déployons et maintenons les reseaux de fibre optique</p>-->
                                     
                                 </div>  
@@ -434,7 +421,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                 </div>
                 <div class="row justify-content-center text-center items">
                     <div class="col-12 col-md-6 col-lg-3 item">
-                        <div data-percent="128" class="radial">
+                        <div data-percent="129" class="radial">
                             <span></span>
                         </div>
                         <h4>Projets Réalisés</h4>
@@ -500,7 +487,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                         <i class="icon fas fa-network-wired"></i>
                         <h4>DEPLOIEMENT & MAINTENANCE DE RESEAUX</h4>
                         <p></p>
-                        <a href="fibre-optique.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                        <a href="deploiement-reseaux.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div data-aos="fade-up" class="col-12 col-md-4 item">
@@ -514,7 +501,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                 <div data-aos="fade-up" class="col-12 col-md-4 item">
                     <div class="card">
                         <i class="icon fas fa-hard-hat"></i>
-                        <h4>BTP, DELOCALISATION & DEVOIEMENT</h4>
+                        <h4>BTP, <br>DELOCALISATION & DEVOIEMENT</h4>
                         <p></p>
                         <a href="equipements-telecoms.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
                     </div>
@@ -535,7 +522,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
             
         <!-- Partners -->
         
-        <section id="partners" class="section-1 partners">
+        <section id="nos-clients" class="section-1 partners">
             <div class="row mb-md-5 text-center">
                 <div class="col-12">
                     
@@ -587,9 +574,9 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
         <section id="projects" class="section-2 odd showcase blog-grid filter-section projects">
             <div class="overflow-holder">
                 <div class="container">
-                    <div class="row text-center intro">
+                    <div class="row text-center intro text-md-left">
                         <div class="col-12">
-                            <span class="pre-title">Ce que nous avons accompli</span>
+                            <span class="pre-title m-auto m-md-0">Portfolio</span>
                             <h2 class="mb-0">Nos <span class="featured"><span>Réalisations</span></span></h2>
                         </div>
                     </div>
@@ -627,6 +614,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             </div>
                         </div>
                     </div>                    
+                    
                     <div class="row items filter-items">                       
                         <div class="col-12 col-md-6 col-lg-4 item filter-item" data-groups='["innovation","social","technology"]'>
                             <div class="row card p-0 text-center">
@@ -728,20 +716,22 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                     </div>
                 </div>
             </div>
+            <a href="realisations.html" class="btn mx-auto ml-md-auto primary-button">VOIR PLUS</a>
         </section>
+
         
         <!--Blog-->
-        <section id="blog" class="section-5 carousel showcase">
+        <section id="blog" class="section-7 carousel showcase">
             <div class="overflow-holder">
                 <div class="container">
                     <div class="row intro">
                         <div class="col-12 col-md-9 align-self-center text-center text-md-left">
-                            <span class="pre-title m-auto m-md-0">Notre Editorial</span>
-                            <h2>Notre <span class="featured"><span>Blog</span></span></h2>
-                            <p>Il nous arrive de partager ici certaines de nos experiences</p>
+                            <span class="pre-title m-auto m-md-0">EDITORIAL</span>
+                            <h2><span class="featured"><span> Blog</span></span></h2>
+                            <h4>NOS ARTICLES LES PLUS LUS </h4>
                         </div>
                         <div class="col-12 col-md-3 align-self-end">
-                            <a href="#" class="btn mx-auto mr-md-0 ml-md-auto primary-button">Voir tous nos ARTICLES</a>
+                            <a href="blog.html" class="btn mx-auto mr-md-0 ml-md-auto primary-button">VOIR PLUS D'ARTICLES</a>
                         </div>
                     </div>
                     <div class="swiper-container mid-slider items" data-perview="3"> 
@@ -749,7 +739,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/activite1.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/infra-pylone-terrain.png" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>M. Issa DRABO</a>
@@ -757,9 +747,9 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                     </div>
                                     <div class="card-caption col-12 p-0">
                                         <div class="card-body">
-                                            <a href="page-single-post-1.html">
+                                            <a href="defis-emplacement-strategiques.html">
                                                 <h4>Les défis pour un emplacement stratégique des infrastructures télécoms</h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <p style="font-size: 15px;">A l'ère du numérique, la fourniture de services d'accès est plus qu'un enjeu majeure, challenge important aux opérateurs télécoms et FAI pour leurs infrastructures.</p>
                                             </a>
                                         </div>
                                     </div>
@@ -768,7 +758,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/activite2.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/conformite-reseau.png" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>B.DIARRASSOUBA </a>
@@ -776,9 +766,9 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                     </div>
                                     <div class="card-caption col-12 p-0">
                                         <div class="card-body">
-                                            <a href="page-single-post-1.html">
-                                                <h4>Supervision et Audit Télécom : Pourquoi la Mise en Conformité Est Cruciale pour Votre Réseau ?"</h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                            <a href="#">
+                                                <h4>Supervision et Audit Télécom : L'importance de la mise en conformité pour votre réseau.</h4>
+                                                <p style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             </a>
                                         </div>
                                     </div>
@@ -787,7 +777,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/activite3.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/deploiement4.png" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Moussa OUATTARA</a>
@@ -795,9 +785,9 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                     </div>
                                     <div class="card-caption col-12 p-0">
                                         <div class="card-body">
-                                            <a href="page-single-post-1.html">
+                                            <a href="#">
                                                 <h4>Déploiement de Fibre Optique : Défis, Opportunités et Impact sur l'Économie Numérique</h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <p style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                             </a>
                                         </div>
                                     </div>
@@ -806,7 +796,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-4.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite4.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
@@ -825,7 +815,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-5.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite5.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>David Cooper</a>
@@ -844,7 +834,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-1.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite1.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
@@ -863,7 +853,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-2.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite2.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
@@ -882,7 +872,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-3.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite3.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>Andrea Miller</a>
@@ -901,7 +891,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-4.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite4.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>John Smith</a>
@@ -920,7 +910,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             <div class="swiper-slide slide-center item">
                                 <div class="row card p-0 text-center">
                                     <div class="image-over">
-                                        <img src="assets/images/news-5.jpg" alt="Lorem ipsum">
+                                        <img src="assets/images/activite5.jpg" alt="Lorem ipsum">
                                     </div>
                                     <div class="card-footer d-lg-flex align-items-center justify-content-center">
                                         <a href="#" class="d-lg-flex align-items-center"><i class="icon-user"></i>David Cooper</a>
@@ -950,7 +940,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                     <div class="col-12 col-md-8 pr-md-5 align-self-center text">
                         <div class="row intro">
                             <div class="col-12 p-0">
-                                <span class="pre-title m-0">Nous envoyer un message</span>
+                                <span class="pre-title m-0">CONTACTS</span>
                                 <h2>Entrons en <span class="featured"><span>Contact</span></span></h2>
                                 <p>Nous vous repondrons aussi vite que possible</p>
                             </div>
@@ -976,11 +966,11 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                             <i class="icon-arrow-down mr-3"></i>
                                             <select name="info" class="form-control field-info">
                                                 <option value="" selected disabled> Ce qui vous interesse</option>
-                                                <option>Negociation & Acquisition de Sites</option>
-                                                <option>Deployement & Maintenance de Fibre Optique</option>
-                                                <option>Génie civil & Infrastructures Télécoms</option>
+                                                <option>Négociation & Acquisition de Sites</option>
+                                                <option>Déploiement & Maintenance de Réseaux</option>
+                                                <option>BTP, Délocalisation & Dévoiement de Réseaux</option>
                                                 <option>Maîtrise d'Ouvrage Délégué</option>
-                                                <option>Supervision, Audits & Mise en Conformité</option>
+                                                <option>Ingéniérie Réseaux & Supervision</option>
                                                 <option>Autres</option>
                                                 
                                             </select>
@@ -992,7 +982,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                             <span class="form-alert"></span>
                                         </div>
                                         <div class="col-12 input-group m-0 p-2">
-                                            <a class="btn primary-button">ENVOYER</a>
+                                            <a href="#" class="btn primary-button">ENVOYER</a>
                                         </div>
                                     </div>
                                 </form>
@@ -1006,19 +996,19 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                             
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="tel:+2252722258671" class="nav-link">
                                         <i class="fas fa-phone-alt mr-2"></i>
                                         (+225) 27 22 25 86 71 
                                     </a>
                                      
                                 </li>
                                 <li>
-                                    <a href="#" class="nav-link">
+                                    <a href="tel:+2250708525123" class="nav-link">
                                         <i class="fas fa-mobile-alt mr-2"></i>
                                         (+225) 07 08 52 51 23 
                                     </a></li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="mailto:info@igtsd.com" class="nav-link">
                                         <i class="fas fa-envelope mr-2"></i>
                                         info@igtsd.com
                                     </a>
@@ -1026,7 +1016,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="fas fa-map-marker-alt mr-2"></i>
-                                    Cocody Faya, Cité Prestige,<br> <span>Abidjan, Côte d'Ivoire</span>
+                                    Cocody Faya, Cité Prestige,<br> <span style="padding: 50px;">Abidjan, Côte d'Ivoire</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -1049,7 +1039,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                         <div class="col-12 col-lg-3 footer-left">
 
                             <!-- Navbar Brand-->
-                            <a class="navbar-brand" href="/">
+                            <a class="navbar-brand" href="index.html">
                                <!-- <span class="brand">
                                     <span class="featured">
                                         <span class="first">IG</span>
@@ -1062,16 +1052,23 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                     <img src="assets/images/logo-igtsd.png" alt="">
                             
                             </a>
-                            <p>Equiped to better serve</p>
+                            <p>EQUIPPED TO BETTER SERVE</p>
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="tel:+2252722258671" class="nav-link">
                                         <i class="fas fa-phone-alt mr-2"></i>
                                         (+225) 27 22 25 86 71 
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                <a href="tel:+2250708525123" class="nav-link">
+                                        <i class="fas fa-mobile mr-2"></i>
+                                         
+                                        (+225) 07 08 52 51 23 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="mailto:info@igtsd.com" class="nav-link">
                                         <i class="fas fa-envelope mr-2"></i>
                                         info@igtsd.com
                                     </a>
@@ -1079,7 +1076,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
                                         <i class="fas fa-map-marker-alt mr-2"></i>
-                                        Cocody Faya, Cité Prestige
+                                     Abidjan, Côte d'Ivoire
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -1092,35 +1089,39 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                                 <div class="col-12 col-lg-4 item">
                                     <div class="card">
                                         <h4>A Propos</h4>
-                                        <a href="#"><i class="icon-arrow-right"></i>L'Entreprise</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Informations</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Nos Services</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Nos Realisations</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Notre Actualité</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Nos Projets</a>
+                                        <a href="a-propos.html#informations"><i class="icon-arrow-right"></i>Qui Sommes-Nous?</a>
+                                        <a href="a-propos.html#mot-du-directeur"><i class="icon-arrow-right"></i>Le Mot Du Directeur</a>
+                                        <a href="a-propos.html#nos-competences"><i class="icon-arrow-right"></i>Nos Compétences</a>
+                                        <a href="services.html"><i class="icon-arrow-right"></i>Nos Services</a>
+                                        <a href="realisations.html"><i class="icon-arrow-right"></i>Nos Realisations</a>
+                                        <a href="blog.html"><i class="icon-arrow-right"></i>Notre Blog</a>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4 item">
                                     <div class="card">
                                         <h4>Nos Services</h4>
-                                        <a href="#"><i class="icon-arrow-right"></i>Ingénierie Reseau</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Genie Civil</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Fibre Optique</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Pylones Telecom</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Tour Telecom</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Equipements</a>
+                                        <a href="acquisition-sites-telecoms.html"><i class="icon-arrow-right"></i>Acquistion de Sites</a>
+                                        <a href="maitrise-ouvrage-delegue-telecoms.html"><i class="icon-arrow-right"></i>MOD</a>
+                                        <a href="deploiement-reseaux.html"><i class="icon-arrow-right"></i>Déploiement</a>
+                                        <a href="ingenierie-reseaux-supervision.html"><i class="icon-arrow-right"></i>Supervision</a>
+                                        <a href="delocalisation-devoiement-reseaux.html"><i class="icon-arrow-right"></i>Relocalisation</a>
+                                        <a href="solutions-energetiques.html"><i class="icon-arrow-right"></i>Energie</a>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-12 col-lg-4 item">
                                     <div class="card">
                                         <h4>Autres</h4>
-                                        <a href="#"><i class="icon-arrow-right"></i>Acquisition Sites</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Raccordement</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>FTTH</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Backbone</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>PABX</a>
-                                        <a href="#"><i class="icon-arrow-right"></i>Infrastructures</a>
-                                    </div>
+                                        
+                                        <a href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" target="_blank"><i class="icon-arrow-right"></i>Notre Brochure</a>
+                                        <a href="index.html#nos-clients"><i class="icon-arrow-right"></i>Nos Clients</a>
+                                        <a href="index.html#funfacts"><i class="icon-arrow-right"></i>Nos Chiffres</a>
+                                        <a href="realisations.html"><i class="icon-arrow-right"></i>Notre Galérie</a>
+                                        
+                                        <a href="#" data-toggle="modal" data-target="#map"><i class="icon-arrow-right"></i>Notre Localisation</a>
+                                   <a href="#lienlinkedin" target=_blank><i class="icon-arrow-right"></i><i class="fab fa-linkedin"></i>Linkedin</a>  
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -1137,7 +1138,7 @@ Nous offrons une maîtrise complète des processus, de la pré-qualification des
                            
                         </div>
                         <div class="col-12 col-md-6 p-3 text-center text-lg-right">
-                           <p> 2025 | © IGTS&D | Tous Droits Reservés | Website conçu par <a href="https://tech-and-web.com" target="_blank"><span style="color: black;">TECH & WEB</span></a></p>
+                           <p> 2025 | © IGTS&D | Tous Droits Reservés | Website conçu par <a href="https://tech-and-web.com" target="_blank"><span style="color: black; font-weight: bold;">TECH & WEB</span></a></p>
                             
                         </div>
                     </div>

@@ -1857,7 +1857,8 @@ header .navbar-expand .navbar-nav.toggle {
 }
 
 header .navbar-expand .navbar-nav.toggle i {
-    font-size: 20px;
+    font-size: 30px;
+    color: #0d669d ;
 }
 
 header .navbar-expand .navbar-brand {
@@ -4719,3 +4720,21 @@ footer .copyright p {
 /* #endregion All Media Queries */
 
 
+
+.mobile-view {
+
+  display: none;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop-view  {
+    display: none;
+    
+    
+  }
+  .mobile-view {
+display: block;
+  }
+  
+}

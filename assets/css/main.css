@@ -4688,6 +4688,7 @@ footer .copyright p {
     body .columns-5 .bricklayer-column-sizer,
     body .columns-6 .bricklayer-column-sizer {
         width: 100%;
+        
     }
 
     body .card-columns {
@@ -4705,7 +4706,7 @@ footer .copyright p {
     /* #endregion Modal */
 }
 
-@media(max-width: 374px) {
+@media (max-width: 374px) {
 
     /* #region General */
 
@@ -4718,23 +4719,3 @@ footer .copyright p {
 }
 
 /* #endregion All Media Queries */
-
-
-
-.mobile-view {
-
-  display: none;
-
-}
-
-@media only screen and (max-width: 600px) {
-  .desktop-view  {
-    display: none;
-    
-    
-  }
-  .mobile-view {
-display: block;
-  }
-  
-}

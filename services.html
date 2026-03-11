@@ -45,23 +45,499 @@
         <link rel="stylesheet" href="assets/css/default.css">
 
        
-        <meta name="theme-color" content="#075281">
+        <meta name="theme-color" content="#031424">
 
         
         <style>
-            :root {
-                --hero-bg-color: #080d10;
+                        :root {
+                --hero-bg-color: #031424;
                 
-                --section-1-bg-color: #ffffff;
-                --section-2-bg-color:#181831 ;
-                --section-3-bg-color: #075281;
-                --section-4-bg-color: #ffffff; 
-                --section-5-bg-color: #eef4ed;
-                --section-6-bg-color: #181831;
-                --section-7-bg-color: #ffffff;
+                --section-1-bg-color: #04192d;
+                --section-2-bg-color: #031829;
+                --section-3-bg-color: #05213a;
+                --section-4-bg-color: #04192d; 
+                --section-5-bg-color: #031829;
+                --section-6-bg-color: #021627;
+                --section-7-bg-color: #04192d;
 
-                --footer-bg-color: #080d10; --footer-bg-image: url('../../assets/images/bg-footer-igtsd.jpg');
+                --footer-bg-color: #041019; --footer-bg-image: none;
             }
+
+            .hero-services {
+                position: relative;
+                overflow: hidden;
+                padding: 7rem 0 5rem;
+                background: linear-gradient(135deg, #04192d 0%, #05213a 55%, #031829 100%);
+                color: #ffffff;
+            }
+
+            .hero-services::before,
+            .hero-services::after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.65;
+                transform: rotate(12deg);
+            }
+
+            .hero-services::before {
+                width: 520px;
+                height: 520px;
+                top: -220px;
+                right: -180px;
+                background: radial-gradient(circle at center, rgba(39, 193, 255, 0.28) 0%, transparent 68%);
+            }
+
+            .hero-services::after {
+                width: 420px;
+                height: 420px;
+                bottom: -180px;
+                left: -140px;
+                background: radial-gradient(circle at center, rgba(10, 56, 121, 0.45) 0%, transparent 72%);
+            }
+
+            .hero-services .container {
+                position: relative;
+                z-index: 1;
+            }
+
+            .hero-services .hero-eyebrow {
+                display: inline-block;
+                padding: 0.4rem 1rem;
+                border-radius: 999px;
+                background: rgba(125, 227, 255, 0.12);
+                color: #7de3ff;
+                font-size: 0.78rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                margin-bottom: 1.2rem;
+            }
+
+            .hero-services h1 {
+                font-size: 2.85rem;
+                line-height: 1.1;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-services .hero-lead {
+                font-size: 1.1rem;
+                color: rgba(255, 255, 255, 0.85);
+                margin-bottom: 1.75rem;
+            }
+
+            .hero-services .story-highlight {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.55rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-services .story-highlight span {
+                padding: 0.45rem 1.1rem;
+                border-radius: 999px;
+                background: rgba(125, 227, 255, 0.12);
+                border: 1px solid rgba(125, 227, 255, 0.28);
+                color: #9ee9ff;
+                font-size: 0.82rem;
+                letter-spacing: 0.03em;
+            }
+
+            .hero-services .list-check {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.75rem;
+            }
+
+            .hero-services .list-check li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                margin-bottom: 0.85rem;
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.88);
+            }
+
+            .hero-services .list-check li::before {
+                content: "\f00c";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: #27c1ff;
+                font-size: 0.85rem;
+                margin-top: 0.1rem;
+            }
+
+            .hero-services .cta-stack .btn {
+                margin-right: 0.75rem;
+                margin-bottom: 0.75rem;
+                min-width: 220px;
+            }
+
+            .hero-services .hero-metrics {
+                display: grid;
+                gap: 1rem;
+            }
+
+            .hero-services .metric-card {
+                background: rgba(3, 16, 25, 0.72);
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 18px;
+                padding: 1.5rem;
+                box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+            }
+
+            .hero-services .metric-card strong {
+                display: block;
+                font-size: 2.3rem;
+                font-weight: 700;
+                color: #7de3ff;
+            }
+
+            .hero-services .metric-card span {
+                display: block;
+                color: rgba(255, 255, 255, 0.75);
+                margin-top: 0.35rem;
+                font-size: 0.95rem;
+                line-height: 1.45;
+            }
+
+            .hero-services .hero-assurance {
+                margin-top: 1.25rem;
+                padding: 1.5rem;
+                border-radius: 16px;
+                background: linear-gradient(135deg, rgba(9, 46, 78, 0.95), rgba(3, 24, 41, 0.95));
+                border: 1px solid rgba(125, 227, 255, 0.18);
+            }
+
+            .hero-services .hero-assurance h4 {
+                font-size: 1.1rem;
+                margin-bottom: 0.6rem;
+                color: #ffffff;
+            }
+
+            .hero-services .hero-assurance p {
+                margin-bottom: 0.9rem;
+                color: rgba(255, 255, 255, 0.78);
+            }
+
+            .hero-services .hero-assurance .link-arrow {
+                color: #7de3ff;
+                font-weight: 600;
+            }
+
+            .link-arrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.45rem;
+                color: #7de3ff;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            .link-arrow::after {
+                content: "\f061";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-size: 0.8rem;
+            }
+
+            .premium-services {
+                padding: 5.5rem 0 4.5rem;
+            }
+
+            .service-portfolio .card,
+            .service-catalog .card {
+                height: 100%;
+                background: rgba(3, 24, 41, 0.82);
+                border: 1px solid rgba(125, 227, 255, 0.12);
+                border-radius: 20px;
+                padding: 2.1rem;
+                color: rgba(255, 255, 255, 0.84);
+                box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+                transition: transform 0.3s ease, border-color 0.3s ease;
+            }
+
+            .service-portfolio .card:hover,
+            .service-catalog .card:hover {
+                transform: translateY(-8px);
+                border-color: rgba(125, 227, 255, 0.4);
+            }
+
+            .service-portfolio .card .icon,
+            .service-catalog .card .icon {
+                width: 52px;
+                height: 52px;
+                border-radius: 14px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.35rem;
+                margin-bottom: 1.25rem;
+                background: rgba(39, 193, 255, 0.12);
+                color: #7de3ff;
+            }
+
+            .service-portfolio .card h4,
+            .service-catalog .card h5 {
+                color: #ffffff;
+                margin-bottom: 1.1rem;
+            }
+
+            .service-portfolio .card ul,
+            .service-catalog .card ul {
+                padding-left: 1rem;
+                margin-bottom: 1.75rem;
+            }
+
+            .service-portfolio .card ul li,
+            .service-catalog .card ul li {
+                margin-bottom: 0.6rem;
+            }
+
+            .service-portfolio .card .link-arrow,
+            .service-catalog .card .link-arrow {
+                margin-top: auto;
+            }
+
+            .service-catalog .card {
+                padding: 1.8rem;
+            }
+
+            .segment-chips {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.6rem;
+            }
+
+            .segment-chips span {
+                padding: 0.55rem 1.15rem;
+                border-radius: 999px;
+                border: 1px solid rgba(125, 227, 255, 0.2);
+                background: rgba(125, 227, 255, 0.08);
+                color: rgba(255, 255, 255, 0.82);
+                font-size: 0.85rem;
+                letter-spacing: 0.02em;
+            }
+
+            .step-track {
+                display: grid;
+                gap: 1.5rem;
+            }
+
+            .step-card {
+                background: rgba(3, 24, 41, 0.78);
+                border: 1px solid rgba(125, 227, 255, 0.15);
+                border-radius: 18px;
+                padding: 1.75rem;
+                height: 100%;
+            }
+
+            .step-card .step-index {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: rgba(39, 193, 255, 0.18);
+                color: #7de3ff;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .step-card h5 {
+                color: #ffffff;
+                margin-bottom: 0.8rem;
+            }
+
+            .step-card p {
+                margin: 0;
+                color: rgba(255, 255, 255, 0.8);
+            }
+
+            .cta-panel {
+                background: linear-gradient(135deg, rgba(9, 46, 78, 0.95), rgba(3, 24, 41, 0.95));
+                border: 1px solid rgba(125, 227, 255, 0.18);
+                border-radius: 22px;
+                padding: 2.5rem;
+                color: #ffffff;
+                box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+            }
+
+            .cta-panel h3 {
+                color: #ffffff;
+                margin-bottom: 1rem;
+            }
+
+            .cta-panel p {
+                color: rgba(255, 255, 255, 0.82);
+                margin-bottom: 1.75rem;
+            }
+
+            .cta-panel .btn {
+                min-width: 220px;
+            }
+
+            .journey-section {
+                position: relative;
+                padding: 6rem 0 5rem;
+            }
+
+            .journey-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at 10% 20%, rgba(125, 227, 255, 0.12) 0%, transparent 55%), radial-gradient(circle at 90% 30%, rgba(9, 46, 78, 0.35) 0%, transparent 60%);
+                opacity: 0.65;
+                pointer-events: none;
+            }
+
+            .journey-section .container {
+                position: relative;
+                z-index: 1;
+            }
+
+            .journey-wrapper {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(4, minmax(200px, 1fr));
+                gap: 1.75rem;
+                margin-top: 2.5rem;
+            }
+
+            .journey-wrapper::before {
+                content: "";
+                position: absolute;
+                top: 42px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, rgba(125, 227, 255, 0) 0%, rgba(125, 227, 255, 0.35) 18%, rgba(125, 227, 255, 0.35) 82%, rgba(125, 227, 255, 0) 100%);
+                z-index: 0;
+            }
+
+            .journey-card {
+                position: relative;
+                height: 100%;
+                border-radius: 22px;
+                padding: 2.4rem 2rem 2.1rem;
+                background: rgba(3, 24, 41, 0.88);
+                border: 1px solid rgba(125, 227, 255, 0.16);
+                box-shadow: 0 30px 55px rgba(3, 16, 25, 0.45);
+                backdrop-filter: blur(6px);
+                display: flex;
+                flex-direction: column;
+                gap: 1.35rem;
+                z-index: 1;
+                transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            }
+
+            .journey-card:hover {
+                transform: translateY(-12px);
+                border-color: rgba(125, 227, 255, 0.45);
+                box-shadow: 0 40px 65px rgba(3, 16, 25, 0.55);
+            }
+
+            .journey-head {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .journey-step {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, rgba(125, 227, 255, 0.25), rgba(39, 193, 255, 0.55));
+                color: #031424;
+                font-weight: 700;
+                font-size: 1.05rem;
+            }
+
+            .journey-title {
+                margin: 0;
+                color: #ffffff;
+                font-size: 1.15rem;
+            }
+
+            .journey-tag {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.2rem 0.75rem;
+                border-radius: 999px;
+                background: rgba(125, 227, 255, 0.12);
+                border: 1px solid rgba(125, 227, 255, 0.28);
+                color: #9ee9ff;
+                font-size: 0.72rem;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+            }
+
+            .journey-card p {
+                margin: 0;
+                color: rgba(255, 255, 255, 0.82);
+                line-height: 1.55;
+                font-size: 0.95rem;
+            }
+
+
+            .journey-footer {
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: rgba(125, 227, 255, 0.8);
+                font-size: 0.82rem;
+                letter-spacing: 0.04em;
+            }
+
+            .journey-footer i {
+                font-size: 0.9rem;
+                margin-left: 0.4rem;
+            }
+
+            @media (max-width: 991.98px) {
+                .hero-services {
+                    padding: 5.5rem 0 4rem;
+                }
+
+                .hero-services h1 {
+                    font-size: 2.3rem;
+                }
+
+                .hero-services .cta-stack .btn {
+                    min-width: 0;
+                    width: 100%;
+                }
+
+                .journey-wrapper {
+                    grid-template-columns: repeat(2, minmax(220px, 1fr));
+                }
+
+                .journey-wrapper::before {
+                    display: none;
+                }
+
+            }
+
+            @media (max-width: 767.98px) {
+                .hero-services .metric-card {
+                    padding: 1.35rem;
+                }
+
+                .premium-services {
+                    padding: 4rem 0 3.5rem;
+                }
+
+                .journey-wrapper {
+                    grid-template-columns: 1fr;
+                }
+            }
+
         </style>
         
     </head>
@@ -74,17 +550,17 @@
             <div data-aos="flip-down" data-aos-delay="0" class="row justify-content-center text-center items">
                 <div data-percent="100" class="radial">
                    <span></span>
-                   <img src="assets/images/preloader-igtsd-no.jpg" style="width: calc(100%/3);" >
+                   <img src="assets/images/logo-igtsd.png" style="width: calc(100%/3);" alt="IGTSD Preloader Logo">
                 </div>
             </div>
         </div>
 
 
        <!-- Header -->
-        <header id="header">
+        <header id="header" class="header-premium">
 
             <!-- Top Navbar -->
-            <nav class="navbar navbar-expand top">
+            <nav class="navbar navbar-expand top nav-top-premium">
                 <div class="container header">
 
                     <!-- Navbar Items [left] -->
@@ -133,7 +609,7 @@
             </nav>
 
            <!-- Navbar -->
-            <nav class="navbar navbar-expand navbar-fixed sub">
+            <nav class="navbar navbar-expand navbar-fixed sub nav-main-premium">
                 <div class="container header">
 
                     <!-- Navbar Brand-->
@@ -249,32 +725,51 @@
 
         </header>
         <!-- Hero -->
-        <section id="slider" class="hero p-0 odd featured">
-            <div class="swiper-container no-slider animation slider-h-50 slider-h-auto">
-                <div class="swiper-wrapper">
-
-                    <!-- Item 1 -->
-                    <div class="swiper-slide slide-center">
-
-                        <!-- Media -->
-                        <img src="assets/images/banniere-a-propos.jpg" alt="Full Image" class="full-image" data-mask="80">
-
-                        <div class="slide-content row text-center">
-                            <div class="col-12 mx-auto inner">
-
-                                <!-- Content -->
-                               <nav data-aos="zoom-out-up" data-aos-delay="800" aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="/">IVOIRE GLOBAL TELECOM SERVICE & DISTRIBUTION</a></li>
-                                        <!--<li class="breadcrumb-item active" aria-current="page">Services</li>-->
-                                    </ol>
-                                </nav>
-
-                                <h1 class="mb-0 title effect-static-text"> NOS SERVICES</h1>
+        <section id="slider" class="hero hero-services odd">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-7">
+                        <span class="hero-eyebrow">Centres d'excellence télécoms</span>
+                        <h1>Nous orchestrons des infrastructures télécoms prêtes à performer</h1>
+                        <p class="hero-lead">IGTSD sécurise la chaîne de valeur des réseaux mobiles, fixes et énergétiques pour les opérateurs, intégrateurs et grands comptes en Afrique de l’Ouest.</p>
+                        <div class="story-highlight">
+                            <span>Densification 4G / 5G</span>
+                            <span>Backbone &amp; FTTH nationaux</span>
+                            <span>Supervision NOC 24/7</span>
+                            <span>Gouvernance PMO SLA</span>
+                        </div>
+                        <ul class="list-check">
+                            <li>Cadre stratégique et maîtrise foncière conformes aux régulations ARTCI / ARTP.</li>
+                            <li>Ingénierie terrain, déploiement et MOP alignés sur des KPI SLA mesurables.</li>
+                            <li>Continuité énergétique et surveillance proactive des sites critiques.</li>
+                        </ul>
+                        <div class="cta-stack">
+                            <a href="contact.html#atelier-strategique" class="btn primary-button">Planifier un diagnostic 360°</a>
+                            <a href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" class="btn outline-button" target="_blank" rel="noopener">Télécharger le company profile</a>
+                        </div>
+                        <p class="mt-3 mb-0" style="color: rgba(255, 255, 255, 0.72);">Directeurs de projets, CTO, O&amp;M managers : mettons votre prochain chantier réseau en mouvement.</p>
+                    </div>
+                    <div class="col-12 col-lg-5 mt-5 mt-lg-0">
+                        <div class="hero-metrics">
+                            <div class="metric-card">
+                                <strong>1200 km</strong>
+                                <span>Backbone fibre, FTTH &amp; réseaux métropolitains conçus et livrés.</span>
+                            </div>
+                            <div class="metric-card">
+                                <strong>350+</strong>
+                                <span>Sites radio, data centers et POP sécurisés &amp; maintenus sous SLA.</span>
+                            </div>
+                            <div class="metric-card">
+                                <strong>20 ans</strong>
+                                <span>de gouvernance projets télécoms &amp; génie civil en Afrique de l’Ouest.</span>
                             </div>
                         </div>
+                        <div class="hero-assurance">
+                            <h4>NOC &amp; PMO intégrés</h4>
+                            <p>Reporting temps-réel, trigger d’escalade et coordination des équipes terrain pour garantir disponibilité &amp; compliance.</p>
+                            <a class="link-arrow" href="contact.html#contact-form">Parler au directeur des opérations</a>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -282,108 +777,260 @@
         
         
        <!-- Services -->
-        <section id="services" class="section-2 odd offers">
-            <div class="container">
-                
-                <div class="row justify-content-center items">
-                
-                <div data-aos="fade-up" class="col-12 col-md-4 item">
-                    <div class="card" >
-                        <i class="icon fas fa-handshake"></i>
-                        <h4>NEGOCIATION & ACQUISITION DE SITES</h4>
-                        <p></p>
-                        <a href="acquisition-sites-telecoms.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+        <section id="services" class="section-2 premium-services">
+            <div class="container service-portfolio">
+                <div class="row intro">
+                    <div class="col-12 col-lg-8">
+                        <span class="pre-title">Portefeuille intégré</span>
+                        <h2>Des programmes structurés pour bâtir, densifier et opérer vos réseaux</h2>
+                        <p>De l’acquisition des sites jusqu’à l’exploitation sous SLA, IGTSD mobilise des équipes senior pour sécuriser vos jalons techniques, financiers et réglementaires.</p>
                     </div>
-                    
-                </div>
-                <div data-aos="fade-up" class="col-12 col-md-4 item">
-                    <div class="card">
-                        <i class="icon fas fa-broadcast-tower"></i>
-                        <h4>MAÎTRISE <br>D'OUVRAGE <br>DELEGUE</h4>
-                        <p></p>
-                        <a href="maitrise-ouvrage-delegue-telecoms.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                </div>
-
-                <div data-aos="fade-up" class="col-12 col-md-4 item">
-                    <div class="card">
-                        <i class="icon fas fa-network-wired"></i>
-                        <h4>DEPLOIEMENT & MAINTENANCE DE RESEAUX</h4>
-                        <p></p>
-                        <a href="deploiement-reseaux.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                    <div class="col-12 col-lg-4 text-lg-right align-self-center mt-3 mt-lg-0">
+                        <a href="contact.html#briefing" class="link-arrow">Co-construire un plan d'exécution</a>
                     </div>
                 </div>
-                <div data-aos="fade-up" class="col-12 col-md-4 item">
-                    <div class="card">
-                        <i class="icon fas fa-tools "></i>
-                        <h4>INGENIERIE <br>RESEAU & SUPERVISION</h4>
-                        <p></p>
-                        <a href="ingenierie-reseau.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+                            <h4>Stratégie sites &amp; conformité</h4>
+                            <ul>
+                                <li>Due diligence foncière, levée de risques juridiques &amp; communautaires.</li>
+                                <li>Négociations opérateurs, autorités, propriétaires et collectivités.</li>
+                                <li>Études topographiques &amp; design d’implantation pylônes / POP.</li>
+                            </ul>
+                            <a class="link-arrow" href="acquisition-sites-telecoms.html">Voir la négociation &amp; acquisition</a>
+                        </div>
                     </div>
-                </div>
-                <div data-aos="fade-up" class="col-12 col-md-4 item">
-                    <div class="card">
-                        <i class="icon fas fa-hard-hat"></i>
-                        <h4>BTP, <br>DELOCALISATION & DEVOIEMENT</h4>
-                        <p></p>
-                        <a href="equipements-telecoms.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-project-diagram"></i></div>
+                            <h4>Maîtrise d'ouvrage déléguée</h4>
+                            <ul>
+                                <li>PMO télécoms, gouvernance CAPEX et pilotage pluri-opérateurs.</li>
+                                <li>Gestion EPC, contrôle budgétaire et reporting SLA / KPI live.</li>
+                                <li>Conformité réglementaire, HSE, RSE et gestion des fournisseurs.</li>
+                            </ul>
+                            <a class="link-arrow" href="maitrise-ouvrage-delegue-telecoms.html">Découvrir la MOD IGTSD</a>
+                        </div>
                     </div>
-                </div>
-                <div data-aos="fade-up" class="col-12 col-md-4 item">
-                    <div class="card">
-                        <i class="icon fas fa-bolt"></i>
-                        <h4>SOLUTIONS ENERGETIQUES & SERVICES</h4>
-                        <p></p>
-                        <a href="supervision-audit.html"><i class="btn-icon pulse fas fas fa-arrow-right"></i></a>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-network-wired"></i></div>
+                            <h4>Ingénierie &amp; déploiement</h4>
+                            <ul>
+                                <li>Design radio, FO, IP/MPLS et data centers modulaires.</li>
+                                <li>Roll-out FTTH/FTTX, backbone et densification RAN / Microwaves.</li>
+                                <li>Tests, recettes, optimisation QoS et transfert d’exploitation.</li>
+                            </ul>
+                            <a class="link-arrow" href="deploiement-reseaux.html">Voir nos programmes de déploiement</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- services details carrousel -->
-        
-        <br>
-            <div class="overflow-holder">
-                <div class="container">
-                    <div class="swiper-container min-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide slide-center item"> 
-                                <h4 style="color: #075281;">FIBRE OPTIQUE</h4>
-                            </div> 
-                            <div class="swiper-slide slide-center item"> 
-                               <h4 style="color: #075281;">EXPERTISE TELECOMS</h4>
-                            </div> 
-
-                            <div class="swiper-slide slide-center item"> 
-                                <h4 style="color: #075281;">ENERGIE</h4>
-                            </div> 
-                            <div class="swiper-slide slide-center item"> 
-                               <h4 style="color: #075281;">SUPERVISION RESEAUX </h4>
-                            </div> 
-                            <div class="swiper-slide slide-center item"> 
-                               <h4 style="color: #075281;">BENCHMARKING</h4>
-                            </div> 
-
-                            <div class="swiper-slide slide-center item"> 
-                                <h4 style="color: #075281;">ACQUISITION SITES</h4>
-                            </div>
-                            <div class="swiper-slide slide-center item"> 
-                               <h4 style="color: #075281;">DELOCALISATION</h4>
-                            </div> 
-                            <div class="swiper-slide slide-center item"> 
-                                <h4 style="color: #075281;">DEVOIEMENT</h4>
-                            </div> 
-
-                            <div class="swiper-slide slide-center item"> 
-                                <h4 style="color: #075281;">BACKBONE</h4>
-                            </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-bolt"></i></div>
+                            <h4>Opérations &amp; résilience</h4>
+                            <ul>
+                                <li>Supervision NOC, runbook d’escalade et maintenance préventive 24/7.</li>
+                                <li>Solutions énergétiques hybrides, PaaS, monitoring IoT &amp; efficacité.</li>
+                                <li>Dévoiement, relocalisation, génie civil et réhabilitation de sites.</li>
+                            </ul>
+                            <a class="link-arrow" href="ingenierie-reseaux-supervision.html">Activer notre dispositif O&amp;M</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--fin services details carrousel-->
-        
+        </section>
+
+        <section class="section-3 premium-services service-catalog">
+            <div class="container">
+                <div class="row intro">
+                    <div class="col-12 col-lg-8">
+                        <span class="pre-title">Solutions spécialisées</span>
+                        <h2>Des offres focalisées pour vos priorités opérationnelles</h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-stream"></i></div>
+                            <h5>Backbone &amp; fibre optique</h5>
+                            <ul>
+                                <li>Études de faisabilité, design FTTx, tirage, soufflage &amp; épissurage.</li>
+                                <li>Backbone longue distance, métropolitain et raccordement site CIE.</li>
+                                <li>Acceptance tests, OTDR, PMD &amp; mise à jour SIG.</li>
+                            </ul>
+                            <a class="link-arrow" href="fibre-optique-reseaux.html">Accéder à l’offre fibre</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-server"></i></div>
+                            <h5>LAN, câblage &amp; data centers</h5>
+                            <ul>
+                                <li>Câblage structuré cuivre / fibre, audits LAN &amp; Wi-Fi professionnels.</li>
+                                <li>Mise en place de salles techniques, PABX, réseaux campus &amp; corporate.</li>
+                                <li>Services managed LAN &amp; exploitation multi-sites.</li>
+                            </ul>
+                            <a class="link-arrow" href="cablage-informatique.html">Optimiser mon infrastructure IT</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-hard-hat"></i></div>
+                            <h5>Génie civil &amp; dévoiement</h5>
+                            <ul>
+                                <li>Travaux GC pylônes, shelters, clôtures &amp; sécurisation périmétrique.</li>
+                                <li>Dévoiement réseaux, désaturation cuivre et travaux spéciaux.</li>
+                                <li>Gestion de crise, relocalisation et remise en conformité des sites.</li>
+                            </ul>
+                            <a class="link-arrow" href="delocalisation-devoiement-reseaux.html">Consulter nos travaux GC</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-solar-panel"></i></div>
+                            <h5>Solutions énergétiques critiques</h5>
+                            <ul>
+                                <li>Dimensionnement énergie hybride, solaire, groupes électrogènes.</li>
+                                <li>Contrats PaaS, monitoring intelligent &amp; optimisation OPEX énergie.</li>
+                                <li>Plan de continuité, redondance &amp; conformité réseau électrique.</li>
+                            </ul>
+                            <a class="link-arrow" href="solutions-energetiques.html">Sécuriser mon énergie</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-satellite-dish"></i></div>
+                            <h5>Supervision &amp; analytics réseaux</h5>
+                            <ul>
+                                <li>NOC 24/7, runbook incidents, gestion SLA &amp; amélioration continue.</li>
+                                <li>KPI dashboards, capacity management &amp; reporting régulateur.</li>
+                                <li>Programmes de formation O&amp;M &amp; transfert de compétences.</li>
+                            </ul>
+                            <a class="link-arrow" href="ingenierie-reseaux-supervision.html">Découvrir notre NOC</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="icon"><i class="fas fa-globe-africa"></i></div>
+                            <h5>Gouvernance 360° &amp; innovation</h5>
+                            <ul>
+                                <li>PMO stratégique, pilotage multi-pays et synchronisation TowerCo / opérateurs.</li>
+                                <li>Due diligence 360°, conformité ARTCI/ARTP, HSE &amp; reporting ESG.</li>
+                                <li>Programmes innovation (Mobile Money, Smart Infra, IoT critiques) adossés au réseau.</li>
+                            </ul>
+                            <a class="link-arrow" href="contact.html#atelier-strategique">Activer notre task force 360°</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-4 premium-services">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+                        <span class="pre-title">Marchés adressés</span>
+                        <h3>Qui accompagnons-nous&nbsp;?</h3>
+                        <p>Notre modèle hybride associe ingénierie locale, standards internationaux et gouvernance projet pour les acteurs télécoms les plus exigeants du continent.</p>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <div class="segment-chips">
+                            <span>Opérateurs mobiles &amp; fixes</span>
+                            <span>TowerCo &amp; Infraco</span>
+                            <span>Intégrateurs &amp; équipementiers</span>
+                            <span>Data centers &amp; ISPs</span>
+                            <span>Grands comptes B2B</span>
+                            <span>Institutions &amp; régulateurs</span>
+                            <span>Projets FTTH B2C &amp; B2B</span>
+                            <span>Banques &amp; FinTech / Mobile Money</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-5 premium-services journey-section">
+            <div class="container">
+                <div class="row intro">
+                    <div class="col-12 col-lg-8">
+                        <span class="pre-title">Méthodologie d'engagement</span>
+                        <h2>Une mécanique 360° pour sécuriser vos jalons</h2>
+                    </div>
+                </div>
+                <div class="journey-wrapper">
+                    <article class="journey-card">
+                        <div class="journey-head">
+                            <span class="journey-step">01</span>
+                            <div>
+                                <h5 class="journey-title">Diagnostic &amp; cadrage ROI</h5>
+                                <span class="journey-tag">Phase stratégique</span>
+                            </div>
+                        </div>
+                        <p>Atelier multi-métiers, analyse de faisabilité, ciblage CAPEX/OPEX et plan de mitigation des risques pour définir le modèle économique et les priorités d’exécution.</p>
+                        <div class="journey-footer">
+                            <span>Livrables : roadmap 360° &amp; business case</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </article>
+                    <article class="journey-card">
+                        <div class="journey-head">
+                            <span class="journey-step">02</span>
+                            <div>
+                                <h5 class="journey-title">Design &amp; ingénierie</h5>
+                                <span class="journey-tag">Blueprint technique</span>
+                            </div>
+                        </div>
+                        <p>Études détaillées radio, FO, énergie et génie civil avec BIM, SIG et outils propriétaires pour verrouiller les jalons techniques, réglementaires et financiers.</p>
+                        <div class="journey-footer">
+                            <span>Livrables : HLD/LLD, planning maître</span>
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                    </article>
+                    <article class="journey-card">
+                        <div class="journey-head">
+                            <span class="journey-step">03</span>
+                            <div>
+                                <h5 class="journey-title">Delivery &amp; contrôle qualité</h5>
+                                <span class="journey-tag">Phase build</span>
+                            </div>
+                        </div>
+                        <p>Déploiement terrain, QA/QC, HSE et pilotage fournisseurs sous gouvernance PMO, avec reporting temps-réel, contrôle des coûts et gestion active des risques.</p>
+                        <div class="journey-footer">
+                            <span>Livrables : QA/QC, rapports SLA</span>
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                    </article>
+                    <article class="journey-card">
+                        <div class="journey-head">
+                            <span class="journey-step">04</span>
+                            <div>
+                                <h5 class="journey-title">Transition &amp; opérations</h5>
+                                <span class="journey-tag">Phase run</span>
+                            </div>
+                        </div>
+                        <p>Mise en service, runbooks NOC, transfert de compétences, amélioration continue et pilotage de la performance pour garantir la disponibilité et la croissance des réseaux.</p>
+                        <div class="journey-footer">
+                            <span>Livrables : runbooks, dashboards KPI</span>
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-6 premium-services">
+            <div class="container">
+                <div class="cta-panel text-center">
+                    <h3>Un acteur unique pour piloter vos infrastructures critiques</h3>
+                    <p>Confiez à IGTSD la construction, l’extension ou la modernisation de vos réseaux. Nous alignons vos objectifs commerciaux, réglementaires et opérationnels pour générer un impact mesurable.</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center">
+                        <a href="contact.html#contact-form" class="btn primary-button mr-sm-3 mb-3 mb-sm-0">Déposer un cahier des charges</a>
+                        <a href="realisations.html" class="btn outline-button">Consulter nos réalisations</a>
+                    </div>
+                </div>
+            </div>
         </section>
         
         
@@ -488,96 +1135,61 @@
         <!-- Footer -->
        <footer>
 
-            <!-- Footer [content] -->
-            <section id="footer" class="odd footer offers">
+            <section id="footer" class="footer-premium">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-3 footer-left">
-
-                            <!-- Navbar Brand-->
-                            <a class="navbar-brand" href="index.html">
-                               <!-- <span class="brand">
-                                    <span class="featured">
-                                        <span class="first">IG</span>
-                                    </span>
-                                    <span class="last">TS&D</span>
-                                </span>-->
-                                
-                                
-                                    
-                                    <img src="assets/images/logo-igtsd.png" alt="">
-                            
-                            </a>
-                            <p>EQUIPPED TO BETTER SERVE</p>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a href="tel:+2252722258671" class="nav-link">
-                                        <i class="fas fa-phone-alt mr-2"></i>
-                                        (+225) 27 22 25 86 71 
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                <a href="tel:+2250708525123" class="nav-link">
-                                        <i class="fas fa-mobile mr-2"></i>
-                                         
-                                        (+225) 07 08 52 51 23 
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="mailto:info@igtsd.com" class="nav-link">
-                                        <i class="fas fa-envelope mr-2"></i>
-                                        info@igtsd.com
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-map-marker-alt mr-2"></i>
-                                     Abidjan, Côte d'Ivoire
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#contact" class="mt-4 btn outline-button smooth-anchor">Nous Contacter</a>
-                                </li>
-                            </ul>
+                    <div class="row gy-4">
+                        <div class="col-12 col-lg-4">
+                            <div class="footer-brand-block">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="assets/images/logo-igtsd.png" alt="IGTSD">
+                                </a>
+                                <p>IGTSD conçoit, déploie et supervise des infrastructures télécoms, IT et énergétiques critiques pour opérateurs, intégrateurs et institutions sur le continent africain.</p>
+                                <ul class="footer-contact-list">
+                                    <li><i class="fas fa-phone-alt"></i><a href="tel:+2252722258671">+225 27 22 25 86 71</a></li>
+                                    <li><i class="fas fa-headset"></i><a href="tel:+2250708525123">Hotline NOC 24/7 : +225 07 08 52 51 23</a></li>
+                                    <li><i class="fas fa-envelope"></i><a href="mailto:info@igtsd.com">info@igtsd.com</a></li>
+                                    <li><i class="fas fa-map-marker-alt"></i>Cité Prestige, Faya – Abidjan, Côte d’Ivoire</li>
+                                </ul>
+                                <div class="footer-social">
+                                    <a href="#lienlinkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12 col-lg-9 p-0 footer-right">
-                            <div class="row items">
-                                <div class="col-12 col-lg-4 item">
-                                    <div class="card">
-                                        <h4>A Propos</h4>
-                                        <a href="a-propos.html#informations"><i class="icon-arrow-right"></i>Qui Sommes-Nous?</a>
-                                        <a href="a-propos.html#mot-du-directeur"><i class="icon-arrow-right"></i>Le Mot Du DG</a>
-                                        <a href="a-propos.html#nos-competences"><i class="icon-arrow-right"></i>Nos Compétences</a>
-                                        <a href="services.html"><i class="icon-arrow-right"></i>Nos Services</a>
-                                        <a href="realisations.html"><i class="icon-arrow-right"></i>Nos Realisations</a>
-                                        <a href="blog.html"><i class="icon-arrow-right"></i>Notre Blog</a>
-                                        
+                        <div class="col-12 col-lg-8">
+                            <div class="row gy-4">
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="footer-links">
+                                        <h4>Domaines d’excellence</h4>
+                                        <a href="acquisition-sites-telecoms.html"><i class="fas fa-chevron-right"></i>Négociation &amp; Acquisition de Sites</a>
+                                        <a href="maitrise-ouvrage-delegue-telecoms.html"><i class="fas fa-chevron-right"></i>Maîtrise d’Ouvrage Déléguée</a>
+                                        <a href="deploiement-reseaux.html"><i class="fas fa-chevron-right"></i>Déploiement &amp; Maintenance Réseaux</a>
+                                        <a href="ingenierie-reseaux-supervision.html"><i class="fas fa-chevron-right"></i>Ingénierie &amp; Supervision</a>
+                                        <a href="delocalisation-devoiement-reseaux.html"><i class="fas fa-chevron-right"></i>BTP &amp; Dévoiement</a>
+                                        <a href="solutions-energetiques.html"><i class="fas fa-chevron-right"></i>Solutions Énergétiques</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-4 item">
-                                    <div class="card">
-                                        <h4>Nos Services</h4>
-                                        <a href="acquisition-sites-telecoms.html"><i class="icon-arrow-right"></i>Acquistion Sites</a>
-                                        <a href="maitrise-ouvrage-delegue-telecoms.html"><i class="icon-arrow-right"></i>MOD</a>
-                                        <a href="deploiement-reseaux.html"><i class="icon-arrow-right"></i>Déploiement</a>
-                                        <a href="ingenierie-reseaux-supervision.html"><i class="icon-arrow-right"></i>Supervision</a>
-                                        <a href="delocalisation-devoiement-reseaux.html"><i class="icon-arrow-right"></i>Relocalisation</a>
-                                        <a href="solutions-energetiques.html"><i class="icon-arrow-right"></i>Energie</a>
-                                        
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="footer-links">
+                                        <h4>Insights &amp; ressources</h4>
+                                        <a href="a-propos.html"><i class="fas fa-chevron-right"></i>À propos d’IGTSD</a>
+                                        <a href="index.html#telecom-excellence"><i class="fas fa-chevron-right"></i>Nos piliers stratégiques</a>
+                                        <a href="realisations.html"><i class="fas fa-chevron-right"></i>Réalisations &amp; cas clients</a>
+                                        <a href="blog.html"><i class="fas fa-chevron-right"></i>Insights &amp; articles</a>
+                                        <a href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" target="_blank" rel="noopener"><i class="fas fa-chevron-right"></i>Company Profile 2025</a>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-4 item">
-                                    <div class="card">
-                                        <h4>Autres</h4>
-                                        
-                                        <a href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" target="_blank"><i class="icon-arrow-right"></i>Notre Brochure</a>
-                                        <a href="index.html#nos-clients"><i class="icon-arrow-right"></i>Nos Clients</a>
-                                        <a href="index.html#funfacts"><i class="icon-arrow-right"></i>Nos Chiffres</a>
-                                        <a href="realisations.html"><i class="icon-arrow-right"></i>Notre Galérie</a>
-                                        
-                                        <a href="#" data-toggle="modal" data-target="#map"><i class="icon-arrow-right"></i>Notre Localisation</a>
-                                   <a href="#lienlinkedin" target=_blank><i class="icon-arrow-right"></i><i class="fab fa-linkedin"></i>Linkedin</a>  
-                                </div>
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="footer-links">
+                                        <h4>Support &amp; accès rapide</h4>
+                                        <a href="contact.html#briefing"><i class="fas fa-chevron-right"></i>Planifier un atelier</a>
+                                        <a href="contact.html#contact-form"><i class="fas fa-chevron-right"></i>Envoyer un cahier des charges</a>
+                                        <a href="index.html#contact"><i class="fas fa-chevron-right"></i>Formulaire express</a>
+                                        <a href="#" data-toggle="modal" data-target="#map"><i class="fas fa-chevron-right"></i>Localisation</a>
+                                        <a href="mailto:operations@igtsd.com"><i class="fas fa-chevron-right"></i>operations@igtsd.com</a>
+                                    </div>
+                                    <div class="footer-cta">
+                                        <a href="contact.html#atelier-strategique" class="btn primary-button btn-block">Planifier un diagnostic 360°</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -585,17 +1197,14 @@
                 </div>
             </section>
 
-            <!-- Copyright -->
-            <section id="copyright" class="p-3 odd copyright" style="background-color: #075281;">
+            <section id="copyright" class="footer-meta">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-6 p-3 text-center text-lg-left">
-                            <p>IGTS&D, Equipped To Better Serve</p>
-                           
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-6 text-center text-md-left">
+                            <p>© 2025 IGTSD – Ivoire Global Telecom Services &amp; Distribution. Tous droits réservés.</p>
                         </div>
-                        <div class="col-12 col-md-6 p-3 text-center text-lg-right">
-                           <p> 2025 | © IGTS&D | Tous Droits Reservés | Website conçu par <a href="https://tech-and-web.com" target="_blank"><span style="color: black; font-weight: bold;">TECH & WEB</span></a></p>
-                            
+                        <div class="col-12 col-md-6 text-center text-md-right">
+                            <p>Design &amp; développement : <a href="https://tech-and-web.com" target="_blank" rel="noopener">TECH &amp; WEB</a></p>
                         </div>
                     </div>
                 </div>

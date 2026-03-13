@@ -21,18 +21,18 @@
 </a>
 <button aria-expanded="false" aria-label="Open menu" class="nav-toggle" type="button">☰</button>
 <nav aria-label="Main navigation" class="nav-main">
-<a href="index.html">HOME</a>
+<a href="index.html" class="active">HOME</a>
 <a href="about.html">ABOUT</a>
-<a href="services.html">SERVICES</a>
-<div class="nav-dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESOURCES</button>
-<div class="nav-dropdown-menu">
-<ul>
-<li><a href="../blog.html">OUR BLOG (FR)</a></li>
-<li><a href="../realisations.html">OUR PROJECTS (FR)</a></li>
-<li><a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">PDF CATALOG</a></li>
-</ul>
+<div class="nav-dropdown nav-dropdown-services">
+<div class="nav-dropdown-control">
+<a class="nav-dropdown-link" href="services.html">SERVICES</a>
+<button aria-expanded="false" aria-haspopup="true" aria-label="Open services list" class="nav-dropdown-toggle nav-dropdown-caret" type="button"></button>
 </div>
+<div class="nav-dropdown-menu nav-dropdown-menu--services"><ul><li><a href="site-negotiation-acquisition.html">Site negotiation &amp; acquisition</a></li><li><a href="delegated-project-ownership.html">Delegated project ownership</a></li><li><a href="network-deployment-maintenance.html">Network deployment &amp; maintenance</a></li><li><a href="network-engineering-supervision.html">Network engineering &amp; supervision</a></li><li><a href="rerouting-relocation.html">Rerouting &amp; relocation</a></li><li><a href="energy-solutions.html">Energy solutions</a></li></ul></div>
+</div>
+<div class="nav-dropdown nav-dropdown-resources">
+<button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESOURCES</button>
+<div class="nav-dropdown-menu"><ul><li><a href="blog.html">BLOG &amp; INSIGHTS</a></li><li><a href="realisations.html">PROJECTS &amp; CASE STUDIES</a></li><li><a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">OUR PDF CATALOG</a></li></ul></div>
 </div>
 <a href="contact.html">CONTACT</a>
 <div aria-label="Language switch" class="nav-lang-switch">
@@ -52,7 +52,7 @@
 <div class="hero-content">
 <span class="hero-premium-kicker">Telecom infrastructure &amp; civil works</span>
 <h1>Execute your network programs with control over schedule and risk</h1>
-<p>IGTSD leads acquisition, engineering, deployment and commissioning to secure cost, timeline and compliance. Core English pages are now available, while detailed service pages continue rolling out.</p>
+<p>IGTSD leads acquisition, engineering, deployment and commissioning to secure cost, timeline and compliance across your network programs.</p>
 <div class="hero-premium-tags">
 <span>Multi-site governance</span>
 <span>Field quality control</span>
@@ -86,7 +86,7 @@
 <span>Go-live quality assurance</span>
 </div>
 <div class="cta-row">
-<a class="btn btn-primary" href="../fibre-optique-reseaux.html">View fiber expertise (FR)</a>
+<a class="btn btn-primary" href="services.html">Explore our services</a>
 <a class="btn btn-outline" href="contact.html">Request project framing</a>
 </div>
 <ul aria-label="Fiber scope coverage" class="hero-proof-strip">
@@ -113,7 +113,7 @@
 <span>SLA-based performance</span>
 </div>
 <div class="cta-row">
-<a class="btn btn-primary" href="../ingenierie-reseaux-supervision.html">Discover the service (FR)</a>
+<a class="btn btn-primary" href="services.html">Discover our services</a>
 <a class="btn btn-outline" href="contact.html">Talk to an expert</a>
 </div>
 <ul aria-label="Operations capabilities" class="hero-proof-strip">
@@ -171,19 +171,22 @@
 <div class="grid-3">
 <article class="card">
 <span class="badge">Mission</span>
-<h3>Measurable execution</h3>
-<p>Turn technical objectives into operational outcomes governed by clear indicators.</p>
+<h3>Measurable sector execution</h3>
+<p>Turn technical objectives into business outcomes through controlled commissioning, documented compliance and lower project risk.</p>
 </article>
 <article class="card">
 <span class="badge">Positioning</span>
-<h3>Execution partner</h3>
-<p>Support technical leadership through an integrated execution chain from design to run.</p>
+<h3>Design-Build-Run partner</h3>
+<p>Support technical, operations and procurement leadership with an integrated chain from land framing to SLA-based operations.</p>
 </article>
 <article class="card">
 <span class="badge">Approach</span>
 <h3>Design-to-Run</h3>
-<p>Framing, engineering, deployment, acceptance, operations and field capability transfer in one flow.</p>
+<p>Framing, engineering, deployment, acceptance, operations and field capability transfer within one contract-ready flow.</p>
 </article>
+</div>
+<div class="actions">
+<a class="btn btn-primary" href="about.html">Learn more</a>
 </div>
 </div>
 </section>
@@ -192,7 +195,7 @@
 <header class="section-head">
 <span class="pre-title">Competitive edge</span>
 <h2 class="section-title">Why work with IGTSD?</h2>
-<p>An organization focused on delivery quality and business impact for strategic infrastructure programs.</p>
+<p>An organization built around delivery, regulatory compliance and business impact for strategic telecom and critical infrastructure programs.</p>
 </header>
 <div class="whyus-layout">
 <div aria-label="IGTSD pillars" class="whyus-tabs" role="tablist">
@@ -200,47 +203,74 @@
 <button aria-selected="false" class="tab-item" data-tab-target="whyus-integree" type="button">Integrated execution</button>
 <button aria-selected="false" class="tab-item" data-tab-target="whyus-gouvernance" type="button">Project governance</button>
 <button aria-selected="false" class="tab-item" data-tab-target="whyus-conformite" type="button">Compliance &amp; HSE</button>
+<button aria-selected="false" class="tab-item" data-tab-target="whyus-mod" type="button">Delegated project ownership</button>
 <button aria-selected="false" class="tab-item" data-tab-target="whyus-impact" type="button">Business impact</button>
 </div>
 <div class="whyus-content">
 <article class="content-panel is-active" id="whyus-expertise" role="tabpanel">
 <h3>Field expertise</h3>
 <ul class="feature-list">
-<li>Experienced teams across mobile networks, fiber and critical infrastructure.</li>
-<li>Strong control of execution constraints in multi-stakeholder environments.</li>
-<li>Operational culture centered on safety, quality and sustainable performance.</li>
+<li>Experienced teams across mobile networks, fiber, energy, urban rerouting and critical infrastructure.</li>
+<li>Strong control of multi-stakeholder constraints involving operators, TowerCo, local authorities, regulators and civil works contractors.</li>
+<li>Operational culture focused on HSE safety, contractual quality and sustainable performance.</li>
 </ul>
 </article>
 <article class="content-panel" id="whyus-integree" role="tabpanel">
 <h3>Integrated execution</h3>
 <ul class="feature-list">
-<li>Unified value chain from design and studies to commissioning.</li>
-<li>Continuous coordination between engineering, field teams and operations.</li>
-<li>Reduced handoff gaps between framing, delivery and run.</li>
+<li>Unified value chain from land studies to commercial commissioning.</li>
+<li>Continuous coordination between engineering, civil works, fiber, energy and operations.</li>
+<li>Fewer handoff gaps between framing, delivery, handover and run.</li>
 </ul>
 </article>
 <article class="content-panel" id="whyus-gouvernance" role="tabpanel">
 <h3>Project governance</h3>
 <ul class="feature-list">
-<li>Decision-oriented steering committees and fast arbitration cycles.</li>
-<li>Quality tracked by milestones, KPIs and traceable action plans.</li>
-<li>Consolidated reporting for technical and operations leadership.</li>
+<li>Decision-oriented steering committees with rapid arbitration and CAPEX/OPEX prioritization.</li>
+<li>Quality governed through QA/QC milestones, KPIs, runbooks and traceable action plans.</li>
+<li>Consolidated reporting for technical, operations, finance and governance leadership.</li>
 </ul>
 </article>
 <article class="content-panel" id="whyus-conformite" role="tabpanel">
 <h3>Compliance &amp; HSE</h3>
 <ul class="feature-list">
-<li>HSE standards applied across the full field intervention lifecycle.</li>
-<li>Compliance control over deliverables and acceptance documentation.</li>
-<li>Contractual alignment with client and regulatory requirements.</li>
+<li>HSE standards enforced across the full field intervention lifecycle and urban worksites.</li>
+<li>Compliance control over deliverables, acceptance files and regulator requirements (ARTCI/ARTP).</li>
+<li>Contractual alignment with client expectations, regulators and local stakeholders.</li>
 </ul>
+</article>
+<article class="content-panel" id="whyus-mod" role="tabpanel">
+<h3>Delegated project ownership</h3>
+<ul class="feature-list">
+<li>Cross-functional steering of stakeholders, milestones and delivery risks.</li>
+<li>A single governance framework aligning technical, operations, procurement and finance teams.</li>
+</ul>
+<div aria-label="Benefits of delegated project ownership" class="mod-adv-card">
+<h4>Benefits of delegated project ownership</h4>
+<div class="mod-adv-grid">
+<article class="mod-adv-item">
+<span class="mod-adv-kpi">Schedule</span>
+<p>Tighter milestone control, faster arbitration and fewer planning slippages.</p>
+</article>
+<article class="mod-adv-item">
+<span class="mod-adv-kpi">Cost</span>
+<p>Continuous CAPEX/OPEX tracking, tighter deviation control and fewer rework costs.</p>
+</article>
+<article class="mod-adv-item">
+<span class="mod-adv-kpi">Performance</span>
+<p>Stronger SLA/SLG commitments through quality gates, escalations and traceable KPIs.</p>
+</article>
+</div>
+</div>
 </article>
 <article class="content-panel" id="whyus-impact" role="tabpanel">
 <h3>Business impact</h3>
 <ul class="feature-list">
-<li>Faster time-to-market for priority programs.</li>
-<li>Reduced post-deployment rework costs.</li>
-<li>Continuous improvement in service availability.</li>
+<li>Faster time-to-market for priority FTTH, RAN and energy programs.</li>
+<li>Lower post-deployment rework costs and lower non-compliance exposure.</li>
+<li>Continuous improvement in availability, perceived quality and resilience.</li>
+<li>For operators: improved QoE, lower churn and stronger monetization of data usage.</li>
+<li>For TowerCo, integrators and enterprises: stronger contractual performance and higher operational value of critical infrastructure.</li>
 </ul>
 </article>
 </div>
@@ -251,53 +281,53 @@
 <div class="container">
 <header class="section-head">
 <span class="pre-title">Our services</span>
-<h2 class="section-title">IGTSD execution capabilities</h2>
-<p>A structured portfolio covering acquisition, engineering, deployment, operations and optimization of critical networks.</p>
+<h2 class="section-title">IGTSD delivery capabilities</h2>
+<p>A structured portfolio covering acquisition, engineering, deployment, operations, rerouting and optimization of critical networks.</p>
 </header>
 <div class="services-home-grid">
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('../assets/images/deploiement1.png')"></div>
+<div class="service-media" style="background-image:url('../assets/images/negociation-terrain-pylones.jpg')"></div>
 <div class="service-home-body">
 <h3><nobr>Site negotiation &amp; acquisition</nobr></h3>
 <div class="service-proof">
-<p class="service-proof-title">Deliverables &amp; KPI</p>
+<p class="service-proof-title">Expected deliverables</p>
 <ul class="service-proof-list">
-<li>Land qualification</li>
-<li>Administrative compliance</li>
-<li>Acquisition cycle reduction</li>
+<li>Multi-stakeholder land qualification</li>
+<li>Administrative &amp; regulatory compliance</li>
+<li>Reduced site acquisition cycle</li>
 </ul>
 </div>
-<a class="service-home-cta" href="services.html#services">VIEW SERVICE</a>
+<a class="service-home-cta" href="site-negotiation-acquisition.html">View service</a>
 </div>
 </article>
 <article class="service-home-card card">
 <div class="service-media" style="background-image:url('../assets/images/conformite-reseau.png')"></div>
 <div class="service-home-body">
-<h3><nobr>Delegated owner representation</nobr></h3>
+<h3><nobr>Delegated project ownership</nobr></h3>
 <div class="service-proof">
-<p class="service-proof-title">Deliverables &amp; KPI</p>
+<p class="service-proof-title">Expected deliverables</p>
 <ul class="service-proof-list">
-<li>Vendor governance</li>
+<li>Multi-vendor governance</li>
 <li>CAPEX / OPEX tracking</li>
-<li>Steering committees</li>
+<li>Executive steering committees</li>
 </ul>
 </div>
-<a class="service-home-cta" href="services.html#services">VIEW SERVICE</a>
+<a class="service-home-cta" href="delegated-project-ownership.html">View service</a>
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('../assets/images/infra-pylone-terrain.png')"></div>
+<div class="service-media" style="background-image:url('../assets/images/deploiement1.png')"></div>
 <div class="service-home-body">
 <h3><nobr>Network deployment &amp; maintenance</nobr></h3>
 <div class="service-proof">
-<p class="service-proof-title">Deliverables &amp; KPI</p>
+<p class="service-proof-title">Expected deliverables</p>
 <ul class="service-proof-list">
-<li>Multi-technology installation</li>
-<li>Acceptance certificates</li>
-<li>As-built documentation</li>
+<li>RAN, fiber, LAN / Wi-Fi installations</li>
+<li>Acceptance reports &amp; QA/QC files</li>
+<li>As-built documentation &amp; O&amp;M handover</li>
 </ul>
 </div>
-<a class="service-home-cta" href="services.html#services">VIEW SERVICE</a>
+<a class="service-home-cta" href="network-deployment-maintenance.html">View service</a>
 </div>
 </article>
 <article class="service-home-card card">
@@ -305,44 +335,44 @@
 <div class="service-home-body">
 <h3><nobr>Network engineering &amp; supervision</nobr></h3>
 <div class="service-proof">
-<p class="service-proof-title">Deliverables &amp; KPI</p>
+<p class="service-proof-title">Expected deliverables</p>
 <ul class="service-proof-list">
 <li>Architecture &amp; capacity optimization</li>
-<li>QoS/QoE benchmarking &amp; drive test</li>
+<li>QoS/QoE benchmarking &amp; drive testing</li>
 <li>NOC/SOC supervision &amp; SLA/SLG performance</li>
 </ul>
 </div>
-<a class="service-home-cta" href="services.html#specialized-solutions">VIEW SERVICE</a>
+<a class="service-home-cta" href="network-engineering-supervision.html">View service</a>
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('../assets/images/fibre-optique-rouleaux.jpg')"></div>
+<div class="service-media" style="background-image:url('../assets/images/devoiement-igtsd.png')"></div>
 <div class="service-home-body">
-<h3><nobr>Optical fiber &amp; backbone</nobr></h3>
+<h3><nobr>Rerouting &amp; relocation</nobr></h3>
 <div class="service-proof">
-<p class="service-proof-title">Deliverables &amp; KPI</p>
+<p class="service-proof-title">Expected deliverables</p>
 <ul class="service-proof-list">
-<li>OSP / ISP sizing</li>
-<li>Deployment &amp; connectivity</li>
-<li>Acceptance and go-live readiness</li>
+<li>Impact studies, rerouting and relocation</li>
+<li>Coordinated switchover with civil works &amp; utilities</li>
+<li>As-built, compliance and service continuity</li>
 </ul>
 </div>
-<a class="service-home-cta" href="services.html#specialized-solutions">VIEW SERVICE</a>
+<a class="service-home-cta" href="rerouting-relocation.html">View service</a>
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('../assets/images/activite4.jpg')"></div>
+<div class="service-media" style="background-image:url('../assets/images/energie-installations-telecom.jpg')"></div>
 <div class="service-home-body">
-<h3><nobr>Critical energy solutions</nobr></h3>
+<h3><nobr>Energy solutions</nobr></h3>
 <div class="service-proof">
-<p class="service-proof-title">Deliverables &amp; KPI</p>
+<p class="service-proof-title">Expected deliverables</p>
 <ul class="service-proof-list">
-<li>Field energy audit</li>
-<li>Hybrid solution design</li>
-<li>Power continuity planning</li>
+<li>Multi-site field energy audit</li>
+<li>Hybrid power solutions</li>
+<li>Critical power continuity plan</li>
 </ul>
 </div>
-<a class="service-home-cta" href="services.html#specialized-solutions">VIEW SERVICE</a>
+<a class="service-home-cta" href="energy-solutions.html">View service</a>
 </div>
 </article>
 </div>
@@ -364,15 +394,16 @@
 <article class="partner-card partner-card-wide"><img alt="GWIT" src="../assets/images/logo-gwit.jpeg"/></article>
 <article class="partner-card partner-card-wide"><img alt="Midwex" src="../assets/images/logo-midwex.png"/></article>
 <article class="partner-card partner-card-wide"><img alt="Muditel" src="../assets/images/logo-muditel.png"/></article>
+<article class="partner-card partner-card-wide"><a aria-label="TECH &amp; WEB - website design, SEO and digital solutions" href="https://tech-and-web.com" rel="noopener external" target="_blank" title="TECH &amp; WEB - website design, SEO and digital solutions"><img alt="TECH &amp; WEB logo, website design, SEO and digital solutions" src="../assets/images/logo-tech-and-web-ci.png"/></a></article>
 </div>
 </div>
 </section>
-<section class="section case-studies" id="case-studies">
+<section class="section case-studies case-studies-home-compact" id="case-studies">
 <div class="container">
 <header class="section-head">
 <span class="pre-title">Projects</span>
 <h2 class="section-title">Measurable outcomes for our clients</h2>
-<p>Business-impact delivery focused on time-to-market, service availability and execution cost control.</p>
+<p>Business-impact delivery focused on time-to-market, service availability, regulatory compliance and execution cost control.</p>
 </header>
 <div aria-label="Filter use cases" class="case-study-filters" role="tablist">
 <button aria-pressed="true" class="case-filter-btn active" data-case-filter="all" type="button">All</button>
@@ -385,58 +416,61 @@
 <div class="case-study-media" style="background-image:url('../assets/images/infra-pylone-terrain.png');"></div>
 <div class="case-study-body">
 <div class="case-study-badge">Telecom</div>
-<h3>Secured multi-site rollout</h3>
-<p class="case-study-summary">Coordinated acquisition, deployment and acceptance to meet commissioning objectives.</p>
+<h3>Multi-site operator rollout under PMO governance</h3>
+<p class="case-study-summary">Coordinated acquisition, civil works, deployment and acceptance to meet commercial commissioning targets, with weekly visibility for technical leadership and PMO teams.</p>
 <div class="case-study-details">
-<div class="case-detail"><h4>Challenge</h4><p>Multiple stakeholders and schedule drift across priority sites.</p></div>
-<div class="case-detail"><h4>IGTSD Solution</h4><p>Centralized milestone steering, QA/QC control and daily tracking of critical actions.</p></div>
-<div class="case-detail"><h4>Impact</h4><p>Stronger schedule adherence and reduced rework after deployment.</p></div>
+<div class="case-detail"><h4>Challenge</h4><p>Multiple stakeholders and schedule drift across priority sites, with cross-package dependencies that were difficult to arbitrate.</p></div>
+<div class="case-detail"><h4>IGTSD solution</h4><p>Centralized milestone steering, QA/QC control, daily tracking of critical actions and rapid resolution of vendor and field blockers.</p></div>
+<div class="case-detail"><h4>Impact</h4><p>Stronger schedule adherence, fewer rework loops and lower post-commissioning corrective cost.</p></div>
 </div>
-<a class="case-study-cta" href="../realisations.html">Read full case study (FR)</a>
+<a class="case-study-cta btn btn-primary" href="realisations.html">View more</a>
 </div>
 </article>
 <article class="case-study-card card" data-category="fibre">
 <div class="case-study-media" style="background-image:url('../assets/images/fibre-optique-ouvriers.jpg');"></div>
 <div class="case-study-body">
 <div class="case-study-badge">Fiber</div>
-<h3>FTTH program acceleration</h3>
-<p class="case-study-summary">OSP/ISP execution structure and technical acceptance to stabilize go-live performance.</p>
+<h3>Acceleration of a metropolitan FTTH program</h3>
+<p class="case-study-summary">Structured OSP/ISP execution and technical acceptance to secure service launch quality while protecting customer experience from day one.</p>
 <div class="case-study-details">
-<div class="case-detail"><h4>Challenge</h4><p>Execution pace was not aligned with commercialization targets.</p></div>
-<div class="case-detail"><h4>IGTSD Solution</h4><p>Reinforced cadence, compliance checks and cross-team coordination.</p></div>
-<div class="case-detail"><h4>Impact</h4><p>Improved time-to-market and stronger delivery quality.</p></div>
+<div class="case-detail"><h4>Challenge</h4><p>Execution pace was misaligned with commercialization targets, with high technical rejection rates before acceptance.</p></div>
+<div class="case-detail"><h4>IGTSD solution</h4><p>Stronger production cadence, compliance controls, inter-team coordination and shared governance between owner and execution teams.</p></div>
+<div class="case-detail"><h4>Impact</h4><p>Faster time-to-market, stronger delivery quality and fewer early-stage service returns.</p></div>
 </div>
-<a class="case-study-cta" href="../realisations.html">Read full case study (FR)</a>
+<a class="case-study-cta btn btn-primary" href="realisations.html">View more</a>
 </div>
 </article>
 <article class="case-study-card card" data-category="telecom">
 <div class="case-study-media" style="background-image:url('../assets/images/superviseurs-reseaux.jpg');"></div>
 <div class="case-study-body">
 <div class="case-study-badge">Supervision</div>
-<h3>SLA-based network operations</h3>
-<p class="case-study-summary">Proactive supervision and structured escalation to guarantee service continuity.</p>
+<h3>SLA-driven NOC network operations</h3>
+<p class="case-study-summary">Proactive supervision and structured escalation to guarantee service continuity across critical multi-technology environments, with alarm correlation and prioritization of major incidents.</p>
 <div class="case-study-details">
-<div class="case-detail"><h4>Challenge</h4><p>Recurring incidents and inconsistent performance in critical environments.</p></div>
-<div class="case-detail"><h4>IGTSD Solution</h4><p>KPI dashboards, prioritized incident handling and preventive maintenance programs.</p></div>
-<div class="case-detail"><h4>Impact</h4><p>Progressive availability stabilization and improved operations predictability.</p></div>
+<div class="case-detail"><h4>Challenge</h4><p>Recurring incidents and uneven performance on a critical scope, with weak escalation traceability and non-uniform reporting.</p></div>
+<div class="case-detail"><h4>IGTSD solution</h4><p>KPI dashboards, prioritized handling rules, preventive maintenance, SLA/MTTR intervention runbooks and weekly steering reviews.</p></div>
+<div class="case-detail"><h4>Impact</h4><p>Progressive availability stabilization, lower MTTR, tighter SLA exposure and better first-line resolution rates.</p></div>
 </div>
-<a class="case-study-cta" href="../realisations.html">Read full case study (FR)</a>
+<a class="case-study-cta btn btn-primary" href="realisations.html">View more</a>
 </div>
 </article>
 <article class="case-study-card card" data-category="energy">
 <div class="case-study-media" style="background-image:url('../assets/images/activite4.jpg');"></div>
 <div class="case-study-body">
 <div class="case-study-badge">Energy</div>
-<h3>Energy resilience for critical sites</h3>
-<p class="case-study-summary">Energy continuity approach to reduce power disruptions on high-sensitivity sites.</p>
+<h3>Energy resilience for critical TowerCo sites</h3>
+<p class="case-study-summary">Energy continuity approach designed to reduce power disruptions on high-sensitivity sites and stabilize OPEX over time.</p>
 <div class="case-study-details">
-<div class="case-detail"><h4>Challenge</h4><p>Power instability and high operational cost exposure.</p></div>
-<div class="case-detail"><h4>IGTSD Solution</h4><p>Field audit, improvement plan and maintenance strategy aligned to load profiles.</p></div>
-<div class="case-detail"><h4>Impact</h4><p>More reliable power supply and stronger service continuity.</p></div>
+<div class="case-detail"><h4>Challenge</h4><p>Energy instability, high operating cost and repeated outage exposure on high-traffic sites.</p></div>
+<div class="case-detail"><h4>IGTSD solution</h4><p>Field audit, improvement roadmap, battery and generator steering, plus preventive maintenance aligned to load profile.</p></div>
+<div class="case-detail"><h4>Impact</h4><p>More reliable power supply, lower diesel consumption and measurable improvement in energy SLA performance.</p></div>
 </div>
-<a class="case-study-cta" href="../realisations.html">Read full case study (FR)</a>
+<a class="case-study-cta btn btn-primary" href="realisations.html">View more</a>
 </div>
 </article>
+</div>
+<div class="case-mobile-more">
+<a class="btn btn-primary" href="realisations.html">View more</a>
 </div>
 </div>
 </section>
@@ -445,30 +479,30 @@
 <header class="section-head">
 <span class="pre-title">Insights &amp; analysis</span>
 <h2 class="section-title">Blog &amp; Resources</h2>
-<p>Operational analysis for telecom, infrastructure and network operations decision-makers.</p>
+<p>Operational analysis for executive managers, technical leadership, regulators and network operations teams.</p>
 </header>
 <div class="grid-3 blog-cards-grid">
 <article class="card blog-story-card">
 <img alt="Network supervision article" src="../assets/images/conformite-reseau.png"/>
-<h3>Network supervision and SLA governance</h3>
-<p>Build a performance management model usable by technical leadership teams.</p>
+<h3>Network supervision, SLA governance and NOC performance</h3>
+<p>How to structure a performance steering model that technical and operations leadership can actually use.</p>
 <a class="btn btn-outline" href="../blog-supervision-sla.html">Read article (FR)</a>
 </article>
 <article class="card blog-story-card">
 <img alt="FTTH acceleration article" src="../assets/images/fibre-optique-rouleaux.jpg"/>
-<h3>Accelerating FTTH without quality drift</h3>
-<p>Field industrialization levers to secure both rollout speed and compliance.</p>
+<h3>Accelerating an FTTH program without quality drift</h3>
+<p>Field industrialization levers to secure cadence, compliance and commissioning quality.</p>
 <a class="btn btn-outline" href="../blog-ftth-acceleration.html">Read article (FR)</a>
 </article>
 <article class="card blog-story-card">
 <img alt="Multi-partner delivery article" src="../assets/images/deploiement1.png"/>
-<h3>Multi-partner delivery governance</h3>
-<p>Governance, KPIs and coordination principles for critical infrastructure programs.</p>
+<h3>Multi-partner and regulator delivery governance</h3>
+<p>Governance, indicators and coordination models that make critical infrastructure programs more reliable.</p>
 <a class="btn btn-outline" href="../blog-delivery-partners.html">Read article (FR)</a>
 </article>
 </div>
 <div class="actions">
-<a class="btn btn-primary" href="../blog.html">Access all analyses (FR)</a>
+<a class="btn btn-primary" href="blog.html">Explore all insights</a>
 </div>
 </div>
 </section>
@@ -477,42 +511,189 @@
 <article class="card">
 <header class="section-head">
 <span class="pre-title">Express contact</span>
-<h2 class="section-title">Start a rapid framing session</h2>
-<p>Share your priority challenge. An IGTSD representative will contact you promptly.</p>
+<h2 class="section-title">Launch technical and/or business framing</h2>
+<p>The default form below is for general requests. For technical needs such as RFP, RFQ, compliance, deployment, NOC or rerouting, switch to the Technical Form.</p>
 </header>
-<form action="#" class="contact-form-grid" method="post">
+<div aria-label="Contact type" class="contact-form-tabs" data-contact-form-tabs="" role="tablist">
+<button aria-selected="true" class="contact-form-tab is-active" data-contact-tab-target="contact-general-home-en" role="tab" type="button">General form</button>
+<button aria-selected="false" class="contact-form-tab" data-contact-tab-target="contact-technical-home-en" role="tab" type="button">Technical form</button>
+</div>
+<div class="contact-form-panels">
+<div class="contact-tab-panel is-active" id="contact-general-home-en" role="tabpanel">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-general" accept-charset="UTF-8" method="POST">
+<input name="source_page" type="hidden" value="home-general-en"/>
+<input name="form_kind" type="hidden" value="general-en"/>
 <div class="contact-field">
-<label for="org">Organization</label>
-<input id="org" name="organisation" type="text"/>
+<label for="general-name-home-en">Full name</label>
+<input id="general-name-home-en" name="nom" placeholder="Your full name" required="" type="text"/>
 </div>
 <div class="contact-field">
-<label for="name">Full name</label>
-<input id="name" name="nom" type="text"/>
+<label for="general-org-home-en">Organization</label>
+<input id="general-org-home-en" name="organisation" placeholder="Company, institution or organization" required="" type="text"/>
 </div>
 <div class="contact-field">
-<label for="mail">Email</label>
-<input id="mail" name="email" type="email"/>
+<label for="general-email-home-en">Email</label>
+<input id="general-email-home-en" name="email" placeholder="you@organization.com" required="" type="email"/>
 </div>
 <div class="contact-field">
-<label for="phone">Phone</label>
-<input id="phone" name="telephone" type="tel"/>
+<label for="general-phone-home-en">Phone</label>
+<input id="general-phone-home-en" name="telephone" placeholder="+225 00 00 00 00" type="tel"/>
+</div>
+<div class="contact-field">
+<label for="general-role-home-en">You are</label>
+<select id="general-role-home-en" name="role_contact" required="">
+<option value="">Select</option>
+<option>Prospect / lead</option>
+<option>IGTSD client</option>
+<option>Telecom operator / TowerCo</option>
+<option>Regulator / institution</option>
+<option>Partner / OEM / integrator</option>
+<option>Enterprise / CIO / industry</option>
+<option>Civil works / construction / utilities</option>
+<option>Other profile</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="general-purpose-home-en">Reason for contact</label>
+<select id="general-purpose-home-en" name="objet_contact" required="">
+<option value="">Select</option>
+<option>General information request</option>
+<option>Commercial request / quotation</option>
+<option>Follow-up on an ongoing project</option>
+<option>Partnership / business alliance</option>
+<option>Institutional / regulatory coordination</option>
+<option>Executive meeting request</option>
+<option>Administrative question</option>
+<option>Other need</option>
+</select>
 </div>
 <div class="contact-field contact-field--full">
-<label for="scope">Context and need</label>
-<textarea id="scope" name="besoin" rows="4"></textarea>
+<label for="general-message-home-en">Your message</label>
+<textarea id="general-message-home-en" name="message" placeholder="Briefly explain your need. We will route it to the right IGTSD contact." rows="4"></textarea>
 </div>
 <div class="contact-field contact-field--full contact-submit">
 <button class="btn btn-primary" type="submit">Send request</button>
+<span class="contact-submit-note">Initial response within 24 business hours.</span>
 </div>
 </form>
+</div>
+<div aria-hidden="true" class="contact-tab-panel" id="contact-technical-home-en" role="tabpanel">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-briefing" enctype="multipart/form-data" accept-charset="UTF-8" method="POST">
+<input name="source_page" type="hidden" value="home-technical-en"/>
+<input name="form_kind" type="hidden" value="technical-en"/>
+<div class="contact-field">
+<label for="briefing-name-home-en">Name &amp; role</label>
+<input id="briefing-name-home-en" name="nom" placeholder="Full name and title" required="" type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-company-home-en">Organization</label>
+<input id="briefing-company-home-en" name="organisation" placeholder="Operator, TowerCo, civil works firm, institution..." required="" type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-email-home-en">Business email</label>
+<input id="briefing-email-home-en" name="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+<div class="contact-field">
+<label for="briefing-phone-home-en">Phone</label>
+<input id="briefing-phone-home-en" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
+</div>
+<div class="contact-field">
+<label for="briefing-scope-home-en">Project type</label>
+<select id="briefing-scope-home-en" name="type_projet">
+<option value="">Select</option>
+<option>Land acquisition &amp; site negotiation</option>
+<option>Mobile / fixed network deployment</option>
+<option>OSP/ISP optical fiber</option>
+<option>Critical energy &amp; continuity</option>
+<option>NOC/SOC supervision &amp; SLA</option>
+<option>Network rerouting &amp; civil works</option>
+<option>IT cabling / LAN / Wi-Fi</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-volume-home-en">Volume / scope</label>
+<select id="briefing-volume-home-en" name="volume">
+<option value="">Select</option>
+<option>Pilot program (1 to 10 sites)</option>
+<option>Intermediate program (10 to 50 sites)</option>
+<option>National program (50+ sites)</option>
+<option>Multi-site IT / campus scope</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-budget-home-en">Indicative budget</label>
+<select id="briefing-budget-home-en" name="budget">
+<option value="">Select</option>
+<option>&lt; 50M FCFA</option>
+<option>50M - 250M FCFA</option>
+<option>250M - 1Bn FCFA</option>
+<option>&gt; 1Bn FCFA</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-deadline-home-en">Target deadline</label>
+<input id="briefing-deadline-home-en" name="deadline" type="date"/>
+</div>
+<div class="contact-field">
+<label for="briefing-zone-home-en">Geographic zone</label>
+<input id="briefing-zone-home-en" name="zone" placeholder="Abidjan, upcountry, multi-country..." type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-channel-home-en">Preferred follow-up channel</label>
+<select id="briefing-channel-home-en" name="canal">
+<option value="">Select</option>
+<option>Email</option>
+<option>Phone</option>
+<option>Framing meeting (video call)</option>
+<option>On-site workshop</option>
+</select>
+</div>
+<div class="contact-field contact-field--full">
+<label>Priority scopes</label>
+<div class="contact-checkbox-group">
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Acquisition"/>Acquisition &amp; land</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Deploiement"/>Network deployment</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Fibre"/>Fiber &amp; backbone</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Energie"/>Critical energy</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="NOC-SLA"/>NOC / SLA supervision</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="GC-Devoiement"/>Civil works &amp; rerouting</label>
+</div>
+</div>
+<div class="contact-field contact-field--full">
+<label for="briefing-file-home-en">Framing document (optional)</label>
+<input id="briefing-file-home-en" name="document" type="file"/>
+</div>
+<div class="contact-field contact-field--full">
+<label for="scope-technical-home-en">Context, milestones and objectives</label>
+<textarea id="scope-technical-home-en" name="message" placeholder="Describe your objectives, constraints, target SLAs and expected deliverables." rows="4"></textarea>
+</div>
+<div class="contact-field contact-field--full contact-privacy">
+<input checked="" id="briefing-nda-home-en" name="nda" type="checkbox"/>
+<label for="briefing-nda-home-en">Your information is handled confidentially. An NDA can be set from the initial framing stage.</label>
+</div>
+<div class="contact-field contact-field--full contact-submit">
+<button class="btn btn-primary" type="submit">Send technical brief</button>
+<span class="contact-submit-note">Initial feedback within 24 to 72 hours depending on criticality.</span>
+</div>
+</form>
+</div>
+</div>
 </article>
-<article class="card">
-<h3>Direct contact details</h3>
-<ul class="contact-list">
-<li><strong>Phone:</strong> +225 27 22 25 86 71 / +225 07 08 52 51 23</li>
-<li><strong>Email:</strong> info@igtsd.com</li>
-<li><strong>Address:</strong> Cité Prestige, Faya, Abidjan - Côte d'Ivoire</li>
+<article class="card contact-direct-card">
+<h3>Direct channels &amp; decision line</h3>
+<h4 class="contact-direct-title">Why contact IGTSD</h4>
+<ul class="contact-intent-list">
+<li><strong>Move fast and execute right:</strong> executive framing, budget and timeline visibility, prioritized roadmap, RFP/RFQ support, deployment, NOC/SLA and field compliance.</li>
 </ul>
+<h4 class="contact-direct-title">Direct phone lines</h4>
+<ul class="contact-list contact-list--phones">
+<li><a href="tel:+2252722258671">+225 27 22 25 86 71</a></li>
+<li><a href="tel:+2250708525123">+225 07 08 52 51 23</a></li>
+</ul>
+<h4 class="contact-direct-title">Decision email</h4>
+<p class="contact-direct-value"><a href="mailto:info@igtsd.com">info@igtsd.com</a></p>
+<h4 class="contact-direct-title">Head office geolocation</h4>
+<p class="contact-direct-value">Cité Prestige, Faya, Abidjan - Côte d'Ivoire</p>
 <div class="map-wrap">
 <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2207036881227!2d-3.9197423000000002!3d5.3832897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc19300363b954d%3A0xd7aa03d06e778dab!2sIvoire%20Global%20Telecom%20Service%20%26%20Distribution%20(IGTSD)!5e0!3m2!1sfr!2sci!4v1739207166506!5m2!1sfr!2sci" title="IGTSD map"></iframe>
 </div>
@@ -535,20 +716,15 @@
 </div>
 <div class="footer-col">
 <h4>Core services</h4>
-<a href="../ingenierie-reseaux-supervision.html">Engineering &amp; supervision (FR)</a>
-<a href="../deploiement-reseaux.html">Network deployment (FR)</a>
-<a href="../fibre-optique-reseaux.html">Optical fiber &amp; backbone (FR)</a>
-<a href="../acquisition-sites-telecoms.html">Site acquisition (FR)</a>
-<a href="../solutions-energetiques.html">Energy solutions (FR)</a>
-<a href="../delocalisation-devoiement-reseaux.html">Rerouting &amp; civil works (FR)</a>
+<a href="site-negotiation-acquisition.html">Site negotiation &amp; acquisition</a><a href="delegated-project-ownership.html">Delegated project ownership</a><a href="network-deployment-maintenance.html">Network deployment &amp; maintenance</a><a href="network-engineering-supervision.html">Network engineering &amp; supervision</a><a href="rerouting-relocation.html">Rerouting &amp; relocation</a><a href="energy-solutions.html">Energy solutions</a>
 </div>
 <div class="footer-col">
 <h4>Resources</h4>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="../realisations.html">Projects (FR)</a>
-<a href="../blog.html">Blog &amp; analyses (FR)</a>
-<a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">PDF catalog</a>
+<a href="about.html">About IGTSD</a>
+<a href="services.html">Services overview</a>
+<a href="realisations.html">Projects &amp; case studies</a>
+<a href="blog.html">Blog &amp; insights</a>
+<a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">Our PDF catalog</a>
 <a href="contact.html">Contact</a>
 </div>
 <div class="footer-col footer-contact-col">
@@ -559,7 +735,7 @@
 <p class="footer-address">Cité Prestige, Faya · Abidjan, Côte d'Ivoire</p>
 </div>
 </div>
-<p class="copy"><span class="copy-left">© <span id="year"></span> IGTSD. All rights reserved.</span><span class="copy-right" itemscope="" itemtype="https://schema.org/Organization"><span class="copy-label">Website design:</span> <a aria-label="TECH &amp; WEB - Conception de site web, SEO et solutions digitales" href="https://tech-and-web.com" itemprop="url" rel="noopener external" target="_blank" title="TECH &amp; WEB - Conception de site web, SEO et solutions digitales"><span itemprop="name">TECH &amp; WEB</span></a></span></p>
+<p class="copy"><span class="copy-left">© <span id="year"></span> IGTSD. All rights reserved.</span><span class="copy-right" itemscope="" itemtype="https://schema.org/Organization"><span class="copy-label">Website design:</span> <a aria-label="TECH &amp; WEB - Website design, SEO and digital solutions" href="https://tech-and-web.com" itemprop="url" rel="noopener external" target="_blank" title="TECH &amp; WEB - Website design, SEO and digital solutions"><span itemprop="name">TECH &amp; WEB</span></a></span></p>
 </div>
 </footer>
 <script src="../assets/js/waas-igtsd.js"></script>

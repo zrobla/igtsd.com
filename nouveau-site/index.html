@@ -23,8 +23,23 @@
 <nav aria-label="Navigation principale" class="nav-main">
 <a href="index.html">ACCUEIL</a>
 <a href="a-propos.html">À PROPOS</a>
-<a href="services.html">SERVICES</a>
-<div class="nav-dropdown">
+<div class="nav-dropdown nav-dropdown-services">
+<div class="nav-dropdown-control">
+<a class="nav-dropdown-link" href="services.html">NOS SERVICES</a>
+<button aria-expanded="false" aria-haspopup="true" aria-label="Afficher la liste des services" class="nav-dropdown-toggle nav-dropdown-caret" type="button"></button>
+</div>
+<div class="nav-dropdown-menu nav-dropdown-menu--services">
+<ul>
+<li><a href="acquisition-sites-telecoms.html">Négociation &amp; acquisition de sites</a></li>
+<li><a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a></li>
+<li><a href="deploiement-reseaux.html">Déploiement &amp; maintenance réseaux</a></li>
+<li><a href="ingenierie-reseaux-supervision.html">Ingénierie réseaux &amp; supervision</a></li>
+<li><a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a></li>
+<li><a href="solutions-energetiques.html">Solutions énergétiques</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-dropdown nav-dropdown-resources">
 <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESSOURCES</button>
 <div class="nav-dropdown-menu">
 <ul>
@@ -155,7 +170,7 @@
 </article>
 <article class="feature-item kpi-item">
 <strong class="kpi-value">34</strong>
-<p class="kpi-label">sites construits cl en main</p>
+<p class="kpi-label">sites construits clés en main</p>
 </article>
 </div>
 </div>
@@ -286,7 +301,7 @@
 </header>
 <div class="services-home-grid">
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('assets/images/infra-pylone-terrain.png')"></div>
+<div class="service-media" style="background-image:url('assets/images/negociation-terrain-pylones.jpg')"></div>
 <div class="service-home-body">
 <h3><nobr>Négociation &amp; acquisition de sites</nobr></h3>
 <div class="service-proof">
@@ -322,9 +337,9 @@
 <div class="service-proof">
 <p class="service-proof-title">Livrables attendus</p>
 <ul class="service-proof-list">
-<li>Installations multi-technologies RAN/FO/IP</li>
+<li>Installations RAN, FO, LAN/Wi-Fi</li>
 <li>PV d'acceptance &amp; dossiers QA/QC</li>
-<li>Documentation as-built</li>
+<li>Documentation as-built &amp; handover O&amp;M</li>
 </ul>
 </div>
 <a class="service-home-cta" href="deploiement-reseaux.html">Voir service</a>
@@ -346,22 +361,22 @@
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('assets/images/fibre-optique-rouleaux.jpg')"></div>
+<div class="service-media" style="background-image:url('assets/images/devoiement-igtsd.png')"></div>
 <div class="service-home-body">
-<h3><nobr>Fibre optique &amp; backbone</nobr></h3>
+<h3><nobr>Dévoiement &amp; délocalisation</nobr></h3>
 <div class="service-proof">
 <p class="service-proof-title">Livrables attendus</p>
 <ul class="service-proof-list">
-<li>Dimensionnement OSP/ISP &amp; ingénierie PON</li>
-<li>Déploiement &amp; raccordement</li>
-<li>Recette OTDR/OLTS et mise en production</li>
+<li>Études d'impact, dévoiement et relocalisation</li>
+<li>Bascule coordonnée BTP &amp; concessionnaires</li>
+<li>As-built, conformité et continuité de service</li>
 </ul>
 </div>
-<a class="service-home-cta" href="fibre-optique-reseaux.html">Voir service</a>
+<a class="service-home-cta" href="delocalisation-devoiement-reseaux.html">Voir service</a>
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('assets/images/activite4.jpg')"></div>
+<div class="service-media" style="background-image:url('assets/images/energie-installations-telecom.jpg')"></div>
 <div class="service-home-body">
 <h3><nobr>Solutions énergétiques</nobr></h3>
 <div class="service-proof">
@@ -394,6 +409,7 @@
 <article class="partner-card partner-card-wide"><img alt="GWIT" src="assets/images/logo-gwit.jpeg"/></article>
 <article class="partner-card partner-card-wide"><img alt="Midwex" src="assets/images/logo-midwex.png"/></article>
 <article class="partner-card partner-card-wide"><img alt="Muditel" src="assets/images/logo-muditel.png"/></article>
+<article class="partner-card partner-card-wide"><a aria-label="TECH &amp; WEB - conception de sites web, SEO et solutions digitales" href="https://tech-and-web.com" rel="noopener external" target="_blank" title="TECH &amp; WEB - conception de sites web, SEO et solutions digitales"><img alt="Logo TECH &amp; WEB, conception de sites web, SEO et solutions digitales" src="assets/images/logo-tech-and-web-ci.png"/></a></article>
 </div>
 </div>
 </section>
@@ -519,7 +535,7 @@
 </div>
 <div class="contact-form-panels">
 <div class="contact-tab-panel is-active" id="contact-general-home" role="tabpanel">
-<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-general" method="post">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-general" accept-charset="UTF-8" method="POST">
 <input name="source_page" type="hidden" value="home-general"/>
 <input name="form_kind" type="hidden" value="general"/>
 <div class="contact-field">
@@ -577,7 +593,7 @@
 </form>
 </div>
 <div aria-hidden="true" class="contact-tab-panel" id="contact-technical-home" role="tabpanel">
-<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-briefing" enctype="multipart/form-data" method="post">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-briefing" enctype="multipart/form-data" accept-charset="UTF-8" method="POST">
 <input name="source_page" type="hidden" value="home-technical"/>
 <input name="form_kind" type="hidden" value="technical"/>
 <div class="contact-field">
@@ -717,10 +733,10 @@
 <h4>Services clés</h4>
 <a href="ingenierie-reseaux-supervision.html">Ingénierie &amp; supervision</a>
 <a href="deploiement-reseaux.html">Déploiement réseaux</a>
-<a href="fibre-optique-reseaux.html">Fibre optique &amp; backbone</a>
+<a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a>
 <a href="acquisition-sites-telecoms.html">Acquisition de sites</a>
 <a href="solutions-energetiques.html">Solutions énergétiques</a>
-<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; génie civil</a>
+<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a>
 </div>
 <div class="footer-col">
 <h4>Ressources</h4>

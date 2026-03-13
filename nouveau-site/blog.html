@@ -12,7 +12,7 @@
 <link href="assets/images/favicon-igtsd-150.png" rel="icon"/>
 <link href="assets/css/waas-igtsd.css" rel="stylesheet"/>
 <meta content="TECH &amp; WEB" name="author"/><link href="https://tech-and-web.com" rel="author"/><script id="tech-web-creator-schema" type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "creator": {"@type": "Organization", "name": "TECH & WEB", "url": "https://tech-and-web.com"}}</script></head>
-<body class="subpage-template-waas">
+<body class="subpage-template-waas blog-page">
 <header class="site-header">
 <div class="container header-wrap">
 <a class="brand" href="index.html"><img alt="IGTSD" src="assets/images/logo-igtsd.png"/><span>Ivoire Global Telecom Service &amp; Distribution<small>Equipped To Better Serve</small></span></a>
@@ -20,8 +20,23 @@
 <nav aria-label="Navigation principale" class="nav-main">
 <a href="index.html">ACCUEIL</a>
 <a href="a-propos.html">À PROPOS</a>
-<a href="services.html">SERVICES</a>
-<div class="nav-dropdown">
+<div class="nav-dropdown nav-dropdown-services">
+<div class="nav-dropdown-control">
+<a class="nav-dropdown-link" href="services.html">NOS SERVICES</a>
+<button aria-expanded="false" aria-haspopup="true" aria-label="Afficher la liste des services" class="nav-dropdown-toggle nav-dropdown-caret" type="button"></button>
+</div>
+<div class="nav-dropdown-menu nav-dropdown-menu--services">
+<ul>
+<li><a href="acquisition-sites-telecoms.html">Négociation &amp; acquisition de sites</a></li>
+<li><a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a></li>
+<li><a href="deploiement-reseaux.html">Déploiement &amp; maintenance réseaux</a></li>
+<li><a href="ingenierie-reseaux-supervision.html">Ingénierie réseaux &amp; supervision</a></li>
+<li><a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a></li>
+<li><a href="solutions-energetiques.html">Solutions énergétiques</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-dropdown nav-dropdown-resources">
 <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESSOURCES</button>
 <div class="nav-dropdown-menu">
 <ul>
@@ -34,24 +49,39 @@
 <a href="contact.html">CONTACT</a>
 <div aria-label="Switch de langue" class="nav-lang-switch">
 <a aria-current="page" aria-label="Version française" class="lang-chip is-active" href="blog.html" lang="fr" title="Français"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/fr.svg"/></a>
-<a aria-label="English version" class="lang-chip" href="en/index.html" hreflang="en" lang="en" title="English"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/gb.svg"/></a>
+<a aria-label="English version" class="lang-chip" href="en/blog.html" hreflang="en" lang="en" title="English"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/gb.svg"/></a>
 </div>
 </nav>
 </div>
 </header>
 <main>
 <section class="hero subpage-hero blog-hero blog-hero-waas">
-<div class="container hero-grid blog-hero-grid">
-<div>
+<div class="container blog-hero-shell">
+<div class="blog-hero-copy">
 <span class="eyebrow">Analyses télécom, énergie et IT</span>
 <h1>Le radar stratégique d'IGTSD</h1>
 <p class="lead">Managers exécutifs, directions techniques, PMO, régulateurs et responsables opérations trouvent ici des analyses terrain pour accélérer les programmes FTTH, RAN, backbone, énergie critique et infrastructures IT.</p>
+<div class="blog-hero-points">
+<article class="blog-hero-point">
+<strong>Décider</strong>
+<p>Notes d'aide à l'arbitrage pour directions générales, techniques, PMO et achats.</p>
+</article>
+<article class="blog-hero-point">
+<strong>Exécuter</strong>
+<p>Retours terrain sur rollout, QA/QC, conformité, SLA et continuité d'exploitation.</p>
+</article>
+<article class="blog-hero-point">
+<strong>Contrôler</strong>
+<p>Repères opérationnels pour suivre CAPEX/OPEX, risques, livrables et performance.</p>
+</article>
+</div>
 <div class="actions">
 <a class="btn btn-primary" href="#latest-insights">Explorer les analyses</a>
-<a class="btn btn-outline" href="contact.html">Programmer un briefing stratégique</a>
 </div>
 </div>
-<aside class="card blog-hero-panel">
+<aside class="blog-hero-stack">
+<article class="card blog-hero-panel">
+<span class="badge">Radar sectoriel 2026</span>
 <h3>Radar sectoriel 2026</h3>
 <ul class="contact-list">
 <li><strong>Opérateurs &amp; TowerCo:</strong> sécuriser SLA, QoS/QoE et continuité de service</li>
@@ -59,16 +89,63 @@
 <li><strong>BTP &amp; entreprises multisites:</strong> piloter dévoiement, énergie et connectivité IT</li>
 </ul>
 <a class="btn btn-primary" href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" rel="noopener" target="_blank">Télécharger le dossier sectoriel</a>
+</article>
+<article class="card blog-hero-mini-panel">
+<span class="blog-hero-mini-label">Formats de lecture</span>
+<div class="blog-hero-mini-grid">
+<div>
+<strong>Analyses de direction</strong>
+<p>Priorités, risques et arbitrages.</p>
+</div>
+<div>
+<strong>Playbooks terrain</strong>
+<p>Delivery, QA/QC et readiness.</p>
+</div>
+<div>
+<strong>Notes conformité</strong>
+<p>Traçabilité, reporting et gouvernance.</p>
+</div>
+<div>
+<strong>Retours d'expérience</strong>
+<p>FTTH, NOC, énergie et dévoiement.</p>
+</div>
+</div>
+</article>
 </aside>
 </div>
 </section>
-<section class="section" id="latest-insights">
-<div class="container blog-main-grid">
-<div>
+<section class="section blog-hub-section" id="latest-insights">
+<div class="container">
 <div class="section-head">
 <span class="pre-title">Radar stratégique</span>
 <h2 class="section-title">Analyses clés pour vos programmes d'infrastructures critiques</h2>
 <p>Filtrez par domaine pour accéder rapidement aux contenus les plus pertinents selon vos priorités opérateur, conformité, FTTH, NOC/SLA et dévoiement.</p>
+</div>
+<div class="blog-main-grid">
+<div class="blog-feed-column">
+<article class="card blog-curation-card">
+<div class="blog-curation-grid">
+<div class="blog-curation-item">
+<strong>Pour les décideurs</strong>
+<p>Une lecture structurée des impacts business, risques et jalons d'exécution.</p>
+</div>
+<div class="blog-curation-item">
+<strong>Pour les équipes techniques</strong>
+<p>Des contenus orientés méthodes, livrables, qualité terrain et exploitation.</p>
+</div>
+<div class="blog-curation-item">
+<strong>Pour les partenaires projets</strong>
+<p>Un langage commun entre opérateurs, TowerCo, BTP, régulateurs et entreprises multisites.</p>
+</div>
+</div>
+</article>
+<article class="card blog-filter-shell">
+<div class="blog-filter-shell-head">
+<div>
+<span class="pre-title">Filtrage</span>
+<h3>Explorer par priorité métier</h3>
+</div>
+<p>Activez un filtre pour concentrer la lecture sur vos enjeux opérateur, conformité, FTTH, NOC/SLA ou dévoiement.</p>
 </div>
 <div class="blog-filter-chips">
 <button aria-pressed="true" class="chip active" data-blog-filter="all" type="button">Tous</button>
@@ -78,46 +155,77 @@
 <button aria-pressed="false" class="chip" data-blog-filter="noc" type="button">NOC &amp; SLA</button>
 <button aria-pressed="false" class="chip" data-blog-filter="btp" type="button">BTP &amp; dévoiement</button>
 </div>
+ </article>
 <article class="card featured-article blog-filter-item" data-blog-category="operator regulation btp">
+<div class="featured-article-media">
 <img alt="Sites stratégiques télécom" src="assets/images/infra-pylone-terrain.png"/>
+</div>
 <div class="featured-body">
+<div class="featured-meta">
 <span class="badge">Analyse terrain</span>
+<span>Foncier • Énergie • Conformité</span>
+</div>
 <h3>Sites stratégiques: sécuriser foncier, énergie et conformité</h3>
 <p>7 leviers opérationnels pour réduire les cycles d'ouverture de sites et limiter les risques juridiques, techniques et HSE sur les programmes télécoms et urbains.</p>
-<a class="btn btn-primary" href="defis-emplacement-strategiques.html">Lire l'analyse complète</a>
+<ul class="featured-insights">
+<li>Réduire les cycles d'ouverture et d'autorisation.</li>
+<li>Sécuriser énergie, HSE et conformité locale.</li>
+<li>Éviter les blocages qui décalent le rollout.</li>
+</ul>
+<a class="btn btn-primary" href="defis-emplacement-strategiques.html">Lire l'article</a>
 </div>
 </article>
 <div class="grid-2 blog-cards-grid">
 <article class="card blog-story-card blog-filter-item" data-blog-category="operator noc">
+<img alt="Supervision télécom et SLA" class="blog-story-thumb" src="assets/images/conformite-reseau.png"/>
+<div class="blog-story-body">
+<div class="blog-story-meta">
 <span class="badge">NOC / SLA</span>
+</div>
 <h3>Supervision 24/7: garantir des SLA critiques</h3>
 <p>Gouvernance NOC/SOC, KPI décisionnels et runbooks d'escalade pour opérateurs, TowerCo et institutions.</p>
-<a class="link-arrow" href="blog-supervision-sla.html">Consulter le guide</a>
+<a class="btn btn-primary" href="blog-supervision-sla.html">Lire l'article</a>
+</div>
 </article>
 <article class="card blog-story-card blog-filter-item" data-blog-category="operator regulation btp">
+<img alt="Pilotage partenaires terrain" class="blog-story-thumb" src="assets/images/deploiement1.png"/>
+<div class="blog-story-body">
+<div class="blog-story-meta">
 <span class="badge">PMO &amp; Delivery</span>
+</div>
 <h3>Engager les partenaires terrain sans dérive</h3>
 <p>Cadre de gouvernance fournisseurs pour aligner qualité, délai, coût et conformité réglementaire.</p>
-<a class="link-arrow" href="blog-delivery-partners.html">Voir la méthodologie</a>
+<a class="btn btn-primary" href="blog-delivery-partners.html">Lire l'article</a>
+</div>
 </article>
 <article class="card blog-story-card blog-filter-item" data-blog-category="operator ftth">
+<img alt="Déploiement FTTH multi-pays" class="blog-story-thumb" src="assets/images/fibre-optique-rouleaux.jpg"/>
+<div class="blog-story-body">
+<div class="blog-story-meta">
 <span class="badge">FTTH</span>
+</div>
 <h3>Accélérer un déploiement FTTH multi-pays</h3>
 <p>Playbook PMO data-driven, QA/QC terrain et pilotage CAPEX/OPEX pour industrialiser les rollouts.</p>
-<a class="link-arrow" href="blog-ftth-acceleration.html">Lire le playbook</a>
+<a class="btn btn-primary" href="blog-ftth-acceleration.html">Lire l'article</a>
+</div>
 </article>
 <article class="card blog-story-card blog-filter-item" data-blog-category="operator noc">
+<img alt="Continuité IT et NOC hybride" class="blog-story-thumb" src="assets/images/superviseurs-reseaux.jpg"/>
+<div class="blog-story-body">
+<div class="blog-story-meta">
 <span class="badge">Continuité IT/NOC</span>
+</div>
 <h3>NOC hybride: continuité et cyber-résilience</h3>
 <p>Architecture, procédures et contrôles pour maintenir les opérations critiques en environnement distribué.</p>
-<a class="link-arrow" href="blog-noc-teletravail.html">Lire l'analyse</a>
+<a class="btn btn-primary" href="blog-noc-teletravail.html">Lire l'article</a>
+</div>
 </article>
 </div>
 <p class="blog-filter-empty" hidden="">Aucun article ne correspond à ce filtre pour le moment.</p>
 </div>
 <aside class="blog-aside">
-<article class="card">
-<h3>Tendances à suivre</h3>
+<article class="card blog-aside-card">
+<h3>Parcours de lecture</h3>
 <ul class="trend-list">
 <li><a href="blog-supervision-sla.html">Supervision 24/7 et gouvernance SLA</a></li>
 <li><a href="blog-ftth-acceleration.html">Industrialisation FTTH multi-pays</a></li>
@@ -125,40 +233,29 @@
 <li><a href="blog-noc-teletravail.html">NOC hybride et cyber-résilience</a></li>
 </ul>
 </article>
-<article class="card">
-<h3>Briefing exécutif</h3>
-<p>Version direction générale avec priorités techniques, risques, arbitrages CAPEX/OPEX et trajectoire de déploiement.</p>
-<a class="btn btn-outline" href="contact.html">Demander le briefing</a>
-</article>
-<article class="card newsletter-card">
-<h3>S'inscrire au radar IGTSD</h3>
-<p>Recevez nos analyses sectorielles, checklists opérationnelles et notes de conformité.</p>
-<form action="https://formspree.io/f/maylkdjq" method="post">
-<input name="source_page" type="hidden" value="blog-radar"/>
-<input name="form_kind" type="hidden" value="newsletter"/>
-<div class="form-group">
-<label for="radar-name">Nom</label>
-<input id="radar-name" name="nom" placeholder="Nom et prénom" type="text"/>
+<article class="card blog-aside-card">
+<h3>Domaines couverts</h3>
+<div class="segment-chips blog-segment-chips">
+<span>Rollout &amp; foncier</span>
+<span>QoS / QoE</span>
+<span>NOC &amp; SLA</span>
+<span>FTTH / Backbone</span>
+<span>Énergie critique</span>
+<span>Dévoiement</span>
 </div>
-<div class="form-group">
-<label for="radar-email">Email</label>
-<input id="radar-email" name="email" placeholder="vous@entreprise.com" type="email"/>
-</div>
-<button class="btn btn-primary" type="submit">Recevoir les analyses</button>
-</form>
 </article>
 </aside>
 </div>
 </section>
-<section class="section alt">
+<section class="section alt blog-bottom-cta">
 <div class="container">
-<article class="card cta-panel">
-<span class="pre-title">Atelier stratégique</span>
-<h2>Organisons un workshop orienté exécution sur vos programmes réseaux, énergie et IT</h2>
-<p>Nos architectes, PMO et operations leads transforment vos enjeux terrain en plan d'exécution mesurable avec livrables, KPI et gouvernance de décision.</p>
+<article class="card cta-panel blog-cta-panel">
+<span class="pre-title">Découverte des services</span>
+<h2>Découvrez les expertises IGTSD pour vos réseaux, vos infrastructures et vos opérations critiques</h2>
+<p>De l'acquisition de sites à la maîtrise d'ouvrage déléguée, du déploiement réseaux à l'énergie, nous structurons des offres exécutables pour opérateurs, TowerCo, régulateurs, BTP et entreprises multisites.</p>
 <div class="actions center-actions">
-<a class="btn btn-primary" href="contact.html">Planifier un workshop</a>
-<a class="btn btn-outline" href="services.html">Explorer nos expertises</a>
+<a class="btn btn-primary" href="services.html">Découvrir nos services</a>
+<a class="btn btn-outline" href="contact.html">Parler à un expert</a>
 </div>
 </article>
 </div>
@@ -181,10 +278,10 @@
 <h4>Services clés</h4>
 <a href="ingenierie-reseaux-supervision.html">Ingénierie &amp; supervision</a>
 <a href="deploiement-reseaux.html">Déploiement réseaux</a>
-<a href="fibre-optique-reseaux.html">Fibre optique &amp; backbone</a>
+<a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a>
 <a href="acquisition-sites-telecoms.html">Acquisition de sites</a>
 <a href="solutions-energetiques.html">Solutions énergétiques</a>
-<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; génie civil</a>
+<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a>
 </div>
 <div class="footer-col">
 <h4>Ressources</h4>

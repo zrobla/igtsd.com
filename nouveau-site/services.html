@@ -20,8 +20,23 @@
 <nav aria-label="Navigation principale" class="nav-main">
 <a href="index.html">ACCUEIL</a>
 <a href="a-propos.html">À PROPOS</a>
-<a href="services.html">SERVICES</a>
-<div class="nav-dropdown">
+<div class="nav-dropdown nav-dropdown-services">
+<div class="nav-dropdown-control">
+<a class="nav-dropdown-link" href="services.html">NOS SERVICES</a>
+<button aria-expanded="false" aria-haspopup="true" aria-label="Afficher la liste des services" class="nav-dropdown-toggle nav-dropdown-caret" type="button"></button>
+</div>
+<div class="nav-dropdown-menu nav-dropdown-menu--services">
+<ul>
+<li><a href="acquisition-sites-telecoms.html">Négociation &amp; acquisition de sites</a></li>
+<li><a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a></li>
+<li><a href="deploiement-reseaux.html">Déploiement &amp; maintenance réseaux</a></li>
+<li><a href="ingenierie-reseaux-supervision.html">Ingénierie réseaux &amp; supervision</a></li>
+<li><a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a></li>
+<li><a href="solutions-energetiques.html">Solutions énergétiques</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-dropdown nav-dropdown-resources">
 <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESSOURCES</button>
 <div class="nav-dropdown-menu">
 <ul>
@@ -52,16 +67,10 @@
 <span>Supervision NOC 24/7</span>
 <span>Gouvernance PMO SLA</span>
 </div>
-<ul class="list-check">
-<li>Cadre stratégique et maîtrise foncière conformes aux régulations ARTCI / ARTP.</li>
-<li>Ingénierie terrain, déploiement et MOP alignés sur des KPI SLA mesurables.</li>
-<li>Continuité énergétique et surveillance proactive des sites critiques.</li>
-</ul>
 <div class="actions">
 <a class="btn btn-primary" href="#contact-form">Planifier un diagnostic</a>
 <a class="btn btn-outline" href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" rel="noopener" target="_blank">Télécharger notre catalogue PDF</a>
 </div>
-<p class="hero-note">Directeurs de projets, CTO, PMO, responsables O&amp;M et procurement: mettons votre prochain chantier réseau en mouvement.</p>
 </div>
 <aside>
 <div class="hero-metrics services-metrics">
@@ -90,7 +99,7 @@
 <div class="container">
 <article class="card services-entry-card">
 <div class="services-entry-head">
-<span class="pre-title">Entrée commerciale</span>
+<span class="pre-title">Point d'entrée stratégique</span>
 <h2 class="section-title">Un interlocuteur unique pour transformer vos priorités en plan d'exécution</h2>
 <p>Avant d'engager les travaux, IGTSD clarifie vos enjeux techniques et business pour sécuriser délais, coûts et niveau de service.</p>
 </div>
@@ -99,10 +108,6 @@
 <li><strong>Décision facilitée:</strong> trajectoire d'exécution lisible pour direction technique, opérations et achats.</li>
 <li><strong>Déploiement maîtrisé:</strong> engagements, livrables et gouvernance alignés dès le lancement.</li>
 </ul>
-<div class="actions">
-<a class="btn btn-primary" href="#contact-form">Demander un cadrage</a>
-<a class="btn btn-outline" href="contact.html">Parler à un expert</a>
-</div>
 </article>
 </div>
 </section>
@@ -115,7 +120,7 @@
 </header>
 <div class="services-home-grid">
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('assets/images/infra-pylone-terrain.png')"></div>
+<div class="service-media" style="background-image:url('assets/images/negociation-terrain-pylones.jpg')"></div>
 <div class="service-home-body">
 <h3><nobr>Négociation &amp; acquisition de sites</nobr></h3>
 <div class="service-proof">
@@ -151,9 +156,9 @@
 <div class="service-proof">
 <p class="service-proof-title">Livrables attendus</p>
 <ul class="service-proof-list">
-<li>Installations multi-technologies RAN/FO/IP</li>
+<li>Installations RAN, FO, LAN/Wi-Fi</li>
 <li>PV d'acceptance &amp; dossiers QA/QC</li>
-<li>Documentation as-built</li>
+<li>Documentation as-built &amp; handover O&amp;M</li>
 </ul>
 </div>
 <a class="service-home-cta" href="deploiement-reseaux.html">Voir service</a>
@@ -175,22 +180,22 @@
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('assets/images/fibre-optique-rouleaux.jpg')"></div>
+<div class="service-media" style="background-image:url('assets/images/devoiement-igtsd.png')"></div>
 <div class="service-home-body">
-<h3><nobr>Fibre optique &amp; backbone</nobr></h3>
+<h3><nobr>Dévoiement &amp; délocalisation</nobr></h3>
 <div class="service-proof">
 <p class="service-proof-title">Livrables attendus</p>
 <ul class="service-proof-list">
-<li>Dimensionnement OSP/ISP &amp; ingénierie PON</li>
-<li>Déploiement &amp; raccordement</li>
-<li>Recette OTDR/OLTS et mise en production</li>
+<li>Études d'impact, dévoiement et relocalisation</li>
+<li>Bascule coordonnée BTP &amp; concessionnaires</li>
+<li>As-built, conformité finale et continuité de service</li>
 </ul>
 </div>
-<a class="service-home-cta" href="fibre-optique-reseaux.html">Voir service</a>
+<a class="service-home-cta" href="delocalisation-devoiement-reseaux.html">Voir service</a>
 </div>
 </article>
 <article class="service-home-card card">
-<div class="service-media" style="background-image:url('assets/images/activite4.jpg')"></div>
+<div class="service-media" style="background-image:url('assets/images/energie-installations-telecom.jpg')"></div>
 <div class="service-home-body">
 <h3><nobr>Solutions énergétiques</nobr></h3>
 <div class="service-proof">
@@ -228,7 +233,7 @@
 </div>
 <div class="contact-grid">
 <article class="card contact-card">
-<form action="https://formspree.io/f/maylkdjq" id="contact-form" method="POST">
+<form action="https://formspree.io/f/maylkdjq" id="contact-form" accept-charset="UTF-8" method="POST">
 <div class="contact-form-grid">
 <div class="contact-field">
 <label for="contact-name">Nom &amp; prénom</label>
@@ -243,7 +248,7 @@
 <input id="contact-email" name="email" placeholder="prenom.nom@entreprise.com" required="" type="email"/>
 </div>
 <div class="contact-field">
-<label for="contact-phone">Telephone</label>
+<label for="contact-phone">Téléphone</label>
 <input id="contact-phone" name="phone" placeholder="+225 00 00 00 00" required="" type="tel"/>
 </div>
 <div class="contact-field">
@@ -313,7 +318,7 @@
 <h3>IGTSD Siège Social</h3>
 <ul class="contact-info-list">
 <li><strong>Adresse:</strong> Cité Prestige, Faya - Abidjan, Côte d'Ivoire</li>
-<li><strong>Telephone:</strong> +225 27 22 25 86 71</li>
+<li><strong>Téléphone:</strong> +225 27 22 25 86 71</li>
 <li><strong>Infoline:</strong> +225 07 08 52 51 23</li>
 <li><strong>Email:</strong> info@igtsd.com</li>
 </ul>
@@ -348,10 +353,10 @@
 <h4>Services clés</h4>
 <a href="ingenierie-reseaux-supervision.html">Ingénierie &amp; supervision</a>
 <a href="deploiement-reseaux.html">Déploiement réseaux</a>
-<a href="fibre-optique-reseaux.html">Fibre optique &amp; backbone</a>
+<a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a>
 <a href="acquisition-sites-telecoms.html">Acquisition de sites</a>
 <a href="solutions-energetiques.html">Solutions énergétiques</a>
-<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; génie civil</a>
+<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a>
 </div>
 <div class="footer-col">
 <h4>Ressources</h4>

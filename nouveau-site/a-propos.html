@@ -20,8 +20,23 @@
 <nav aria-label="Navigation principale" class="nav-main">
 <a href="index.html">ACCUEIL</a>
 <a href="a-propos.html">À PROPOS</a>
-<a href="services.html">SERVICES</a>
-<div class="nav-dropdown">
+<div class="nav-dropdown nav-dropdown-services">
+<div class="nav-dropdown-control">
+<a class="nav-dropdown-link" href="services.html">NOS SERVICES</a>
+<button aria-expanded="false" aria-haspopup="true" aria-label="Afficher la liste des services" class="nav-dropdown-toggle nav-dropdown-caret" type="button"></button>
+</div>
+<div class="nav-dropdown-menu nav-dropdown-menu--services">
+<ul>
+<li><a href="acquisition-sites-telecoms.html">Négociation &amp; acquisition de sites</a></li>
+<li><a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a></li>
+<li><a href="deploiement-reseaux.html">Déploiement &amp; maintenance réseaux</a></li>
+<li><a href="ingenierie-reseaux-supervision.html">Ingénierie réseaux &amp; supervision</a></li>
+<li><a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a></li>
+<li><a href="solutions-energetiques.html">Solutions énergétiques</a></li>
+</ul>
+</div>
+</div>
+<div class="nav-dropdown nav-dropdown-resources">
 <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESSOURCES</button>
 <div class="nav-dropdown-menu">
 <ul>
@@ -41,25 +56,60 @@
 </header>
 <main>
 <section class="hero subpage-hero about-hero">
-<div class="container hero-grid about-hero-grid">
-<div>
-<span class="eyebrow">Storytelling IGTSD</span>
-<h1>IGTSD, orchestrateur des infrastructures télécoms nouvelle génération</h1>
-<p class="lead">Face à la modernisation des réseaux GSM et à l'hyper-croissance des usages data, nous concevons et pilotons des programmes Design-Build-Run qui sécurisent disponibilité, résilience et performance des infrastructures critiques en Afrique de l'Ouest.</p>
-<ul class="list-check">
-<li><strong>Approche Design-to-Operate</strong> couvrant prospection foncière, ingénierie FO/RAN/IP, énergie et exploitation 24/7.</li>
-<li>Gouvernance de projets télécoms et génie civil aligne sur SLA opérateurs, exigences ARTCI/ARTP et standards HSE.</li>
-<li>Task-force terrain pour déploiements FTTH, backbone, swaps radio, dévoiements, pose de poteaux et maintenance critique.</li>
+<div class="container about-hero-shell">
+<div class="about-hero-copy">
+<span class="eyebrow">À propos d'IGTSD</span>
+<h1>IGTSD, architecte d'exécution pour les réseaux et infrastructures critiques</h1>
+<p class="lead">Nous structurons des programmes Design-Build-Run pour opérateurs, TowerCo, régulateurs, acteurs BTP et organisations multisites, avec une même exigence: sécuriser disponibilité, conformité, délais d'exécution et performance durable.</p>
+<div class="about-hero-chips">
+<span>Design-Build-Run</span>
+<span>RAN / FO / Énergie</span>
+<span>PMO &amp; exploitation 24/7</span>
+</div>
+<ul class="list-check about-hero-list">
+<li>Nous intégrons acquisition de sites, ingénierie télécoms, génie civil, énergie et readiness d'exploitation dans une seule chaîne de delivery.</li>
+<li>Notre gouvernance aligne terrain, KPI, conformité ARTCI/ARTP, HSE et obligations contractuelles pour fiabiliser vos décisions.</li>
+<li>Nos équipes soutiennent rollout GSM, backbone, FTTH, dévoiement, pose de poteaux et maintenance critique sur des environnements multi-acteurs.</li>
 </ul>
 <div class="actions">
 <a class="btn btn-primary" href="contact.html">Co-construire votre roadmap réseau</a>
 <a class="btn btn-outline" href="assets/pdf/IGTSD-COMPANY-PROFILE.pdf" rel="noopener" target="_blank">Télécharger notre catalogue PDF</a>
 </div>
 </div>
-<aside class="about-hero-stats">
-<article class="metric"><strong>20+</strong><span>ans d'ingénierie, PMO télécoms et pilotage de chantiers multi-opérateurs.</span></article>
-<article class="metric"><strong>360</strong><span>Stratégie intégrée: acquisition de sites, génie civil, FO, radio, transmission et énergie.</span></article>
-<article class="metric"><strong>24/7</strong><span>NOC, supervision, maintenance predictive et riposte task-force sur l'ensemble du territoire.</span></article>
+<aside class="about-hero-aside">
+<article class="card about-hero-panel about-hero-panel--summary">
+<span class="pre-title">Repères IGTSD</span>
+<h3>Une exécution pensée pour les réseaux à forte criticité</h3>
+<div class="about-hero-metrics-grid">
+<article class="about-hero-metric">
+<strong>20+</strong>
+<span>ans d'ingénierie, PMO télécoms et pilotage multi-acteurs.</span>
+</article>
+<article class="about-hero-metric">
+<strong>Design-Build-Run</strong>
+<span>Une même chaîne d'exécution du foncier à la mise en service.</span>
+</article>
+<article class="about-hero-metric">
+<strong>24/7</strong>
+<span>Supervision, maintenance critique et support aux opérations.</span>
+</article>
+</div>
+</article>
+<article class="card about-hero-panel about-hero-panel--coverage">
+<span class="pre-title">Périmètre d'intervention</span>
+<ul class="about-hero-capabilities">
+<li>Acquisition &amp; négociation de sites télécoms</li>
+<li>FO, RAN, transmission, énergie et génie civil</li>
+<li>MOD, QA/QC, recette technique et DOE</li>
+<li>Dévoiement, poteaux, maintenance et continuité</li>
+</ul>
+<div class="about-hero-market-strip">
+<span>Opérateurs</span>
+<span>TowerCo</span>
+<span>Régulateurs</span>
+<span>BTP &amp; multisites</span>
+</div>
+</article>
 </aside>
 </div>
 </section>
@@ -257,6 +307,7 @@
 <article class="partner-card partner-card-wide"><img alt="GWIT" src="assets/images/logo-gwit.jpeg"/></article>
 <article class="partner-card partner-card-wide"><img alt="Midwex" src="assets/images/logo-midwex.png"/></article>
 <article class="partner-card partner-card-wide"><img alt="Muditel" src="assets/images/logo-muditel.png"/></article>
+<article class="partner-card partner-card-wide"><a aria-label="TECH &amp; WEB - conception de sites web, SEO et solutions digitales" href="https://tech-and-web.com" rel="noopener external" target="_blank" title="TECH &amp; WEB - conception de sites web, SEO et solutions digitales"><img alt="Logo TECH &amp; WEB, conception de sites web, SEO et solutions digitales" src="assets/images/logo-tech-and-web-ci.png"/></a></article>
 </div>
 </div>
 </section>
@@ -289,10 +340,10 @@
 <h4>Services clés</h4>
 <a href="ingenierie-reseaux-supervision.html">Ingénierie &amp; supervision</a>
 <a href="deploiement-reseaux.html">Déploiement réseaux</a>
-<a href="fibre-optique-reseaux.html">Fibre optique &amp; backbone</a>
+<a href="maitrise-ouvrage-delegue-telecoms.html">Maîtrise d'ouvrage déléguée</a>
 <a href="acquisition-sites-telecoms.html">Acquisition de sites</a>
 <a href="solutions-energetiques.html">Solutions énergétiques</a>
-<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; génie civil</a>
+<a href="delocalisation-devoiement-reseaux.html">Dévoiement &amp; délocalisation réseaux</a>
 </div>
 <div class="footer-col">
 <h4>Ressources</h4>

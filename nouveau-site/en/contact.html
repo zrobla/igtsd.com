@@ -23,18 +23,18 @@
 <nav aria-label="Main navigation" class="nav-main">
 <a href="index.html">HOME</a>
 <a href="about.html">ABOUT</a>
-<a href="services.html">SERVICES</a>
-<div class="nav-dropdown">
+<div class="nav-dropdown nav-dropdown-services">
+<div class="nav-dropdown-control">
+<a class="nav-dropdown-link" href="services.html">SERVICES</a>
+<button aria-expanded="false" aria-haspopup="true" aria-label="Open services list" class="nav-dropdown-toggle nav-dropdown-caret" type="button"></button>
+</div>
+<div class="nav-dropdown-menu nav-dropdown-menu--services"><ul><li><a href="site-negotiation-acquisition.html">Site negotiation &amp; acquisition</a></li><li><a href="delegated-project-ownership.html">Delegated project ownership</a></li><li><a href="network-deployment-maintenance.html">Network deployment &amp; maintenance</a></li><li><a href="network-engineering-supervision.html">Network engineering &amp; supervision</a></li><li><a href="rerouting-relocation.html">Rerouting &amp; relocation</a></li><li><a href="energy-solutions.html">Energy solutions</a></li></ul></div>
+</div>
+<div class="nav-dropdown nav-dropdown-resources">
 <button aria-expanded="false" aria-haspopup="true" class="nav-dropdown-toggle" type="button">RESOURCES</button>
-<div class="nav-dropdown-menu">
-<ul>
-<li><a href="../blog.html">OUR BLOG (FR)</a></li>
-<li><a href="../realisations.html">OUR PROJECTS (FR)</a></li>
-<li><a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">PDF CATALOG</a></li>
-</ul>
+<div class="nav-dropdown-menu"><ul><li><a href="blog.html">BLOG &amp; INSIGHTS</a></li><li><a href="realisations.html">PROJECTS &amp; CASE STUDIES</a></li><li><a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">OUR PDF CATALOG</a></li></ul></div>
 </div>
-</div>
-<a href="contact.html">CONTACT</a>
+<a href="contact.html" class="active">CONTACT</a>
 <div aria-label="Language switch" class="nav-lang-switch">
 <a aria-label="Version française" class="lang-chip" href="../contact.html" hreflang="fr" lang="fr" title="Français"><img alt="" aria-hidden="true" class="flag-icon" src="../assets/images/flags/fr.svg"/></a>
 <a aria-current="page" aria-label="English version" class="lang-chip is-active" href="contact.html" hreflang="en" lang="en" title="English"><img alt="" aria-hidden="true" class="flag-icon" src="../assets/images/flags/gb.svg"/></a>
@@ -47,12 +47,12 @@
 <div class="container hero-grid">
 <div>
 <span class="eyebrow">Business contact</span>
-<h1>Request a strategic briefing</h1>
-<p class="lead">Streamlined form, fast response, senior team support. Your information remains confidential.</p>
+<h1>Launch strategic framing with a senior IGTSD contact</h1>
+<p class="lead">Rapid qualification of your telecom, fiber, energy, rerouting and IT priorities. We structure your technical, regulatory and business stakes into an actionable execution plan.</p>
 <div class="hero-metrics">
-<article class="metric"><strong>Technical support</strong><span>QoS/QoE, network engineering, SOC/NOC</span></article>
-<article class="metric"><strong>Business &amp; partnerships</strong><span>Executive briefs, RFP and alliances</span></article>
-<article class="metric"><strong>Meetings &amp; visits</strong><span>KPI workshops and field demos in Abidjan</span></article>
+<article class="metric"><strong>Technical support</strong><span>QoS/QoE, network engineering, NOC/SOC, SLA</span></article>
+<article class="metric"><strong>Business &amp; partnerships</strong><span>Executive briefing, RFP, tendering and co-delivery</span></article>
+<article class="metric"><strong>Regulation &amp; compliance</strong><span>ARTCI/ARTP alignment, HSE and field QA/QC</span></article>
 </div>
 </div>
 <aside class="hero-panel"><img alt="Contact IGTSD" src="../assets/images/deploiement1.png"/></aside>
@@ -61,53 +61,191 @@
 <section class="section" id="contact-form">
 <div class="container">
 <header class="section-head">
-<span class="pre-title">Direct channel</span>
-<h2 class="section-title">Let's discuss your operational priority</h2>
-<p>Light form, rapid response and a single point of contact for telecom, fiber and critical infrastructure priorities.</p>
+<span class="pre-title">Project qualification</span>
+<h2 class="section-title">Let's discuss your operational need</h2>
+<p>Share your context (rollout, rerouting, energy, LAN/Wi-Fi cabling, SLA supervision). We come back with structured framing and prioritized actions.</p>
 </header>
 <div class="contact-panel">
 <article class="card">
-<h2 class="section-title">Quick form</h2>
-<form>
-<div class="form-group">
-<label for="nom">Full name</label>
-<input id="nom" name="nom" placeholder="Your name" required="" type="text"/>
+<h3>Launch technical and/or business framing</h3>
+<p class="contact-direct-lead">Choose the right form: general inquiry or technical framing for RFP/RFQ and execution priorities.</p>
+<div aria-label="Contact type" class="contact-form-tabs" data-contact-form-tabs="" role="tablist">
+<button aria-selected="true" class="contact-form-tab is-active" data-contact-tab-target="contact-general-page-en" role="tab" type="button">General form</button>
+<button aria-selected="false" class="contact-form-tab" data-contact-tab-target="contact-technical-page-en" role="tab" type="button">Technical form</button>
 </div>
-<div class="form-group">
-<label for="email">Business email</label>
-<input id="email" name="email" placeholder="you@company.com" required="" type="email"/>
+<div class="contact-form-panels">
+<div class="contact-tab-panel is-active" id="contact-general-page-en" role="tabpanel">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-general" accept-charset="UTF-8" method="POST">
+<input name="source_page" type="hidden" value="contact-general-en"/>
+<input name="form_kind" type="hidden" value="general-en"/>
+<div class="contact-field">
+<label for="general-name-page-en">Full name</label>
+<input id="general-name-page-en" name="nom" placeholder="Full name" required="" type="text"/>
 </div>
-<div class="form-group">
-<label for="telephone">Phone</label>
-<input id="telephone" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
+<div class="contact-field">
+<label for="general-company-page-en">Organization</label>
+<input id="general-company-page-en" name="organisation" placeholder="Company, operator, TowerCo, institution..." required="" type="text"/>
 </div>
-<div class="form-group">
-<label for="service">Service area</label>
-<select id="service" name="service">
-<option>Select a service</option>
-<option>Site acquisition</option>
-<option>Delegated owner representation</option>
-<option>Network deployment</option>
-<option>Optical fiber</option>
-<option>Engineering &amp; supervision</option>
-<option>Energy solutions</option>
+<div class="contact-field">
+<label for="general-email-page-en">Business email</label>
+<input id="general-email-page-en" name="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+<div class="contact-field">
+<label for="general-phone-page-en">Phone</label>
+<input id="general-phone-page-en" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
+</div>
+<div class="contact-field">
+<label for="general-role-page-en">You are</label>
+<select id="general-role-page-en" name="role">
+<option value="">Select</option>
+<option>Prospect / new client</option>
+<option>Current client</option>
+<option>Technical leadership / CTO</option>
+<option>Operations / O&amp;M leadership</option>
+<option>PMO / Owner / Procurement</option>
+<option>Regulator / institution</option>
+<option>Partner / subcontractor</option>
+<option>Other profile</option>
 </select>
 </div>
-<div class="form-group">
-<label for="message">Your need</label>
-<textarea id="message" name="message" placeholder="Context, urgency, objectives"></textarea>
+<div class="contact-field">
+<label for="general-intent-page-en">Request purpose</label>
+<select id="general-intent-page-en" name="objet">
+<option value="">Select</option>
+<option>Information request</option>
+<option>Discover IGTSD services</option>
+<option>Meeting request</option>
+<option>Commercial inquiry</option>
+<option>Administrative question</option>
+<option>Other need</option>
+</select>
 </div>
+<div class="contact-field contact-field--full">
+<label for="general-message-page-en">Your message</label>
+<textarea id="general-message-page-en" name="message" placeholder="Briefly explain your need. We will route it to the right IGTSD contact." rows="4"></textarea>
+</div>
+<div class="contact-field contact-field--full contact-submit">
 <button class="btn btn-primary" type="submit">Send request</button>
+<span class="contact-submit-note">Initial response within 24 business hours.</span>
+</div>
 </form>
+</div>
+<div aria-hidden="true" class="contact-tab-panel" id="contact-technical-page-en" role="tabpanel">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-briefing" enctype="multipart/form-data" accept-charset="UTF-8" method="POST">
+<input name="source_page" type="hidden" value="contact-technical-en"/>
+<input name="form_kind" type="hidden" value="technical-en"/>
+<div class="contact-field">
+<label for="briefing-name-page-en">Name &amp; role</label>
+<input id="briefing-name-page-en" name="nom" placeholder="Full name and title" required="" type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-company-page-en">Organization</label>
+<input id="briefing-company-page-en" name="organisation" placeholder="Operator, TowerCo, civil works firm, institution..." required="" type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-email-page-en">Business email</label>
+<input id="briefing-email-page-en" name="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+<div class="contact-field">
+<label for="briefing-phone-page-en">Phone</label>
+<input id="briefing-phone-page-en" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
+</div>
+<div class="contact-field">
+<label for="briefing-scope-page-en">Project type</label>
+<select id="briefing-scope-page-en" name="type_projet">
+<option value="">Select</option>
+<option>Land acquisition &amp; site negotiation</option>
+<option>Mobile / fixed network deployment</option>
+<option>OSP/ISP optical fiber</option>
+<option>Critical energy &amp; continuity</option>
+<option>NOC/SOC supervision &amp; SLA</option>
+<option>Network rerouting &amp; civil works</option>
+<option>IT cabling / LAN / Wi-Fi</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-volume-page-en">Volume / scope</label>
+<select id="briefing-volume-page-en" name="volume">
+<option value="">Select</option>
+<option>Pilot program (1 to 10 sites)</option>
+<option>Intermediate program (10 to 50 sites)</option>
+<option>National program (50+ sites)</option>
+<option>Multi-site IT / campus scope</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-budget-page-en">Indicative budget</label>
+<select id="briefing-budget-page-en" name="budget">
+<option value="">Select</option>
+<option>&lt; 50M FCFA</option>
+<option>50M - 250M FCFA</option>
+<option>250M - 1Bn FCFA</option>
+<option>&gt; 1Bn FCFA</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-deadline-page-en">Target deadline</label>
+<input id="briefing-deadline-page-en" name="deadline" type="date"/>
+</div>
+<div class="contact-field">
+<label for="briefing-zone-page-en">Geographic zone</label>
+<input id="briefing-zone-page-en" name="zone" placeholder="Abidjan, upcountry, multi-country..." type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-channel-page-en">Preferred follow-up channel</label>
+<select id="briefing-channel-page-en" name="canal">
+<option value="">Select</option>
+<option>Email</option>
+<option>Phone</option>
+<option>Framing meeting (video call)</option>
+<option>On-site workshop</option>
+</select>
+</div>
+<div class="contact-field contact-field--full">
+<label>Priority scopes</label>
+<div class="contact-checkbox-group">
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Acquisition"/>Acquisition &amp; land</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Deploiement"/>Network deployment</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Fibre"/>Fiber &amp; backbone</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Energie"/>Critical energy</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="NOC-SLA"/>NOC / SLA supervision</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="GC-Devoiement"/>Civil works &amp; rerouting</label>
+</div>
+</div>
+<div class="contact-field contact-field--full">
+<label for="briefing-file-page-en">Framing document (optional)</label>
+<input id="briefing-file-page-en" name="document" type="file"/>
+</div>
+<div class="contact-field contact-field--full">
+<label for="scope-technical-page-en">Context, milestones and objectives</label>
+<textarea id="scope-technical-page-en" name="message" placeholder="Describe your objectives, constraints, target SLAs and expected deliverables." rows="4"></textarea>
+</div>
+<div class="contact-field contact-field--full contact-privacy">
+<input checked="" id="briefing-nda-page-en" name="nda" type="checkbox"/>
+<label for="briefing-nda-page-en">Your information is handled confidentially. An NDA can be set from the initial framing stage.</label>
+</div>
+<div class="contact-field contact-field--full contact-submit">
+<button class="btn btn-primary" type="submit">Send technical brief</button>
+<span class="contact-submit-note">Initial feedback within 24 to 72 hours depending on criticality.</span>
+</div>
+</form>
+</div>
+</div>
 </article>
-<article class="card">
-<h2 class="section-title">Express contact</h2>
-<ul class="contact-list">
-<li><strong>Phone:</strong> +225 27 22 25 86 71 / +225 07 08 52 51 23</li>
-<li><strong>Email:</strong> info@igtsd.com</li>
-<li><strong>Address:</strong> 06 BP 1394 Abidjan 06 - Côte d'Ivoire</li>
-<li><strong>HQ:</strong> Cité Prestige, Faya, Abidjan</li>
+<article class="card contact-direct-card">
+<h3>Direct channels &amp; decision line</h3>
+<ul class="contact-intent-list">
+<li><strong>Decide faster and execute right:</strong> executive framing, budget and timeline visibility, prioritized roadmap, RFP/RFQ support, deployment, NOC/SLA and field compliance.</li>
 </ul>
+<h4 class="contact-direct-title">Direct phone lines</h4>
+<ul class="contact-list contact-list--phones">
+<li><a href="tel:+2252722258671">+225 27 22 25 86 71</a></li>
+<li><a href="tel:+2250708525123">+225 07 08 52 51 23</a></li>
+</ul>
+<h4 class="contact-direct-title">Decision email</h4>
+<p class="contact-direct-value"><a href="mailto:info@igtsd.com">info@igtsd.com</a></p>
+<h4 class="contact-direct-title">Head office geolocation</h4>
+<p class="contact-direct-value">Cité Prestige, Faya, Abidjan - Côte d'Ivoire</p>
 <div class="geo-badge-row">
 <span class="badge">Geolocation</span>
 </div>
@@ -134,20 +272,15 @@
 </div>
 <div class="footer-col">
 <h4>Core services</h4>
-<a href="../ingenierie-reseaux-supervision.html">Engineering &amp; supervision (FR)</a>
-<a href="../deploiement-reseaux.html">Network deployment (FR)</a>
-<a href="../fibre-optique-reseaux.html">Optical fiber &amp; backbone (FR)</a>
-<a href="../acquisition-sites-telecoms.html">Site acquisition (FR)</a>
-<a href="../solutions-energetiques.html">Energy solutions (FR)</a>
-<a href="../delocalisation-devoiement-reseaux.html">Rerouting &amp; civil works (FR)</a>
+<a href="site-negotiation-acquisition.html">Site negotiation &amp; acquisition</a><a href="delegated-project-ownership.html">Delegated project ownership</a><a href="network-deployment-maintenance.html">Network deployment &amp; maintenance</a><a href="network-engineering-supervision.html">Network engineering &amp; supervision</a><a href="rerouting-relocation.html">Rerouting &amp; relocation</a><a href="energy-solutions.html">Energy solutions</a>
 </div>
 <div class="footer-col">
 <h4>Resources</h4>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="../realisations.html">Projects (FR)</a>
-<a href="../blog.html">Blog &amp; analyses (FR)</a>
-<a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">PDF catalog</a>
+<a href="about.html">About IGTSD</a>
+<a href="services.html">Services overview</a>
+<a href="realisations.html">Projects &amp; case studies</a>
+<a href="blog.html">Blog &amp; insights</a>
+<a download="" href="../assets/pdf/IGTSD-COMPANY-PROFILE.pdf">Our PDF catalog</a>
 <a href="contact.html">Contact</a>
 </div>
 <div class="footer-col footer-contact-col">
@@ -158,7 +291,7 @@
 <p class="footer-address">Cité Prestige, Faya · Abidjan, Côte d'Ivoire</p>
 </div>
 </div>
-<p class="copy"><span class="copy-left">© <span id="year"></span> IGTSD. All rights reserved.</span><span class="copy-right" itemscope="" itemtype="https://schema.org/Organization"><span class="copy-label">Website design:</span> <a aria-label="TECH &amp; WEB - Conception de site web, SEO et solutions digitales" href="https://tech-and-web.com" itemprop="url" rel="noopener external" target="_blank" title="TECH &amp; WEB - Conception de site web, SEO et solutions digitales"><span itemprop="name">TECH &amp; WEB</span></a></span></p>
+<p class="copy"><span class="copy-left">© <span id="year"></span> IGTSD. All rights reserved.</span><span class="copy-right" itemscope="" itemtype="https://schema.org/Organization"><span class="copy-label">Website design:</span> <a aria-label="TECH &amp; WEB - Website design, SEO and digital solutions" href="https://tech-and-web.com" itemprop="url" rel="noopener external" target="_blank" title="TECH &amp; WEB - Website design, SEO and digital solutions"><span itemprop="name">TECH &amp; WEB</span></a></span></p>
 </div>
 </footer>
 <script src="../assets/js/waas-igtsd.js"></script>

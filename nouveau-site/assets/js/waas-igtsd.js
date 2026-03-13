@@ -1,9 +1,23 @@
 (function () {
+  const isEnglish = (document.documentElement.lang || '').toLowerCase().startsWith('en');
+  const uiLabels = isEnglish
+    ? {
+        openMenu: 'Open menu',
+        closeMenu: 'Close menu'
+      }
+    : {
+        openMenu: 'Ouvrir le menu',
+        closeMenu: 'Fermer le menu'
+      };
   const header = document.querySelector('.site-header');
   const navToggle = document.querySelector('.nav-toggle');
   const navMain = document.querySelector('.nav-main');
-  const resourceDropdown = document.querySelector('.nav-dropdown');
-  const resourceToggle = document.querySelector('.nav-dropdown-toggle');
+  const navDropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+  const resourceDropdown = document.querySelector('.nav-dropdown-resources');
+  const resourceToggle = resourceDropdown ? resourceDropdown.querySelector('.nav-dropdown-toggle') : null;
+  const serviceDropdown = document.querySelector('.nav-dropdown-services');
+  const serviceToggle = serviceDropdown ? serviceDropdown.querySelector('.nav-dropdown-toggle') : null;
+  const serviceLink = serviceDropdown ? serviceDropdown.querySelector('.nav-dropdown-link') : null;
   const year = document.getElementById('year');
 
   if (year) {
@@ -23,44 +37,67 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   if (navToggle && navMain) {
-    let resourceCloseTimer = null;
     const isMobileNav = () => window.matchMedia('(max-width: 860px)').matches;
-    const clearResourceCloseTimer = () => {
-      if (!resourceCloseTimer) return;
-      clearTimeout(resourceCloseTimer);
-      resourceCloseTimer = null;
+    const dropdownCloseTimers = new WeakMap();
+    const setNavState = (open) => {
+      navMain.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.setAttribute('aria-label', open ? uiLabels.closeMenu : uiLabels.openMenu);
+      navToggle.textContent = open ? '✕' : '☰';
+      document.body.classList.toggle('nav-open', open && isMobileNav());
+      if (!open) {
+        closeAllDropdowns();
+      }
     };
 
-    const closeResourceDropdown = () => {
-      if (!resourceDropdown || !resourceToggle) return;
-      clearResourceCloseTimer();
-      resourceDropdown.classList.remove('open');
-      resourceToggle.setAttribute('aria-expanded', 'false');
+    const clearDropdownCloseTimer = (dropdown) => {
+      const timer = dropdownCloseTimers.get(dropdown);
+      if (!timer) return;
+      clearTimeout(timer);
+      dropdownCloseTimers.delete(dropdown);
     };
 
-    const openResourceDropdownDesktop = () => {
-      if (!resourceDropdown || !resourceToggle || isMobileNav()) return;
-      clearResourceCloseTimer();
-      resourceDropdown.classList.add('open');
-      resourceToggle.setAttribute('aria-expanded', 'true');
+    const closeDropdown = (dropdown) => {
+      if (!dropdown) return;
+      const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+      clearDropdownCloseTimer(dropdown);
+      dropdown.classList.remove('open');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', 'false');
+      }
     };
 
-    const closeResourceDropdownDesktopDelayed = () => {
-      if (!resourceDropdown || !resourceToggle || isMobileNav()) return;
-      clearResourceCloseTimer();
-      resourceCloseTimer = setTimeout(() => {
-        resourceDropdown.classList.remove('open');
-        resourceToggle.setAttribute('aria-expanded', 'false');
+    const closeAllDropdowns = (except = null) => {
+      navDropdowns.forEach((dropdown) => {
+        if (dropdown === except) return;
+        closeDropdown(dropdown);
+      });
+    };
+
+    const openDropdownDesktop = (dropdown) => {
+      if (!dropdown || isMobileNav()) return;
+      const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+      clearDropdownCloseTimer(dropdown);
+      closeAllDropdowns(dropdown);
+      dropdown.classList.add('open');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+    };
+
+    const closeDropdownDesktopDelayed = (dropdown) => {
+      if (!dropdown || isMobileNav()) return;
+      clearDropdownCloseTimer(dropdown);
+      const timer = setTimeout(() => {
+        closeDropdown(dropdown);
       }, 220);
+      dropdownCloseTimers.set(dropdown, timer);
     };
+
+    setNavState(false);
 
     navToggle.addEventListener('click', () => {
-      navMain.classList.toggle('open');
-      const expanded = navMain.classList.contains('open');
-      navToggle.setAttribute('aria-expanded', String(expanded));
-      if (!expanded) {
-        closeResourceDropdown();
-      }
+      setNavState(!navMain.classList.contains('open'));
     });
 
     document.addEventListener('click', (event) => {
@@ -68,37 +105,59 @@
       const isInsideMenu = navMain.contains(event.target);
       const isToggle = navToggle.contains(event.target);
       if (!isInsideMenu && !isToggle) {
-        navMain.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        closeResourceDropdown();
+        setNavState(false);
       }
     });
 
-    if (resourceDropdown && resourceToggle) {
-      resourceToggle.addEventListener('click', (event) => {
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      if (!navMain.classList.contains('open')) return;
+      setNavState(false);
+      navToggle.focus();
+    });
+
+    navDropdowns.forEach((dropdown) => {
+      const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+      if (!toggle) return;
+
+      toggle.addEventListener('click', (event) => {
         if (!isMobileNav()) return;
         event.preventDefault();
-        clearResourceCloseTimer();
-        const opened = resourceDropdown.classList.toggle('open');
-        resourceToggle.setAttribute('aria-expanded', String(opened));
+        clearDropdownCloseTimer(dropdown);
+        const opened = dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(opened));
+        closeAllDropdowns(opened ? dropdown : null);
       });
 
-      resourceDropdown.addEventListener('mouseenter', openResourceDropdownDesktop);
-      resourceDropdown.addEventListener('mouseleave', closeResourceDropdownDesktopDelayed);
-      resourceDropdown.addEventListener('focusin', openResourceDropdownDesktop);
-      resourceDropdown.addEventListener('focusout', (event) => {
-        if (resourceDropdown.contains(event.relatedTarget)) return;
-        closeResourceDropdownDesktopDelayed();
+      dropdown.addEventListener('mouseenter', () => openDropdownDesktop(dropdown));
+      dropdown.addEventListener('mouseleave', () => closeDropdownDesktopDelayed(dropdown));
+      dropdown.addEventListener('focusin', () => openDropdownDesktop(dropdown));
+      dropdown.addEventListener('focusout', (event) => {
+        if (dropdown.contains(event.relatedTarget)) return;
+        closeDropdownDesktopDelayed(dropdown);
       });
+    });
 
-      navMain.querySelectorAll('.nav-dropdown-menu a').forEach((link) => {
-        link.addEventListener('click', () => {
-          closeResourceDropdown();
-          navMain.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
+    navMain.querySelectorAll('.nav-dropdown-menu a').forEach((link) => {
+      link.addEventListener('click', () => {
+        setNavState(false);
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (!isMobileNav()) {
+        setNavState(false);
+      } else {
+        document.body.classList.toggle('nav-open', navMain.classList.contains('open'));
+        navDropdowns.forEach((dropdown) => {
+          const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+          dropdown.classList.remove('open');
+          if (toggle) {
+            toggle.setAttribute('aria-expanded', 'false');
+          }
         });
-      });
-    }
+      }
+    });
   }
 
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
@@ -124,6 +183,7 @@
   ]);
 
   let resourceActive = resourcePages.has(currentPath);
+  let serviceActive = servicePages.has(currentPath);
 
   document.querySelectorAll('.nav-main a').forEach((link) => {
     if (link.closest('.nav-lang-switch')) return;
@@ -134,8 +194,12 @@
     const normalized = href.split('/').pop();
     if (normalized === currentPath) {
       link.classList.add('active');
-      if (link.closest('.nav-dropdown-menu')) {
+      const parentDropdown = link.closest('.nav-dropdown');
+      if (parentDropdown && parentDropdown.classList.contains('nav-dropdown-resources')) {
         resourceActive = true;
+      }
+      if (parentDropdown && parentDropdown.classList.contains('nav-dropdown-services')) {
+        serviceActive = true;
       }
     }
   });
@@ -144,11 +208,16 @@
     resourceToggle.classList.add('active');
   }
 
-  if (servicePages.has(currentPath)) {
-    const serviceLink = document.querySelector('.nav-main a[href="services.html"]');
-    if (serviceLink) {
-      serviceLink.classList.add('active');
-    }
+  if (serviceDropdown && serviceActive) {
+    serviceDropdown.classList.add('is-active');
+  }
+
+  if (serviceToggle && serviceActive) {
+    serviceToggle.classList.add('active');
+  }
+
+  if (serviceLink && serviceActive) {
+    serviceLink.classList.add('active');
   }
 
   const initHeroSlider = () => {

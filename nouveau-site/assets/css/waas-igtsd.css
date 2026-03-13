@@ -77,16 +77,20 @@ img {
   gap: 0.8rem;
   font-weight: 700;
   color: var(--text-main);
+  min-width: 0;
 }
 
 .brand > span {
   display: inline-block;
   color: var(--brand-primary-deep);
   font-weight: 800;
+  font-size: clamp(0.56rem, 0.28vw + 0.52rem, 0.74rem);
   letter-spacing: 0.018em;
   line-height: 1.12;
   text-transform: uppercase;
   transform: translateY(0.2rem);
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .brand img {
@@ -99,7 +103,7 @@ img {
 .brand small {
   display: block;
   color: var(--text-main);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
@@ -642,8 +646,8 @@ iframe {
   display: block;
   color: #f3f8ff;
   text-transform: uppercase;
-  letter-spacing: 0.015em;
-  font-size: 0.74rem;
+  letter-spacing: 0.012em;
+  font-size: 0.62rem;
   line-height: 1.1;
   white-space: nowrap;
 }
@@ -2165,8 +2169,12 @@ body.subpage-template-waas.about-page .director-grid .card .btn-outline:hover {
     height: 48px;
   }
 
+  .brand > span {
+    font-size: clamp(0.54rem, 0.32vw + 0.5rem, 0.68rem);
+  }
+
   .brand small {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
   }
 
   .hero {
@@ -2197,6 +2205,10 @@ body.subpage-template-waas.about-page .director-grid .card .btn-outline:hover {
 
   .brand img {
     height: 44px;
+  }
+
+  .brand > span {
+    font-size: 0.53rem;
   }
 
   .brand small {

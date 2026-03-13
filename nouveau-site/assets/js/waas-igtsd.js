@@ -295,12 +295,47 @@
     const chips = Array.from(document.querySelectorAll('.blog-filter-chips .chip'));
     if (!chips.length) return;
 
+    const filterItems = Array.from(document.querySelectorAll('.blog-filter-item[data-blog-category]'));
+    const emptyState = document.querySelector('.blog-filter-empty');
+    const hasFilterableItems = filterItems.length > 0 && chips.some((chip) => chip.hasAttribute('data-blog-filter'));
+
+    const applyFilter = (value) => {
+      if (!hasFilterableItems) return;
+
+      let visibleCount = 0;
+      filterItems.forEach((item) => {
+        const raw = item.getAttribute('data-blog-category') || '';
+        const categories = raw.split(/\s+/).filter(Boolean);
+        const visible = value === 'all' || categories.includes(value);
+        item.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+
+      if (emptyState) {
+        emptyState.hidden = visibleCount > 0;
+      }
+    };
+
     chips.forEach((chip) => {
       chip.addEventListener('click', () => {
-        chips.forEach((item) => item.classList.remove('active'));
+        chips.forEach((item) => {
+          item.classList.remove('active');
+          item.setAttribute('aria-pressed', 'false');
+        });
         chip.classList.add('active');
+        chip.setAttribute('aria-pressed', 'true');
+
+        const filter = chip.getAttribute('data-blog-filter') || 'all';
+        applyFilter(filter);
       });
     });
+
+    const initial = chips.find((chip) => chip.classList.contains('active')) || chips[0];
+    if (initial) {
+      const filter = initial.getAttribute('data-blog-filter') || 'all';
+      initial.setAttribute('aria-pressed', 'true');
+      applyFilter(filter);
+    }
   };
   const initCaseFilters = () => {
     const filterButtons = Array.from(document.querySelectorAll('.case-filter-btn[data-case-filter]'));

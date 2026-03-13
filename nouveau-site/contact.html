@@ -30,7 +30,7 @@
 </div>
 <a href="contact.html">CONTACT</a>
 <div aria-label="Switch de langue" class="nav-lang-switch">
-<a aria-current="page" aria-label="Version française" class="lang-chip is-active" href="#" lang="fr" title="Français"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/fr.svg"/></a>
+<a aria-current="page" aria-label="Version française" class="lang-chip is-active" href="contact.html" lang="fr" title="Français"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/fr.svg"/></a>
 <a aria-label="English version" class="lang-chip" href="en/contact.html" hreflang="en" lang="en" title="English"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/gb.svg"/></a>
 </div>
 </nav>
@@ -61,64 +61,185 @@
 </header>
 <div class="contact-panel">
 <article class="card">
-<h2 class="section-title">Formulaire rapide B2B</h2>
-<form>
-<div class="form-group">
-<label for="nom">Nom complet</label>
-<input id="nom" name="nom" placeholder="Votre nom" required="" type="text"/>
+<h3>Lancer un cadrage technique et/ou business</h3>
+<p class="contact-direct-lead">Choisissez le formulaire adapté: usage général ou cadrage technique, RFP/RFQ et priorités d'exécution.</p>
+<div aria-label="Type de contact" class="contact-form-tabs" data-contact-form-tabs="" role="tablist">
+<button aria-selected="true" class="contact-form-tab is-active" data-contact-tab-target="contact-general-page" role="tab" type="button">Formulaire Général</button>
+<button aria-selected="false" class="contact-form-tab" data-contact-tab-target="contact-technical-page" role="tab" type="button">Formulaire Technique</button>
 </div>
-<div class="form-group">
-<label for="organisation">Organisation</label>
-<input id="organisation" name="organisation" placeholder="Opérateur, TowerCo, BTP, institution, entreprise..." required="" type="text"/>
+<div class="contact-form-panels">
+<div class="contact-tab-panel is-active" id="contact-general-page" role="tabpanel">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-general" method="post">
+<input name="source_page" type="hidden" value="contact-general"/>
+<input name="form_kind" type="hidden" value="general"/>
+<div class="contact-field">
+<label for="general-name-page">Nom complet</label>
+<input id="general-name-page" name="nom" placeholder="Nom et prénom" required="" type="text"/>
 </div>
-<div class="form-group">
-<label for="email">Email professionnel</label>
-<input id="email" name="email" placeholder="vous@entreprise.com" required="" type="email"/>
+<div class="contact-field">
+<label for="general-company-page">Organisation</label>
+<input id="general-company-page" name="organisation" placeholder="Entreprise, opérateur, TowerCo, institution..." required="" type="text"/>
 </div>
-<div class="form-group">
-<label for="telephone">Téléphone</label>
-<input id="telephone" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
+<div class="contact-field">
+<label for="general-email-page">Email professionnel</label>
+<input id="general-email-page" name="email" placeholder="vous@entreprise.com" required="" type="email"/>
 </div>
-<div class="form-group">
-<label for="service">Domaine concern</label>
-<select id="service" name="service">
-<option>Sélectionner un service</option>
-<option>Négociation &amp; acquisition de sites</option>
-<option>Maîtrise d'ouvrage déléguée / PMO</option>
-<option>Déploiement &amp; maintenance réseaux</option>
-<option>Fibre optique &amp; backbone</option>
-<option>Ingénierie réseaux &amp; supervision NOC</option>
-<option>Solutions énergétiques</option>
-<option>Génie civil &amp; dévoiement</option>
-<option>Câblage IT/LAN/WiFi</option>
-</select>
+<div class="contact-field">
+<label for="general-phone-page">Téléphone</label>
+<input id="general-phone-page" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
 </div>
-<div class="form-group">
-<label for="profil">Profil de demande</label>
-<select id="profil" name="profil">
+<div class="contact-field">
+<label for="general-role-page">Vous êtes</label>
+<select id="general-role-page" name="role">
+<option value="">Sélectionner</option>
+<option>Prospect / nouveau client</option>
+<option>Client en cours</option>
 <option>Direction technique / CTO</option>
 <option>Direction opérations / O&amp;M</option>
 <option>PMO / MOA / Procurement</option>
 <option>Régulateur / institution</option>
-<option>Entreprise BTP / VRD</option>
-<option>Entreprise multisites / DSI</option>
+<option>Partenaire / sous-traitant</option>
+<option>Autre profil</option>
 </select>
 </div>
-<div class="form-group">
-<label for="message">Contexte, jalons et objectifs</label>
-<textarea id="message" name="message" placeholder="Décrivez votre périmètre, l'urgence, les contraintes réglementaires et vos objectifs de performance"></textarea>
+<div class="contact-field">
+<label for="general-intent-page">Objet de la demande</label>
+<select id="general-intent-page" name="objet">
+<option value="">Sélectionner</option>
+<option>Demande d'information</option>
+<option>Découverte des services IGTSD</option>
+<option>Prise de rendez-vous</option>
+<option>Demande commerciale</option>
+<option>Question administrative</option>
+<option>Autre besoin</option>
+</select>
 </div>
+<div class="contact-field contact-field--full">
+<label for="general-message-page">Votre message</label>
+<textarea id="general-message-page" name="message" placeholder="Expliquez brièvement votre besoin, nous vous redirigerons vers l'interlocuteur adapté." rows="4"></textarea>
+</div>
+<div class="contact-field contact-field--full contact-submit">
 <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+<span class="contact-submit-note">Réponse initiale sous 24h ouvrées.</span>
+</div>
 </form>
+</div>
+<div aria-hidden="true" class="contact-tab-panel" id="contact-technical-page" role="tabpanel">
+<form action="https://formspree.io/f/maylkdjq" class="contact-form-grid contact-form-briefing" enctype="multipart/form-data" method="post">
+<input name="source_page" type="hidden" value="contact-technical"/>
+<input name="form_kind" type="hidden" value="technical"/>
+<div class="contact-field">
+<label for="briefing-name-page">Nom &amp; fonction</label>
+<input id="briefing-name-page" name="nom" placeholder="Nom complet et poste" required="" type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-company-page">Organisation</label>
+<input id="briefing-company-page" name="organisation" placeholder="Opérateur, TowerCo, BTP, institution..." required="" type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-email-page">Email professionnel</label>
+<input id="briefing-email-page" name="email" placeholder="vous@entreprise.com" required="" type="email"/>
+</div>
+<div class="contact-field">
+<label for="briefing-phone-page">Téléphone</label>
+<input id="briefing-phone-page" name="telephone" placeholder="+225 00 00 00 00" required="" type="tel"/>
+</div>
+<div class="contact-field">
+<label for="briefing-scope-page">Type de projet</label>
+<select id="briefing-scope-page" name="type_projet">
+<option value="">Sélectionner</option>
+<option>Acquisition foncière &amp; négociation de sites</option>
+<option>Déploiement réseaux mobiles / fixes</option>
+<option>Fibre optique OSP/ISP</option>
+<option>Énergie critique &amp; continuité</option>
+<option>Supervision NOC/SOC &amp; SLA</option>
+<option>Dévoiement réseaux &amp; génie civil</option>
+<option>Câblage IT / LAN / WiFi</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-volume-page">Volume / périmètre</label>
+<select id="briefing-volume-page" name="volume">
+<option value="">Sélectionner</option>
+<option>Programme pilote (1 à 10 sites)</option>
+<option>Programme intermédiaire (10 à 50 sites)</option>
+<option>Programme national (+50 sites)</option>
+<option>Périmètre multisites IT / campus</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-budget-page">Budget indicatif</label>
+<select id="briefing-budget-page" name="budget">
+<option value="">Sélectionner</option>
+<option>&lt; 50M FCFA</option>
+<option>50M - 250M FCFA</option>
+<option>250M - 1Md FCFA</option>
+<option>&gt; 1Md FCFA</option>
+</select>
+</div>
+<div class="contact-field">
+<label for="briefing-deadline-page">Échéance cible</label>
+<input id="briefing-deadline-page" name="deadline" type="date"/>
+</div>
+<div class="contact-field">
+<label for="briefing-zone-page">Zone géographique</label>
+<input id="briefing-zone-page" name="zone" placeholder="Abidjan, upcountry, multi-pays..." type="text"/>
+</div>
+<div class="contact-field">
+<label for="briefing-channel-page">Canal de suivi préféré</label>
+<select id="briefing-channel-page" name="canal">
+<option value="">Sélectionner</option>
+<option>Email</option>
+<option>Téléphone</option>
+<option>Réunion de cadrage (visio)</option>
+<option>Atelier sur site</option>
+</select>
+</div>
+<div class="contact-field contact-field--full">
+<label>Périmètres prioritaires</label>
+<div class="contact-checkbox-group">
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Acquisition"/>Acquisition &amp; foncier</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Deploiement"/>Déploiement réseaux</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Fibre"/>Fibre &amp; backbone</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="Energie"/>Énergie critique</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="NOC-SLA"/>Supervision NOC/SLA</label>
+<label class="contact-checkbox"><input name="priorites[]" type="checkbox" value="GC-Devoiement"/>Génie civil &amp; dévoiement</label>
+</div>
+</div>
+<div class="contact-field contact-field--full">
+<label for="briefing-file-page">Document de cadrage (optionnel)</label>
+<input id="briefing-file-page" name="document" type="file"/>
+</div>
+<div class="contact-field contact-field--full">
+<label for="scope-technical-page">Contexte, jalons et objectifs</label>
+<textarea id="scope-technical-page" name="message" placeholder="Décrivez vos objectifs, contraintes, SLA visés et livrables attendus." rows="4"></textarea>
+</div>
+<div class="contact-field contact-field--full contact-privacy">
+<input checked="" id="briefing-nda-page" name="nda" type="checkbox"/>
+<label for="briefing-nda-page">Traitement confidentiel des informations. NDA possible dès le cadrage initial.</label>
+</div>
+<div class="contact-field contact-field--full contact-submit">
+<button class="btn btn-primary" type="submit">Envoyer le brief technique</button>
+<span class="contact-submit-note">Retour initial sous 24h à 72h selon le niveau de criticité.</span>
+</div>
+</form>
+</div>
+</div>
 </article>
-<article class="card">
-<h2 class="section-title">Contact express</h2>
-<ul class="contact-list">
-<li><strong>Téléphone:</strong> +225 27 22 25 86 71 / +225 07 08 52 51 23</li>
-<li><strong>Email:</strong> info@igtsd.com</li>
-<li><strong>Adresse:</strong> 06 BP 1394 Abidjan 06 - Côte d'Ivoire</li>
-<li><strong>Siège:</strong> Cit Prestige, Faya, Abidjan</li>
+<article class="card contact-direct-card">
+<h3>Coordonnées directes &amp; canal décision</h3>
+<ul class="contact-intent-list">
+<li><strong>Décidons vite et exécutons juste:</strong> cadrage exécutif, visibilité budget/planning, feuille de route priorisée, consultation RFP/RFQ, déploiement, NOC/SLA et conformité terrain.</li>
 </ul>
+<h4 class="contact-direct-title">Téléphones directs</h4>
+<ul class="contact-list contact-list--phones">
+<li><a href="tel:+2252722258671">+225 27 22 25 86 71</a></li>
+<li><a href="tel:+2250708525123">+225 07 08 52 51 23</a></li>
+</ul>
+<h4 class="contact-direct-title">Email décisionnel</h4>
+<p class="contact-direct-value"><a href="mailto:info@igtsd.com">info@igtsd.com</a></p>
+<h4 class="contact-direct-title">Géolocalisation du siège</h4>
+<p class="contact-direct-value">Cité Prestige, Faya, Abidjan - Côte d'Ivoire</p>
 <div class="geo-badge-row">
 <span class="badge">Géolocalisation</span>
 </div>

@@ -30,7 +30,7 @@
 </div>
 <a href="contact.html">CONTACT</a>
 <div aria-label="Switch de langue" class="nav-lang-switch">
-<a aria-current="page" aria-label="Version française" class="lang-chip is-active" href="#" lang="fr" title="Français"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/fr.svg"/></a>
+<a aria-current="page" aria-label="Version française" class="lang-chip is-active" href="blog.html" lang="fr" title="Français"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/fr.svg"/></a>
 <a aria-label="English version" class="lang-chip" href="en/index.html" hreflang="en" lang="en" title="English"><img alt="" aria-hidden="true" class="flag-icon" src="assets/images/flags/gb.svg"/></a>
 </div>
 </nav>
@@ -64,17 +64,18 @@
 <div>
 <div class="section-head">
 <span class="pre-title">Radar stratégique</span>
-<h2 class="section-title">Insights cls pour vos programmes d'infrastructures critiques</h2>
+<h2 class="section-title">Analyses clés pour vos programmes d'infrastructures critiques</h2>
+<p>Filtrez par domaine pour accéder rapidement aux contenus les plus pertinents selon vos priorités opérateur, conformité, FTTH, NOC/SLA et dévoiement.</p>
 </div>
 <div class="blog-filter-chips">
-<button class="chip active" type="button">Tous</button>
-<button class="chip" type="button">Opérateurs &amp; TowerCo</button>
-<button class="chip" type="button">Régulation &amp; conformité</button>
-<button class="chip" type="button">FTTH / Backbone</button>
-<button class="chip" type="button">NOC &amp; SLA</button>
-<button class="chip" type="button">BTP &amp; dévoiement</button>
+<button aria-pressed="true" class="chip active" data-blog-filter="all" type="button">Tous</button>
+<button aria-pressed="false" class="chip" data-blog-filter="operator" type="button">Opérateurs &amp; TowerCo</button>
+<button aria-pressed="false" class="chip" data-blog-filter="regulation" type="button">Régulation &amp; conformité</button>
+<button aria-pressed="false" class="chip" data-blog-filter="ftth" type="button">FTTH / Backbone</button>
+<button aria-pressed="false" class="chip" data-blog-filter="noc" type="button">NOC &amp; SLA</button>
+<button aria-pressed="false" class="chip" data-blog-filter="btp" type="button">BTP &amp; dévoiement</button>
 </div>
-<article class="card featured-article">
+<article class="card featured-article blog-filter-item" data-blog-category="operator regulation btp">
 <img alt="Sites stratégiques télécom" src="assets/images/infra-pylone-terrain.png"/>
 <div class="featured-body">
 <span class="badge">Analyse terrain</span>
@@ -84,31 +85,32 @@
 </div>
 </article>
 <div class="grid-2 blog-cards-grid">
-<article class="card blog-story-card">
+<article class="card blog-story-card blog-filter-item" data-blog-category="operator noc">
 <span class="badge">NOC / SLA</span>
 <h3>Supervision 24/7: garantir des SLA critiques</h3>
-<p>Gouvernance NOC/SOC, KPI dcisionnels et runbooks d'escalade pour opérateurs, TowerCo et institutions.</p>
+<p>Gouvernance NOC/SOC, KPI décisionnels et runbooks d'escalade pour opérateurs, TowerCo et institutions.</p>
 <a class="link-arrow" href="blog-supervision-sla.html">Consulter le guide</a>
 </article>
-<article class="card blog-story-card">
+<article class="card blog-story-card blog-filter-item" data-blog-category="operator regulation btp">
 <span class="badge">PMO &amp; Delivery</span>
 <h3>Engager les partenaires terrain sans dérive</h3>
 <p>Cadre de gouvernance fournisseurs pour aligner qualité, délai, coût et conformité réglementaire.</p>
 <a class="link-arrow" href="blog-delivery-partners.html">Voir la méthodologie</a>
 </article>
-<article class="card blog-story-card">
+<article class="card blog-story-card blog-filter-item" data-blog-category="operator ftth">
 <span class="badge">FTTH</span>
 <h3>Accélérer un déploiement FTTH multi-pays</h3>
 <p>Playbook PMO data-driven, QA/QC terrain et pilotage CAPEX/OPEX pour industrialiser les rollouts.</p>
 <a class="link-arrow" href="blog-ftth-acceleration.html">Lire le playbook</a>
 </article>
-<article class="card blog-story-card">
+<article class="card blog-story-card blog-filter-item" data-blog-category="operator noc">
 <span class="badge">Continuité IT/NOC</span>
 <h3>NOC hybride: continuité et cyber-résilience</h3>
 <p>Architecture, procédures et contrôles pour maintenir les opérations critiques en environnement distribué.</p>
 <a class="link-arrow" href="blog-noc-teletravail.html">Lire l'analyse</a>
 </article>
 </div>
+<p class="blog-filter-empty" hidden="">Aucun article ne correspond à ce filtre pour le moment.</p>
 </div>
 <aside class="blog-aside">
 <article class="card">
@@ -128,14 +130,16 @@
 <article class="card newsletter-card">
 <h3>S'inscrire au radar IGTSD</h3>
 <p>Recevez nos analyses sectorielles, checklists opérationnelles et notes de conformité.</p>
-<form>
+<form action="https://formspree.io/f/maylkdjq" method="post">
+<input name="source_page" type="hidden" value="blog-radar"/>
+<input name="form_kind" type="hidden" value="newsletter"/>
 <div class="form-group">
 <label for="radar-name">Nom</label>
-<input id="radar-name" placeholder="Nom et prénom" type="text"/>
+<input id="radar-name" name="nom" placeholder="Nom et prénom" type="text"/>
 </div>
 <div class="form-group">
 <label for="radar-email">Email</label>
-<input id="radar-email" placeholder="vous@entreprise.com" type="email"/>
+<input id="radar-email" name="email" placeholder="vous@entreprise.com" type="email"/>
 </div>
 <button class="btn btn-primary" type="submit">Recevoir les analyses</button>
 </form>
@@ -147,7 +151,7 @@
 <div class="container">
 <article class="card cta-panel">
 <span class="pre-title">Atelier stratégique</span>
-<h2>Organisons un workshop orient exécution sur vos programmes réseaux, énergie et IT</h2>
+<h2>Organisons un workshop orienté exécution sur vos programmes réseaux, énergie et IT</h2>
 <p>Nos architectes, PMO et operations leads transforment vos enjeux terrain en plan d'exécution mesurable avec livrables, KPI et gouvernance de décision.</p>
 <div class="actions center-actions">
 <a class="btn btn-primary" href="contact.html">Planifier un workshop</a>

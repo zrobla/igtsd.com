@@ -670,7 +670,7 @@ iframe {
 .site-footer {
   position: relative;
   background: #0c2239;
-  border-top: 1px solid rgba(0, 152, 152, 0.5);
+  border-top: 1px solid rgba(1, 126, 255, 0.5);
   padding: 58px 0 24px;
   color: #d3e3f6;
 }
@@ -702,7 +702,7 @@ iframe {
 
 .footer-grid > div:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 152, 152, 0.55);
+  border-color: rgba(1, 126, 255, 0.55);
   box-shadow: 0 20px 38px rgba(0, 0, 0, 0.32);
 }
 
@@ -1419,7 +1419,7 @@ body.subpage-template-waas.about-page .about-hero-shell::after {
   transform: translateY(-50%);
   background-image:
     radial-gradient(circle at center, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0) 72%),
-    radial-gradient(circle at center, rgba(0, 152, 152, 0.18) 0%, rgba(0, 152, 152, 0.06) 38%, rgba(0, 152, 152, 0) 76%),
+    radial-gradient(circle at center, rgba(1, 126, 255, 0.18) 0%, rgba(1, 126, 255, 0.06) 38%, rgba(1, 126, 255, 0) 76%),
     url('../images/logo-igtsd.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center, center, center;
@@ -3306,7 +3306,7 @@ body.home-template-waas .hero-overlay {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(5, 13, 32, 0.74) 0%, rgba(5, 13, 32, 0.52) 42%, rgba(5, 13, 32, 0.16) 100%),
-    radial-gradient(circle at 84% 26%, rgba(0, 152, 152, 0.12) 0%, rgba(0, 152, 152, 0) 46%);
+    radial-gradient(circle at 84% 26%, rgba(1, 126, 255, 0.12) 0%, rgba(1, 126, 255, 0) 46%);
 }
 
 body.home-template-waas .hero-premium-track .hero-premium-slide:first-child .hero-overlay {
@@ -3537,7 +3537,7 @@ body.home-template-waas .hero-overlay::after {
   background: linear-gradient(
     115deg,
     transparent 30%,
-    rgba(0, 152, 152, 0.10) 50%,
+    rgba(1, 126, 255, 0.10) 50%,
     transparent 70%
   );
   background-size: 220% 220%;
@@ -3559,7 +3559,7 @@ body.home-template-waas .hero-premium::before {
   z-index: 3;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 22% 38%, rgba(0, 152, 152, 0.18) 0%, transparent 50%),
+    radial-gradient(circle at 22% 38%, rgba(1, 126, 255, 0.18) 0%, transparent 50%),
     radial-gradient(circle at 78% 64%, rgba(11, 59, 140, 0.22) 0%, transparent 55%);
   animation: ambientPulse 11s ease-in-out infinite;
 }
@@ -3609,7 +3609,7 @@ body.home-template-waas .hero-premium-slide.is-active .hero-content h1, .hero-pr
     100deg,
     #ffffff 0%,
     #ffffff 35%,
-    #b8e9ff 48%,
+    #a8d4ff 48%,
     #ffffff 62%,
     #ffffff 100%
   );
@@ -3634,12 +3634,12 @@ body.home-template-waas .hero-premium-kicker {
   -webkit-backdrop-filter: blur(10px);
   background: linear-gradient(
     135deg,
-    rgba(0, 152, 152, 0.28),
+    rgba(1, 126, 255, 0.28),
     rgba(255, 255, 255, 0.10)
   );
-  border-color: rgba(0, 152, 152, 0.55);
+  border-color: rgba(1, 126, 255, 0.55);
   box-shadow:
-    0 4px 20px rgba(0, 152, 152, 0.28),
+    0 4px 20px rgba(1, 126, 255, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
@@ -3656,14 +3656,14 @@ body.home-template-waas .hero-premium-tags span {
 body.home-template-waas .hero-premium-tags span:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 6px 18px rgba(0, 152, 152, 0.35);
+  box-shadow: 0 6px 18px rgba(1, 126, 255, 0.35);
 }
 
 /* CTA primary glow + sweep on hover */
 body.home-template-waas .cta-row .btn-primary {
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 26px rgba(0, 152, 152, 0.32);
+  box-shadow: 0 8px 26px rgba(1, 126, 255, 0.32);
 }
 
 body.home-template-waas .cta-row .btn-primary::before {
@@ -3691,10 +3691,10 @@ body.home-template-waas .hero-premium-dot {
 }
 
 body.home-template-waas .hero-premium-dot.is-active {
-  background: linear-gradient(90deg, #00c9c9, #ffffff);
+  background: linear-gradient(90deg, #017eff, #ffffff);
   box-shadow:
-    0 0 16px rgba(0, 201, 201, 0.7),
-    0 0 32px rgba(0, 201, 201, 0.32);
+    0 0 16px rgba(1, 126, 255, 0.7),
+    0 0 32px rgba(1, 126, 255, 0.32);
 }
 
 body.home-template-waas .hero-premium-dots {
@@ -3718,11 +3718,11 @@ body.home-template-waas .hero-premium-arrow {
 body.home-template-waas .hero-premium-arrow:hover {
   background: linear-gradient(
     135deg,
-    rgba(0, 152, 152, 0.38),
-    rgba(0, 152, 152, 0.15)
+    rgba(1, 126, 255, 0.38),
+    rgba(1, 126, 255, 0.15)
   );
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(0, 152, 152, 0.45);
+  box-shadow: 0 6px 24px rgba(1, 126, 255, 0.45);
 }
 
 /* Autoplay progress bar */
@@ -3743,8 +3743,8 @@ body.home-template-waas .hero-premium-progress::after {
   display: block;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, #00c9c9 0%, #ffffff 100%);
-  box-shadow: 0 0 12px rgba(0, 201, 201, 0.7);
+  background: linear-gradient(90deg, #017eff 0%, #ffffff 100%);
+  box-shadow: 0 0 12px rgba(1, 126, 255, 0.7);
   transform-origin: left center;
   transform: scaleX(0);
 }
@@ -3827,7 +3827,7 @@ body.home-template-waas .feature-grid.is-revealed .feature-item.kpi-item:nth-chi
 
 body.home-template-waas .feature-bar .feature-item.kpi-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 22px 44px rgba(0, 152, 152, 0.38);
+  box-shadow: 0 22px 44px rgba(1, 126, 255, 0.38);
 }
 
 body.home-template-waas .kpi-value.is-counting {
@@ -4113,7 +4113,7 @@ body.home-template-waas .mod-adv-item p {
     color: #ffffff;
     background: linear-gradient(180deg, var(--brand-primary) 0%, #007d94 100%);
     border-color: transparent;
-    box-shadow: 0 12px 22px rgba(0, 152, 152, 0.28);
+    box-shadow: 0 12px 22px rgba(1, 126, 255, 0.28);
   }
 
   body.home-template-waas .content-panel.is-active {
@@ -4152,8 +4152,8 @@ body.home-template-waas .mod-adv-item p {
     min-width: 2rem;
     height: 2rem;
     border-radius: 999px;
-    background: rgba(0, 152, 152, 0.1);
-    border: 1px solid rgba(0, 152, 152, 0.18);
+    background: rgba(1, 126, 255, 0.1);
+    border: 1px solid rgba(1, 126, 255, 0.18);
     color: var(--brand-primary-dark);
     font-size: 0.8rem;
     font-weight: 820;
@@ -4525,13 +4525,13 @@ body.home-template-waas .map-wrap iframe {
   body.home-template-waas .hero-overlay {
     background:
       linear-gradient(180deg, rgba(5, 13, 32, 0.56) 0%, rgba(5, 13, 32, 0.64) 52%, rgba(5, 13, 32, 0.74) 100%),
-      radial-gradient(circle at 50% 6%, rgba(0, 152, 152, 0.08) 0%, rgba(0, 152, 152, 0) 45%);
+      radial-gradient(circle at 50% 6%, rgba(1, 126, 255, 0.08) 0%, rgba(1, 126, 255, 0) 45%);
   }
 
   body.home-template-waas .hero-premium-track .hero-premium-slide:first-child .hero-overlay {
     background:
       linear-gradient(180deg, rgba(5, 13, 32, 0.58) 0%, rgba(5, 13, 32, 0.66) 52%, rgba(5, 13, 32, 0.76) 100%),
-      radial-gradient(circle at 50% 6%, rgba(0, 152, 152, 0.1) 0%, rgba(0, 152, 152, 0) 45%);
+      radial-gradient(circle at 50% 6%, rgba(1, 126, 255, 0.1) 0%, rgba(1, 126, 255, 0) 45%);
   }
 
   body.home-template-waas .hero-premium-controls {
@@ -4645,7 +4645,7 @@ body.subpage-template-waas .about-hero::after {
   background:
     linear-gradient(90deg, rgba(5, 13, 32, 0.88) 0%, rgba(5, 13, 32, 0.72) 40%, rgba(5, 13, 32, 0.38) 74%, rgba(5, 13, 32, 0.26) 100%),
     radial-gradient(circle at 78% 28%, rgba(1, 126, 255, 0.18) 0%, rgba(1, 126, 255, 0) 42%),
-    radial-gradient(circle at 78% 74%, rgba(0, 152, 152, 0.16) 0%, rgba(0, 152, 152, 0) 40%);
+    radial-gradient(circle at 78% 74%, rgba(1, 126, 255, 0.16) 0%, rgba(1, 126, 255, 0) 40%);
 }
 
 body.subpage-template-waas .hero.subpage-hero.about-hero {
@@ -6479,7 +6479,7 @@ body.subpage-template-waas.service-detail-page .service-detail-hero::before {
 body.subpage-template-waas.service-detail-page .service-detail-hero::after {
   background-image:
     radial-gradient(circle at center, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 22%, rgba(255, 255, 255, 0) 52%),
-    radial-gradient(circle at center, rgba(0, 152, 152, 0.12) 0%, rgba(0, 152, 152, 0.04) 28%, rgba(0, 152, 152, 0) 58%);
+    radial-gradient(circle at center, rgba(1, 126, 255, 0.12) 0%, rgba(1, 126, 255, 0.04) 28%, rgba(1, 126, 255, 0) 58%);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: 100% 100%, 76% 76%;
@@ -6505,7 +6505,7 @@ body.subpage-template-waas.service-detail-page .service-hero-layout::before {
   transform: translate(-50%, -50%);
   background-image:
     radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0) 68%),
-    radial-gradient(circle at center, rgba(0, 152, 152, 0.14) 0%, rgba(0, 152, 152, 0.05) 36%, rgba(0, 152, 152, 0) 72%),
+    radial-gradient(circle at center, rgba(1, 126, 255, 0.14) 0%, rgba(1, 126, 255, 0.05) 36%, rgba(1, 126, 255, 0) 72%),
     url('../images/logo-igtsd.png');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: center, center, center;
@@ -7363,7 +7363,7 @@ body.subpage-template-waas.service-detail-page .service-cta-panel .btn-outline:h
   body.subpage-template-waas.service-detail-page .service-detail-hero::after {
     background-image:
       radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 30%, rgba(255, 255, 255, 0) 62%),
-      radial-gradient(circle at center, rgba(0, 152, 152, 0.08) 0%, rgba(0, 152, 152, 0.02) 34%, rgba(0, 152, 152, 0) 66%);
+      radial-gradient(circle at center, rgba(1, 126, 255, 0.08) 0%, rgba(1, 126, 255, 0.02) 34%, rgba(1, 126, 255, 0) 66%);
     background-size: 100% 100%, 78% 78%;
     opacity: 0.1;
   }
@@ -7375,7 +7375,7 @@ body.subpage-template-waas.service-detail-page .service-cta-panel .btn-outline:h
     opacity: 0.28;
     background-image:
       radial-gradient(circle at center, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.12) 42%, rgba(255, 255, 255, 0) 82%),
-      radial-gradient(circle at center, rgba(0, 152, 152, 0.28) 0%, rgba(0, 152, 152, 0.12) 44%, rgba(0, 152, 152, 0) 88%),
+      radial-gradient(circle at center, rgba(1, 126, 255, 0.28) 0%, rgba(1, 126, 255, 0.12) 44%, rgba(1, 126, 255, 0) 88%),
       url('../images/logo-igtsd.png');
     background-size: 132% 132%, 108% 108%, contain;
     filter: drop-shadow(0 12px 28px rgba(1, 63, 134, 0.22));

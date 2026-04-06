@@ -305,18 +305,46 @@
         const isActive = btn === button;
         btn.classList.toggle('is-active', isActive);
         btn.setAttribute('aria-selected', String(isActive));
+        btn.setAttribute('tabindex', isActive ? '0' : '-1');
       });
 
       panelMap.forEach((panel, btn) => {
-        panel.classList.toggle('is-active', btn === button);
+        const isActive = btn === button;
+        panel.classList.toggle('is-active', isActive);
+        panel.hidden = !isActive;
+        panel.setAttribute('aria-hidden', String(!isActive));
       });
     };
 
     tabButtons.forEach((button) => {
       button.addEventListener('click', () => activate(button));
+      button.addEventListener('keydown', (event) => {
+        const currentIndex = tabButtons.indexOf(button);
+        if (currentIndex < 0) return;
+
+        let nextIndex = null;
+
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+          nextIndex = (currentIndex + 1) % tabButtons.length;
+        } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+          nextIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+        } else if (event.key === 'Home') {
+          nextIndex = 0;
+        } else if (event.key === 'End') {
+          nextIndex = tabButtons.length - 1;
+        }
+
+        if (nextIndex === null) return;
+
+        event.preventDefault();
+        const nextButton = tabButtons[nextIndex];
+        activate(nextButton);
+        nextButton.focus();
+      });
     });
 
-    activate(tabButtons[0]);
+    const initialTab = tabButtons.find((button) => button.classList.contains('is-active')) || tabButtons[0];
+    activate(initialTab);
   };
 
   const initContactFormTabs = () => {
@@ -564,6 +592,73 @@
     updateVisibility();
     window.addEventListener('scroll', updateVisibility, { passive: true });
   };
+  const initAjaxForms = () => {
+    const forms = Array.from(document.querySelectorAll('form[action*="api.web3forms.com"]'));
+    if (!forms.length) return;
+
+    const labels = isEnglish
+      ? {
+          sending: 'Sending...',
+          success: 'Thank you! Your request has been sent. Our team will get back to you shortly.',
+          error: 'Submission failed. Please try again or email info@igtsd.com.',
+          network: 'Network error. Please check your connection and retry.'
+        }
+      : {
+          sending: 'Envoi en cours...',
+          success: 'Merci ! Votre demande a bien été envoyée. Notre équipe vous recontactera rapidement.',
+          error: "L'envoi a échoué. Merci de réessayer ou d'écrire à info@igtsd.com.",
+          network: 'Erreur réseau. Vérifiez votre connexion et réessayez.'
+        };
+
+    forms.forEach((form) => {
+      const status = document.createElement('div');
+      status.className = 'form-status';
+      status.setAttribute('role', 'status');
+      status.setAttribute('aria-live', 'polite');
+      form.appendChild(status);
+
+      const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        status.className = 'form-status is-pending';
+        status.textContent = labels.sending;
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = labels.sending;
+        }
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' }
+          });
+          const data = await response.json().catch(() => ({}));
+
+          if (response.ok && data.success) {
+            status.className = 'form-status is-success';
+            status.textContent = labels.success;
+            form.reset();
+          } else {
+            status.className = 'form-status is-error';
+            status.textContent = (data && data.message) ? data.message : labels.error;
+          }
+        } catch (err) {
+          status.className = 'form-status is-error';
+          status.textContent = labels.network;
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+        }
+      });
+    });
+  };
+
   initScrollTopButton();
   initHeroSlider();
   initWhyUsTabs();
@@ -571,4 +666,5 @@
   initCaseFilters();
   initPartnersCarousel();
   initBlogChips();
+  initAjaxForms();
 })();

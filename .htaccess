@@ -1,0 +1,108 @@
+# ============================================================
+#  IGTSD .htaccess — SEO, performance, security
+# ============================================================
+
+# ----- Force HTTPS + canonical host (non-www) -----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Force non-www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # Remove trailing index.html
+  RewriteCond %{THE_REQUEST} \s/+(.*?)index\.html [NC]
+  RewriteRule ^ /%1 [L,R=301]
+</IfModule>
+
+# ----- Custom error pages -----
+ErrorDocument 404 /404.html
+
+# ----- Compression Gzip / Brotli -----
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml application/atom+xml
+  AddOutputFilterByType DEFLATE image/svg+xml application/font-woff application/font-woff2
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
+# ----- Browser caching -----
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                              "access plus 1 month"
+
+  # HTML — short cache, must revalidate
+  ExpiresByType text/html                     "access plus 1 hour"
+
+  # CSS, JS — long cache (versioned via filename if needed)
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType text/javascript               "access plus 1 year"
+
+  # Images
+  ExpiresByType image/jpeg                    "access plus 1 year"
+  ExpiresByType image/png                     "access plus 1 year"
+  ExpiresByType image/webp                    "access plus 1 year"
+  ExpiresByType image/svg+xml                 "access plus 1 year"
+  ExpiresByType image/x-icon                  "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff                     "access plus 1 year"
+  ExpiresByType font/woff2                    "access plus 1 year"
+  ExpiresByType application/font-woff         "access plus 1 year"
+  ExpiresByType application/font-woff2        "access plus 1 year"
+
+  # Sitemap, robots
+  ExpiresByType application/xml               "access plus 1 day"
+  ExpiresByType text/xml                      "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Cache-Control for static assets
+  <FilesMatch "\.(css|js|jpg|jpeg|png|webp|svg|ico|woff|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  <FilesMatch "\.(html|xml)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # Security headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
+# ----- MIME types -----
+<IfModule mod_mime.c>
+  AddType application/javascript              .js
+  AddType text/css                            .css
+  AddType image/svg+xml                       .svg
+  AddType image/webp                          .webp
+  AddType font/woff2                          .woff2
+  AddType application/manifest+json           .webmanifest
+</IfModule>
+
+# ----- Disable directory listing -----
+Options -Indexes
+
+# ----- Block sensitive files -----
+<FilesMatch "\.(md|log|sql|env|tmp|bak)$">
+  Require all denied
+</FilesMatch>
+
+<Files ".git*">
+  Require all denied
+</Files>

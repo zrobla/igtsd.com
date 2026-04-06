@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/pdf/
+Disallow: /*.tmp$
+Disallow: /facturation/
+Disallow: /Signatures Pro/
+
+Sitemap: https://igtsd.com/sitemap.xml

@@ -3362,7 +3362,8 @@ body.home-template-waas .hero-premium-kicker {
   font-weight: 700;
 }
 
-body.home-template-waas .hero-content h1 {
+body.home-template-waas .hero-content h1,
+body.home-template-waas .hero-content .hero-h1-equivalent {
   margin-top: 1rem;
   color: #ffffff;
   font-size: clamp(1.82rem, 4vw, 2.9rem);
@@ -3371,7 +3372,7 @@ body.home-template-waas .hero-content h1 {
 
 
 @media (min-width: 861px) {
-  body.home-template-waas .hero-premium-track .hero-premium-slide:first-child .hero-content h1 {
+  body.home-template-waas .hero-premium-track .hero-premium-slide:first-child .hero-content h1, .hero-premium-slide:first-child .hero-content .hero-h1-equivalent {
     font-size: clamp(1.68rem, 3.7vw, 2.64rem);
   }
 }
@@ -3570,7 +3571,7 @@ body.home-template-waas .hero-premium::before {
 
 /* Staggered content reveal — hidden by default */
 body.home-template-waas .hero-premium-slide .hero-premium-kicker,
-body.home-template-waas .hero-premium-slide .hero-content h1,
+body.home-template-waas .hero-premium-slide .hero-content h1, .hero-premium-slide .hero-content .hero-h1-equivalent,
 body.home-template-waas .hero-premium-slide .hero-content p,
 body.home-template-waas .hero-premium-slide .hero-premium-tags,
 body.home-template-waas .hero-premium-slide .cta-row,
@@ -3586,7 +3587,7 @@ body.home-template-waas .hero-premium-slide .hero-proof-strip {
 body.home-template-waas .hero-premium-slide.is-active .hero-premium-kicker {
   opacity: 1; transform: none; transition-delay: 0.35s;
 }
-body.home-template-waas .hero-premium-slide.is-active .hero-content h1 {
+body.home-template-waas .hero-premium-slide.is-active .hero-content h1, .hero-premium-slide.is-active .hero-content .hero-h1-equivalent {
   opacity: 1; transform: none; transition-delay: 0.50s;
 }
 body.home-template-waas .hero-premium-slide.is-active .hero-content p {
@@ -3603,7 +3604,7 @@ body.home-template-waas .hero-premium-slide.is-active .hero-proof-strip {
 }
 
 /* Shimmer sweep on title (left → right) */
-body.home-template-waas .hero-premium-slide.is-active .hero-content h1 {
+body.home-template-waas .hero-premium-slide.is-active .hero-content h1, .hero-premium-slide.is-active .hero-content .hero-h1-equivalent {
   background: linear-gradient(
     100deg,
     #ffffff 0%,
@@ -3767,12 +3768,12 @@ body.home-template-waas .hero-premium-progress.is-paused::after {
   body.home-template-waas .hero-premium-slide.is-active img,
   body.home-template-waas .hero-overlay::after,
   body.home-template-waas .hero-premium::before,
-  body.home-template-waas .hero-premium-slide.is-active .hero-content h1 {
+  body.home-template-waas .hero-premium-slide.is-active .hero-content h1, .hero-premium-slide.is-active .hero-content .hero-h1-equivalent {
     animation: none !important;
     transition: opacity 0.3s ease !important;
   }
   body.home-template-waas .hero-premium-slide .hero-premium-kicker,
-  body.home-template-waas .hero-premium-slide .hero-content h1,
+  body.home-template-waas .hero-premium-slide .hero-content h1, .hero-premium-slide .hero-content .hero-h1-equivalent,
   body.home-template-waas .hero-premium-slide .hero-content p,
   body.home-template-waas .hero-premium-slide .hero-premium-tags,
   body.home-template-waas .hero-premium-slide .cta-row,
@@ -4554,7 +4555,8 @@ body.home-template-waas .map-wrap iframe {
     width: 20px;
   }
 
-  body.home-template-waas .hero-content h1 {
+  body.home-template-waas .hero-content h1,
+body.home-template-waas .hero-content .hero-h1-equivalent {
     max-width: 100%;
     font-size: clamp(1.48rem, 7.4vw, 2.04rem);
   }

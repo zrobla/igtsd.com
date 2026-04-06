@@ -320,6 +320,7 @@
     });
 
     const activate = (button) => {
+      button.classList.add('tab-explored');
       tabButtons.forEach((btn) => {
         const isActive = btn === button;
         btn.classList.toggle('is-active', isActive);
@@ -334,6 +335,21 @@
         panel.setAttribute('aria-hidden', String(!isActive));
       });
     };
+
+    const whyusSection = document.querySelector('.whyus-section');
+    if (whyusSection && 'IntersectionObserver' in window) {
+      const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            whyusSection.classList.add('is-revealed');
+            revealObs.unobserve(whyusSection);
+          }
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+      revealObs.observe(whyusSection);
+    } else if (whyusSection) {
+      whyusSection.classList.add('is-revealed');
+    }
 
     tabButtons.forEach((button) => {
       button.addEventListener('click', () => activate(button));

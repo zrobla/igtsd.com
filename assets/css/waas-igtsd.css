@@ -4111,9 +4111,27 @@ body.home-template-waas .mod-adv-item p {
   body.home-template-waas .tab-item:hover,
   body.home-template-waas .tab-item.is-active {
     color: #ffffff;
-    background: linear-gradient(180deg, var(--brand-primary) 0%, #007d94 100%);
+    background: linear-gradient(180deg, var(--brand-primary) 0%, var(--brand-primary-dark) 100%);
     border-color: transparent;
     box-shadow: 0 12px 22px rgba(1, 126, 255, 0.28);
+  }
+
+  body.home-template-waas .whyus-section .tab-item {
+    position: relative;
+  }
+
+  body.home-template-waas .whyus-section .tab-item.is-active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid var(--brand-primary-dark);
+    pointer-events: none;
   }
 
   body.home-template-waas .content-panel.is-active {
@@ -7451,5 +7469,73 @@ body.subpage-template-waas.service-detail-page .service-hero-copy h3 {
 
   body.subpage-template-waas.service-detail-page .service-cta-panel .actions .btn {
     width: 100%;
+  }
+}
+
+/* ==========================================================================
+   WhyUs tabs — discoverability animations (cascade pulse + shimmer + notch)
+   ========================================================================== */
+body.home-template-waas .whyus-section .whyus-tabs .tab-item {
+  transform-origin: center;
+}
+
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item {
+  animation: igtsdWhyusTabPulse 1.05s ease-out 1 both;
+}
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item:nth-child(1) { animation-delay: 0.30s; }
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item:nth-child(2) { animation-delay: 0.42s; }
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item:nth-child(3) { animation-delay: 0.54s; }
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item:nth-child(4) { animation-delay: 0.66s; }
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item:nth-child(5) { animation-delay: 0.78s; }
+body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item:nth-child(6) { animation-delay: 0.90s; }
+
+@keyframes igtsdWhyusTabPulse {
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(1, 126, 255, 0.0); }
+  35%  { transform: scale(1.06); box-shadow: 0 0 0 6px rgba(1, 126, 255, 0.18); }
+  70%  { transform: scale(0.99); box-shadow: 0 0 0 10px rgba(1, 126, 255, 0); }
+  100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(1, 126, 255, 0); }
+}
+
+@media (min-width: 992px) {
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item > * {
+    position: relative;
+    z-index: 1;
+  }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, rgba(1, 126, 255, 0.14) 50%, transparent 70%);
+    background-size: 260% 100%;
+    animation: igtsdWhyusTabShimmer 12s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+  }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active):nth-child(2)::before { animation-delay: 2s; }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active):nth-child(3)::before { animation-delay: 4s; }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active):nth-child(4)::before { animation-delay: 6s; }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active):nth-child(5)::before { animation-delay: 8s; }
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active):nth-child(6)::before { animation-delay: 10s; }
+}
+
+/* Sweep window = 2s out of 12s (16.66%), rest of cycle is parked off-screen.
+   Combined with 2s staggered delays across 6 tabs = exactly one tab shimmers
+   at a time, then the cycle restarts on tab 1. */
+@keyframes igtsdWhyusTabShimmer {
+  0%     { background-position: -130% 0; }
+  16.66% { background-position: 230% 0; }
+  100%   { background-position: 230% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home-template-waas .whyus-section.is-revealed .whyus-tabs .tab-item,
+  body.home-template-waas .whyus-section .whyus-tabs .tab-item:not(.tab-explored):not(.is-active)::before {
+    animation: none !important;
   }
 }
